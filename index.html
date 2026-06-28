@@ -3,163 +3,203 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Mathe-Spiel</title>
 
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#111111">
+  <meta name="mobile-web-app-capable" content="yes">
+
   <style>
-  * {
-    box-sizing: border-box;
-    touch-action: manipulation;
-  }
+    * {
+      box-sizing: border-box;
+      touch-action: manipulation;
+      user-select: none;
+    }
 
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #111;
-    color: white;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
 
-  .game {
-    width: 100%;
-    max-width: 1100px;
-    padding: 15px 25px;
-    text-align: center;
-  }
-
-  .task {
-    display: inline-block;
-    font-size: 4.8rem;
-    padding: 18px 55px;
-    margin-bottom: 12px;
-    background: linear-gradient(#c045b7, #9d168e);
-    border-radius: 24px;
-    box-shadow: 0 5px 0 #6f0c66;
-  }
-
-  .answer {
-    font-size: 3.8rem;
-    min-height: 70px;
-    margin: 8px 0;
-    color: #fff;
-  }
-
-  .message {
-    font-size: 2.4rem;
-    min-height: 50px;
-    margin: 8px 0 18px;
-    font-weight: bold;
-  }
-
-  .message.correct {
-    color: #58e058;
-  }
-
-  .message.wrong {
-    color: #ff5555;
-  }
-
-  .buttons {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 12px;
-    margin-top: 5px;
-  }
-
-  button {
-    font-size: 3.2rem;
-    border: none;
-    border-radius: 18px;
-    padding: 12px 0;
-    color: white;
-    background: linear-gradient(#39b5e8, #0097cf);
-    box-shadow: 0 5px 0 #006b93;
-  }
-
-  button:active {
-    transform: translateY(4px);
-    box-shadow: 0 1px 0 #006b93;
-  }
-
-  .control {
-    background: linear-gradient(#68c64a, #289313);
-    box-shadow: 0 5px 0 #17640d;
-  }
-
-  .delete {
-    background: linear-gradient(#ff8a4b, #d94a18);
-    box-shadow: 0 5px 0 #9c2e0c;
-  }
-
-  .flash-correct {
-    animation: flashGreen 0.5s;
-  }
-
-  .flash-wrong {
-    animation: flashRed 0.5s;
-  }
-
-  @keyframes flashGreen {
-    0% { background: #111; }
-    50% { background: #145f14; }
-    100% { background: #111; }
-  }
-
-  @keyframes flashRed {
-    0% { background: #111; }
-    50% { background: #6f1111; }
-    100% { background: #111; }
-  }
-
-  @media (max-height: 650px) {
     .game {
-      padding: 8px 18px;
+      width: 100%;
+      max-width: 1100px;
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 4px;
+    }
+
+    .fullscreen-button {
+      font-size: 1.3rem;
+      border: none;
+      border-radius: 12px;
+      padding: 8px 16px;
+      color: white;
+      background: linear-gradient(#68c64a, #289313);
+      box-shadow: 0 4px 0 #17640d;
     }
 
     .task {
-      font-size: 4rem;
-      padding: 12px 45px;
-      margin-bottom: 6px;
+      display: inline-block;
+      font-size: 4.6rem;
+      padding: 16px 55px;
+      margin-bottom: 8px;
+      background: linear-gradient(#c045b7, #9d168e);
+      border-radius: 24px;
+      box-shadow: 0 5px 0 #6f0c66;
+    }
+
+    .status {
+      min-height: 105px;
     }
 
     .answer {
-      font-size: 3.2rem;
-      min-height: 55px;
+      font-size: 3.6rem;
+      min-height: 58px;
       margin: 4px 0;
+      color: #fff;
     }
 
     .message {
-      font-size: 2rem;
-      min-height: 40px;
-      margin: 4px 0 10px;
+      font-size: 2.2rem;
+      min-height: 42px;
+      margin: 2px 0 8px;
+      font-weight: bold;
     }
 
-    button {
-      font-size: 2.7rem;
-      padding: 9px 0;
-      border-radius: 15px;
+    .message.correct {
+      color: #58e058;
+    }
+
+    .message.wrong {
+      color: #ff5555;
     }
 
     .buttons {
-      gap: 9px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      margin-top: 4px;
     }
-  }
-</style>
+
+    button {
+      font-size: 3rem;
+      border: none;
+      border-radius: 18px;
+      padding: 11px 0;
+      color: white;
+      background: linear-gradient(#39b5e8, #0097cf);
+      box-shadow: 0 5px 0 #006b93;
+    }
+
+    button:active {
+      transform: translateY(4px);
+      box-shadow: 0 1px 0 #006b93;
+    }
+
+    .control {
+      background: linear-gradient(#68c64a, #289313);
+      box-shadow: 0 5px 0 #17640d;
+    }
+
+    .delete {
+      background: linear-gradient(#ff8a4b, #d94a18);
+      box-shadow: 0 5px 0 #9c2e0c;
+    }
+
+    .flash-correct {
+      animation: flashGreen 0.5s;
+    }
+
+    .flash-wrong {
+      animation: flashRed 0.5s;
+    }
+
+    @keyframes flashGreen {
+      0% { background: #111; }
+      50% { background: #145f14; }
+      100% { background: #111; }
+    }
+
+    @keyframes flashRed {
+      0% { background: #111; }
+      50% { background: #6f1111; }
+      100% { background: #111; }
+    }
+
+    @media (max-height: 650px) {
+      .game {
+        padding: 6px 16px;
+      }
+
+      .fullscreen-button {
+        font-size: 1rem;
+        padding: 6px 12px;
+      }
+
+      .task {
+        font-size: 3.8rem;
+        padding: 10px 42px;
+        margin-bottom: 4px;
+        border-radius: 20px;
+      }
+
+      .status {
+        min-height: 82px;
+      }
+
+      .answer {
+        font-size: 3rem;
+        min-height: 46px;
+        margin: 2px 0;
+      }
+
+      .message {
+        font-size: 1.8rem;
+        min-height: 32px;
+        margin: 2px 0 6px;
+      }
+
+      button {
+        font-size: 2.5rem;
+        padding: 8px 0;
+        border-radius: 15px;
+      }
+
+      .buttons {
+        gap: 8px;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <div class="game">
+    <div class="topbar">
+      <button class="fullscreen-button" onclick="goFullscreen()">Vollbild</button>
+    </div>
+
     <div id="task" class="task">4 × 5</div>
 
-    <div id="answer" class="answer">?</div>
-
-    <div id="message" class="message"></div>
+    <div class="status">
+      <div id="answer" class="answer">?</div>
+      <div id="message" class="message"></div>
+    </div>
 
     <div class="buttons">
-      <button class="control" onclick="goFullscreen()">Vollbild</button>
       <button onclick="addDigit(1)">1</button>
       <button onclick="addDigit(2)">2</button>
       <button onclick="addDigit(3)">3</button>
@@ -202,16 +242,6 @@
       return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-function goFullscreen() {
-  const element = document.documentElement;
-
-  if (element.requestFullscreen) {
-    element.requestFullscreen();
-  } else if (element.webkitRequestFullscreen) {
-    element.webkitRequestFullscreen();
-  }
-}
-    
     function addDigit(digit) {
       if (currentAnswer.length >= 3) return;
 
@@ -255,6 +285,16 @@ function goFullscreen() {
         setTimeout(() => {
           document.body.classList.remove("flash-wrong");
         }, 700);
+      }
+    }
+
+    function goFullscreen() {
+      const element = document.documentElement;
+
+      if (element.requestFullscreen) {
+        element.requestFullscreen();
+      } else if (element.webkitRequestFullscreen) {
+        element.webkitRequestFullscreen();
       }
     }
 
