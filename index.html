@@ -38,18 +38,99 @@
 
     .topbar {
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
+      align-items: center;
       margin-bottom: 4px;
+      gap: 10px;
     }
 
-    .fullscreen-button {
-      font-size: 1.3rem;
+    .small-button {
+      font-size: 1.15rem;
       border: none;
       border-radius: 12px;
       padding: 8px 16px;
       color: white;
       background: linear-gradient(#68c64a, #289313);
       box-shadow: 0 4px 0 #17640d;
+    }
+
+    .small-button.orange {
+      background: linear-gradient(#ff8a4b, #d94a18);
+      box-shadow: 0 4px 0 #9c2e0c;
+    }
+
+    .setup {
+      background: #1d1d1d;
+      border-radius: 28px;
+      padding: 25px;
+      box-shadow: 0 8px 0 #000;
+    }
+
+    .setup h1 {
+      font-size: 3.2rem;
+      margin: 0 0 20px;
+    }
+
+    .setup-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      text-align: left;
+      margin-bottom: 22px;
+    }
+
+    .setting {
+      background: #2b2b2b;
+      border-radius: 18px;
+      padding: 16px;
+    }
+
+    .setting label {
+      display: block;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .operation-buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .operation-button {
+      font-size: 2.5rem;
+      padding: 12px 0;
+      border-radius: 16px;
+      background: linear-gradient(#555, #333);
+      box-shadow: 0 5px 0 #111;
+    }
+
+    .operation-button.selected {
+      background: linear-gradient(#c045b7, #9d168e);
+      box-shadow: 0 5px 0 #6f0c66;
+    }
+
+    input {
+      width: 100%;
+      font-size: 2rem;
+      padding: 10px;
+      border-radius: 14px;
+      border: none;
+      text-align: center;
+      background: white;
+      color: #111;
+    }
+
+    .start-button {
+      width: 100%;
+      font-size: 3rem;
+      border: none;
+      border-radius: 22px;
+      padding: 16px 0;
+      color: white;
+      background: linear-gradient(#68c64a, #289313);
+      box-shadow: 0 7px 0 #17640d;
     }
 
     .task {
@@ -60,6 +141,20 @@
       background: linear-gradient(#c045b7, #9d168e);
       border-radius: 24px;
       box-shadow: 0 5px 0 #6f0c66;
+    }
+
+    .progress {
+      font-size: 1.6rem;
+      color: #ddd;
+      min-width: 180px;
+      text-align: left;
+    }
+
+    .score {
+      font-size: 1.6rem;
+      color: #ddd;
+      min-width: 180px;
+      text-align: right;
     }
 
     .status {
@@ -120,6 +215,27 @@
       box-shadow: 0 5px 0 #9c2e0c;
     }
 
+    .result {
+      background: #1d1d1d;
+      border-radius: 28px;
+      padding: 30px;
+      box-shadow: 0 8px 0 #000;
+    }
+
+    .result h1 {
+      font-size: 4rem;
+      margin: 0 0 20px;
+    }
+
+    .result p {
+      font-size: 2.5rem;
+      margin: 15px 0;
+    }
+
+    .hidden {
+      display: none;
+    }
+
     .flash-correct {
       animation: flashGreen 0.5s;
     }
@@ -145,9 +261,47 @@
         padding: 6px 16px;
       }
 
-      .fullscreen-button {
+      .small-button {
         font-size: 1rem;
         padding: 6px 12px;
+      }
+
+      .setup {
+        padding: 14px;
+      }
+
+      .setup h1 {
+        font-size: 2.3rem;
+        margin-bottom: 10px;
+      }
+
+      .setup-grid {
+        gap: 10px;
+        margin-bottom: 12px;
+      }
+
+      .setting {
+        padding: 10px;
+      }
+
+      .setting label {
+        font-size: 1.1rem;
+        margin-bottom: 6px;
+      }
+
+      input {
+        font-size: 1.5rem;
+        padding: 7px;
+      }
+
+      .operation-button {
+        font-size: 1.9rem;
+        padding: 7px 0;
+      }
+
+      .start-button {
+        font-size: 2.2rem;
+        padding: 10px 0;
       }
 
       .task {
@@ -155,6 +309,11 @@
         padding: 10px 42px;
         margin-bottom: 4px;
         border-radius: 20px;
+      }
+
+      .progress,
+      .score {
+        font-size: 1.2rem;
       }
 
       .status {
@@ -182,60 +341,252 @@
       .buttons {
         gap: 8px;
       }
+
+      .result h1 {
+        font-size: 3rem;
+      }
+
+      .result p {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
 
 <body>
   <div class="game">
-    <div class="topbar">
-      <button class="fullscreen-button" onclick="goFullscreen()">Vollbild</button>
+
+    <div id="setupScreen" class="setup">
+      <h1>Mathe-Spiel</h1>
+
+      <div class="setup-grid">
+        <div class="setting">
+          <label>Rechenart</label>
+          <div class="operation-buttons">
+            <button id="opPlus" class="operation-button selected" onclick="selectOperation('+')">+</button>
+            <button id="opMinus" class="operation-button" onclick="selectOperation('-')">−</button>
+            <button id="opMultiply" class="operation-button" onclick="selectOperation('*')">×</button>
+            <button id="opDivide" class="operation-button" onclick="selectOperation('/')">÷</button>
+          </div>
+        </div>
+
+        <div class="setting">
+          <label for="roundsInput">Runden</label>
+          <input id="roundsInput" type="number" min="1" max="100" value="10">
+        </div>
+
+        <div class="setting">
+          <label for="minInput">Kleinste Zahl</label>
+          <input id="minInput" type="number" min="0" max="999" value="1">
+        </div>
+
+        <div class="setting">
+          <label for="maxInput">Größte Zahl</label>
+          <input id="maxInput" type="number" min="1" max="999" value="10">
+        </div>
+      </div>
+
+      <button class="start-button" onclick="startGame()">Start</button>
     </div>
 
-    <div id="task" class="task">4 × 5</div>
+    <div id="gameScreen" class="hidden">
+      <div class="topbar">
+        <div id="progress" class="progress">Runde 1 / 10</div>
+        <button class="small-button" onclick="goFullscreen()">Vollbild</button>
+        <div id="score" class="score">Richtig: 0</div>
+      </div>
 
-    <div class="status">
-      <div id="answer" class="answer">?</div>
-      <div id="message" class="message"></div>
+      <div id="task" class="task">4 × 5</div>
+
+      <div class="status">
+        <div id="answer" class="answer">?</div>
+        <div id="message" class="message"></div>
+      </div>
+
+      <div class="buttons">
+        <button onclick="addDigit(1)">1</button>
+        <button onclick="addDigit(2)">2</button>
+        <button onclick="addDigit(3)">3</button>
+        <button onclick="addDigit(4)">4</button>
+        <button onclick="addDigit(5)">5</button>
+
+        <button onclick="addDigit(6)">6</button>
+        <button onclick="addDigit(7)">7</button>
+        <button onclick="addDigit(8)">8</button>
+        <button onclick="addDigit(9)">9</button>
+        <button onclick="addDigit(0)">0</button>
+
+        <button class="delete" onclick="clearAnswer()">←</button>
+        <button class="control" style="grid-column: span 4;" onclick="checkAnswer()">Los!</button>
+      </div>
     </div>
 
-    <div class="buttons">
-      <button onclick="addDigit(1)">1</button>
-      <button onclick="addDigit(2)">2</button>
-      <button onclick="addDigit(3)">3</button>
-      <button onclick="addDigit(4)">4</button>
-      <button onclick="addDigit(5)">5</button>
-
-      <button onclick="addDigit(6)">6</button>
-      <button onclick="addDigit(7)">7</button>
-      <button onclick="addDigit(8)">8</button>
-      <button onclick="addDigit(9)">9</button>
-      <button onclick="addDigit(0)">0</button>
-
-      <button class="delete" onclick="clearAnswer()">←</button>
-      <button class="control" style="grid-column: span 4;" onclick="checkAnswer()">Los!</button>
+    <div id="resultScreen" class="result hidden">
+      <h1>Geschafft! 🎉</h1>
+      <p id="finalScore">Du hast 0 von 10 richtig.</p>
+      <p id="finalComment">Gut gemacht!</p>
+      <button class="start-button" onclick="showSetup()">Neue Runde</button>
     </div>
+
   </div>
 
   <script>
+    let selectedOperation = "+";
+
+    let minNumber = 1;
+    let maxNumber = 10;
+    let totalRounds = 10;
+
+    let currentRound = 1;
+    let correctCount = 0;
+
     let numberA;
     let numberB;
     let correctResult;
     let currentAnswer = "";
 
-    function newTask() {
-      numberA = randomNumber(1, 10);
-      numberB = randomNumber(1, 10);
-      correctResult = numberA * numberB;
+    function selectOperation(operation) {
+      selectedOperation = operation;
 
+      document.getElementById("opPlus").classList.remove("selected");
+      document.getElementById("opMinus").classList.remove("selected");
+      document.getElementById("opMultiply").classList.remove("selected");
+      document.getElementById("opDivide").classList.remove("selected");
+
+      if (operation === "+") {
+        document.getElementById("opPlus").classList.add("selected");
+      } else if (operation === "-") {
+        document.getElementById("opMinus").classList.add("selected");
+      } else if (operation === "*") {
+        document.getElementById("opMultiply").classList.add("selected");
+      } else if (operation === "/") {
+        document.getElementById("opDivide").classList.add("selected");
+      }
+    }
+
+    function startGame() {
+      minNumber = Number(document.getElementById("minInput").value);
+      maxNumber = Number(document.getElementById("maxInput").value);
+      totalRounds = Number(document.getElementById("roundsInput").value);
+
+      if (Number.isNaN(minNumber)) minNumber = 1;
+      if (Number.isNaN(maxNumber)) maxNumber = 10;
+      if (Number.isNaN(totalRounds)) totalRounds = 10;
+
+      minNumber = Math.max(0, Math.floor(minNumber));
+      maxNumber = Math.max(1, Math.floor(maxNumber));
+      totalRounds = Math.max(1, Math.floor(totalRounds));
+
+      if (minNumber > maxNumber) {
+        const temp = minNumber;
+        minNumber = maxNumber;
+        maxNumber = temp;
+      }
+
+      if (selectedOperation === "/" && minNumber === 0 && maxNumber === 0) {
+        maxNumber = 10;
+      }
+
+      currentRound = 1;
+      correctCount = 0;
+
+      document.getElementById("setupScreen").classList.add("hidden");
+      document.getElementById("resultScreen").classList.add("hidden");
+      document.getElementById("gameScreen").classList.remove("hidden");
+
+      newTask();
+    }
+
+    function showSetup() {
+      document.getElementById("resultScreen").classList.add("hidden");
+      document.getElementById("gameScreen").classList.add("hidden");
+      document.getElementById("setupScreen").classList.remove("hidden");
+    }
+
+    function newTask() {
       currentAnswer = "";
 
-      document.getElementById("task").textContent = numberA + " × " + numberB;
+      if (selectedOperation === "+") {
+        createAdditionTask();
+      } else if (selectedOperation === "-") {
+        createSubtractionTask();
+      } else if (selectedOperation === "*") {
+        createMultiplicationTask();
+      } else if (selectedOperation === "/") {
+        createDivisionTask();
+      }
+
       document.getElementById("answer").textContent = "?";
 
       const message = document.getElementById("message");
       message.textContent = "";
       message.className = "message";
+
+      updateTopbar();
+    }
+
+    function createAdditionTask() {
+      numberA = randomNumber(minNumber, maxNumber);
+      numberB = randomNumber(minNumber, maxNumber);
+      correctResult = numberA + numberB;
+
+      document.getElementById("task").textContent = numberA + " + " + numberB;
+    }
+
+    function createSubtractionTask() {
+      numberA = randomNumber(minNumber, maxNumber);
+      numberB = randomNumber(minNumber, maxNumber);
+
+      if (numberB > numberA) {
+        const temp = numberA;
+        numberA = numberB;
+        numberB = temp;
+      }
+
+      correctResult = numberA - numberB;
+
+      document.getElementById("task").textContent = numberA + " − " + numberB;
+    }
+
+    function createMultiplicationTask() {
+      numberA = randomNumber(minNumber, maxNumber);
+      numberB = randomNumber(minNumber, maxNumber);
+      correctResult = numberA * numberB;
+
+      document.getElementById("task").textContent = numberA + " × " + numberB;
+    }
+
+    function createDivisionTask() {
+      /*
+        Idee:
+        Wir wählen erst den Teiler und das Ergebnis.
+        Dann berechnen wir die linke Zahl:
+        dividend = divisor * result
+
+        Dadurch ist die Aufgabe immer ohne Rest teilbar.
+        Beispiel:
+        divisor = 4, result = 6
+        Aufgabe: 24 ÷ 4
+        Lösung: 6
+      */
+
+      let divisorMin = Math.max(1, minNumber);
+      let divisorMax = Math.max(1, maxNumber);
+
+      numberB = randomNumber(divisorMin, divisorMax);
+      correctResult = randomNumber(minNumber, maxNumber);
+
+      numberA = numberB * correctResult;
+
+      document.getElementById("task").textContent = numberA + " ÷ " + numberB;
+    }
+
+    function updateTopbar() {
+      document.getElementById("progress").textContent =
+        "Runde " + currentRound + " / " + totalRounds;
+
+      document.getElementById("score").textContent =
+        "Richtig: " + correctCount;
     }
 
     function randomNumber(min, max) {
@@ -243,7 +594,7 @@
     }
 
     function addDigit(digit) {
-      if (currentAnswer.length >= 3) return;
+      if (currentAnswer.length >= 5) return;
 
       currentAnswer += digit;
       document.getElementById("answer").textContent = currentAnswer;
@@ -267,25 +618,61 @@
       }
 
       if (givenAnswer === correctResult) {
+        correctCount++;
+
         message.textContent = "Richtig! 🎉";
         message.className = "message correct";
 
         document.body.classList.add("flash-correct");
 
         setTimeout(() => {
-          newTask();
           document.body.classList.remove("flash-correct");
-        }, 1200);
+          nextRound();
+        }, 900);
       } else {
-        message.textContent = "Leider falsch";
+        message.textContent = "Leider falsch. Richtig wäre " + correctResult;
         message.className = "message wrong";
 
         document.body.classList.add("flash-wrong");
 
         setTimeout(() => {
           document.body.classList.remove("flash-wrong");
-        }, 700);
+          nextRound();
+        }, 1600);
       }
+    }
+
+    function nextRound() {
+      if (currentRound >= totalRounds) {
+        showResult();
+      } else {
+        currentRound++;
+        newTask();
+      }
+    }
+
+    function showResult() {
+      document.getElementById("gameScreen").classList.add("hidden");
+      document.getElementById("resultScreen").classList.remove("hidden");
+
+      document.getElementById("finalScore").textContent =
+        "Du hast " + correctCount + " von " + totalRounds + " richtig.";
+
+      const percentage = correctCount / totalRounds;
+
+      let comment = "Gut gemacht!";
+
+      if (percentage === 1) {
+        comment = "Alles richtig! Super! 🏆";
+      } else if (percentage >= 0.8) {
+        comment = "Sehr stark! ⭐";
+      } else if (percentage >= 0.5) {
+        comment = "Gut gemacht! Weiter so!";
+      } else {
+        comment = "Das üben wir einfach nochmal.";
+      }
+
+      document.getElementById("finalComment").textContent = comment;
     }
 
     function goFullscreen() {
@@ -297,8 +684,6 @@
         element.webkitRequestFullscreen();
       }
     }
-
-    newTask();
   </script>
 </body>
 </html>
