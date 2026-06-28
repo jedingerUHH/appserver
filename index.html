@@ -232,6 +232,29 @@
       margin: 15px 0;
     }
 
+    .reward {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 0 15px;
+    }
+
+    .reward img {
+      max-height: 260px;
+      max-width: 260px;
+      width: auto;
+      height: auto;
+      image-rendering: auto;
+      filter: drop-shadow(0 10px 12px rgba(0, 0, 0, 0.6));
+    }
+
+    #pokemonName {
+      font-size: 1.8rem;
+      margin: 8px 0;
+      color: #ffd84d;
+      font-weight: bold;
+    }
+
     .hidden {
       display: none;
     }
@@ -349,6 +372,16 @@
       .result p {
         font-size: 2rem;
       }
+
+      .reward img {
+        max-height: 160px;
+        max-width: 160px;
+      }
+
+      #pokemonName {
+        font-size: 1.3rem;
+        margin: 4px 0;
+      }
     }
   </style>
 </head>
@@ -423,8 +456,15 @@
 
     <div id="resultScreen" class="result hidden">
       <h1>Geschafft! 🎉</h1>
+
+      <div class="reward">
+        <img id="pokemonReward" src="" alt="Pokémon-Belohnung">
+      </div>
+
+      <p id="pokemonName">Du hast ein Pokémon bekommen!</p>
       <p id="finalScore">Du hast 0 von 10 richtig.</p>
       <p id="finalComment">Gut gemacht!</p>
+
       <button class="start-button" onclick="showSetup()">Neue Runde</button>
     </div>
 
@@ -557,25 +597,11 @@
     }
 
     function createDivisionTask() {
-      /*
-        Idee:
-        Wir wählen erst den Teiler und das Ergebnis.
-        Dann berechnen wir die linke Zahl:
-        dividend = divisor * result
-
-        Dadurch ist die Aufgabe immer ohne Rest teilbar.
-        Beispiel:
-        divisor = 4, result = 6
-        Aufgabe: 24 ÷ 4
-        Lösung: 6
-      */
-
       let divisorMin = Math.max(1, minNumber);
       let divisorMax = Math.max(1, maxNumber);
 
       numberB = randomNumber(divisorMin, divisorMax);
       correctResult = randomNumber(minNumber, maxNumber);
-
       numberA = numberB * correctResult;
 
       document.getElementById("task").textContent = numberA + " ÷ " + numberB;
@@ -594,7 +620,7 @@
     }
 
     function addDigit(digit) {
-      if (currentAnswer.length >= 5) return;
+      if (currentAnswer.length >= 8) return;
 
       currentAnswer += digit;
       document.getElementById("answer").textContent = currentAnswer;
@@ -655,6 +681,8 @@
       document.getElementById("gameScreen").classList.add("hidden");
       document.getElementById("resultScreen").classList.remove("hidden");
 
+      showPokemonReward();
+
       document.getElementById("finalScore").textContent =
         "Du hast " + correctCount + " von " + totalRounds + " richtig.";
 
@@ -673,6 +701,24 @@
       }
 
       document.getElementById("finalComment").textContent = comment;
+    }
+
+    function showPokemonReward() {
+      const pokemonNumber = randomNumber(1, 1025);
+      const paddedNumber = String(pokemonNumber).padStart(3, "0");
+
+      const imageUrl =
+        "https://db.pokemongohub.net/images/official/full/" +
+        paddedNumber +
+        ".webp";
+
+      const image = document.getElementById("pokemonReward");
+      const label = document.getElementById("pokemonName");
+
+      image.src = imageUrl;
+      image.alt = "Pokémon Nummer " + pokemonNumber;
+
+      label.textContent = "Du hast Pokémon #" + pokemonNumber + " bekommen!";
     }
 
     function goFullscreen() {
