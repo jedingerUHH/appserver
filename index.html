@@ -159,6 +159,7 @@
     <div id="message" class="message"></div>
 
     <div class="buttons">
+      <button class="control" onclick="goFullscreen()">Vollbild</button>
       <button onclick="addDigit(1)">1</button>
       <button onclick="addDigit(2)">2</button>
       <button onclick="addDigit(3)">3</button>
@@ -201,6 +202,16 @@
       return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
+function goFullscreen() {
+  const element = document.documentElement;
+
+  if (element.requestFullscreen) {
+    element.requestFullscreen();
+  } else if (element.webkitRequestFullscreen) {
+    element.webkitRequestFullscreen();
+  }
+}
+    
     function addDigit(digit) {
       if (currentAnswer.length >= 3) return;
 
