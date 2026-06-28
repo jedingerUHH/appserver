@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Pokémon-Suche</title>
+
+  <meta name="theme-color" content="#111111">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      touch-action: manipulation;
+      user-select: none;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .game {
+      width: 100%;
+      max-width: 1100px;
+      padding: 10px 18px;
+      text-align: center;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .small-button {
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 12px;
+      padding: 8px 16px;
+      color: white;
+      background: linear-gradient(#68c64a, #289313);
+      box-shadow: 0 4px 0 #17640d;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .small-button.orange {
+      background: linear-gradient(#ff8a4b, #d94a18);
+      box-shadow: 0 4px 0 #9c2e0c;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 0 0 8px;
+    }
+
+    .subtitle {
+      font-size: 1.4rem;
+      color: #ddd;
+      margin: 0 0 12px;
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #ddd;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      justify-items: center;
+      align-items: center;
+      background: #1d1d1d;
+      border-radius: 24px;
+      padding: 14px;
+      box-shadow: 0 8px 0 #000;
+    }
+
+    .grid-item {
+      width: 100%;
+      max-width: 115px;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+      cursor: pointer;
+      border-radius: 16px;
+      padding: 6px;
+      background: #2b2b2b;
+      border: 4px solid transparent;
+      filter: drop-shadow(0 7px 8px rgba(0, 0, 0, 0.45));
+    }
+
+    .grid-item:active {
+      transform: scale(0.94);
+    }
+
+    .highlight {
+      border: 4px solid #58e058;
+      background: #164416;
+      animation: pop 0.4s;
+    }
+
+    .wrong-flash {
+      animation: wrongFlash 0.35s;
+    }
+
+    .message {
+      min-height: 42px;
+      margin-top: 12px;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .message.success {
+      color: #58e058;
+    }
+
+    .message.wrong {
+      color: #ff5555;
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.65);
+      z-index: 1000;
+    }
+
+    .overlay-box {
+      background: #1d1d1d;
+      border-radius: 28px;
+      padding: 30px;
+      box-shadow: 0 8px 0 #000;
+      text-align: center;
+      max-width: 520px;
+      width: calc(100% - 40px);
+    }
+
+    .overlay-box h2 {
+      font-size: 3rem;
+      margin: 0 0 12px;
+    }
+
+    .overlay-box p {
+      font-size: 2rem;
+      margin: 12px 0 24px;
+    }
+
+    .big-button {
+      width: 100%;
+      font-size: 2.4rem;
+      border: none;
+      border-radius: 22px;
+      padding: 14px 0;
+      color: white;
+      background: linear-gradient(#68c64a, #289313);
+      box-shadow: 0 7px 0 #17640d;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.12); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes wrongFlash {
+      0% { background: #111; }
+      50% { background: #661111; }
+      100% { background: #111; }
+    }
+
+    @media (max-height: 650px) {
+      .game {
+        padding: 6px 14px;
+      }
+
+      .topbar {
+        margin-bottom: 4px;
+      }
+
+      .small-button {
+        font-size: 0.95rem;
+        padding: 6px 12px;
+      }
+
+      h1 {
+        font-size: 2.1rem;
+        margin-bottom: 2px;
+      }
+
+      .subtitle {
+        font-size: 1rem;
+        margin-bottom: 6px;
+      }
+
+      .info-row {
+        font-size: 1rem;
+        margin-bottom: 6px;
+      }
+
+      .grid-container {
+        gap: 5px;
+        padding: 8px;
+        border-radius: 18px;
+      }
+
+      .grid-item {
+        max-width: 82px;
+        border-radius: 12px;
+        padding: 4px;
+        border-width: 3px;
+      }
+
+      .highlight {
+        border-width: 3px;
+      }
+
+      .message {
+        min-height: 30px;
+        margin-top: 6px;
+        font-size: 1.5rem;
+      }
+
+      .overlay-box {
+        padding: 20px;
+      }
+
+      .overlay-box h2 {
+        font-size: 2.3rem;
+      }
+
+      .overlay-box p {
+        font-size: 1.6rem;
+      }
+
+      .big-button {
+        font-size: 2rem;
+        padding: 10px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="game">
+    <div class="topbar">
+      <a class="small-button orange" href="index.html">Zurück</a>
+      <button class="small-button" onclick="goFullscreen()">Vollbild</button>
+    </div>
+
+    <h1>Pokémon-Suche</h1>
+    <p class="subtitle">Finde das doppelte Pokémon!</p>
+
+    <div class="info-row">
+      <div id="timeDisplay">Zeit: 0 s</div>
+      <div id="attemptDisplay">Versuche: 0</div>
+    </div>
+
+    <div class="grid-container" id="gridContainer"></div>
+
+    <div class="message" id="message"></div>
+  </main>
+
+  <div class="overlay" id="resultOverlay">
+    <div class="overlay-box">
+      <h2>Gefunden! 🎉</h2>
+      <p id="resultText">Zeit: 0 Sekunden</p>
+      <button class="big-button" onclick="startNewGame()">Noch einmal</button>
+    </div>
+  </div>
+
+  <script>
+    const NUMBER_OF_POKEMON = 200;
+    const GRID_SIZE = 5 * 5;
+
+    let correctImagesFound = false;
+    let selectedImages = [];
+    let duplicateImage;
+    let startTime;
+    let timerInterval;
+    let attempts = 0;
+
+    function padPokemonNumber(number) {
+      return String(number).padStart(3, "0");
+    }
+
+    function getPokemonImageUrl(number) {
+      return "https://db.pokemongohub.net/images/official/full/" +
+        padPokemonNumber(number) +
+        ".webp";
+    }
+
+    function generateImagePaths(count) {
+      const paths = [];
+
+      for (let i = 1; i <= count; i++) {
+        paths.push(getPokemonImageUrl(i));
+      }
+
+      return paths;
+    }
+
+    function startNewGame() {
+      correctImagesFound = false;
+      selectedImages = [];
+      attempts = 0;
+      startTime = new Date();
+
+      document.getElementById("resultOverlay").style.display = "none";
+      document.getElementById("message").textContent = "";
+      document.getElementById("message").className = "message";
+      document.getElementById("attemptDisplay").textContent = "Versuche: 0";
+      document.getElementById("timeDisplay").textContent = "Zeit: 0 s";
+
+      if (timerInterval) {
+        clearInterval(timerInterval);
+      }
+
+      timerInterval = setInterval(updateTimer, 1000);
+
+      initializeImages();
+    }
+
+    function initializeImages() {
+      const imagePaths = generateImagePaths(NUMBER_OF_POKEMON);
+      selectedImages = [];
+
+      while (selectedImages.length < GRID_SIZE - 1) {
+        const randomIndex = Math.floor(Math.random() * imagePaths.length);
+        const selectedImage = imagePaths[randomIndex];
+
+        if (!selectedImages.includes(selectedImage)) {
+          selectedImages.push(selectedImage);
+        }
+      }
+
+      const duplicateImageIndex = Math.floor(Math.random() * selectedImages.length);
+      duplicateImage = selectedImages[duplicateImageIndex];
+
+      selectedImages.push(duplicateImage);
+
+      shuffleAndDisplayImages();
+    }
+
+    function shuffleAndDisplayImages() {
+      selectedImages.sort(() => Math.random() - 0.5);
+
+      const container = document.getElementById("gridContainer");
+      container.innerHTML = "";
+
+      selectedImages.forEach(imagePath => {
+        const imgElement = document.createElement("img");
+        imgElement.src = imagePath;
+        imgElement.className = "grid-item";
+        imgElement.alt = "Pokémon";
+        imgElement.draggable = false;
+
+        imgElement.addEventListener("click", function () {
+          handleImageClick(imagePath);
+        });
+
+        container.appendChild(imgElement);
+      });
+    }
+
+    function handleImageClick(imagePath) {
+      if (correctImagesFound) {
+        return;
+      }
+
+      attempts++;
+      document.getElementById("attemptDisplay").textContent = "Versuche: " + attempts;
+
+      if (imagePath === duplicateImage) {
+        correctImagesFound = true;
+        highlightMatchingImages(duplicateImage);
+        showSuccess();
+      } else {
+        showWrong();
+        setTimeout(shuffleAndDisplayImages, 350);
+      }
+    }
+
+    function highlightMatchingImages(imagePath) {
+      const images = document.querySelectorAll(".grid-item");
+
+      images.forEach(img => {
+        if (img.src === imagePath) {
+          img.classList.add("highlight");
+        }
+      });
+    }
+
+    function showSuccess() {
+      if (timerInterval) {
+        clearInterval(timerInterval);
+      }
+
+      const elapsedTime = getElapsedSeconds();
+
+      const message = document.getElementById("message");
+      message.textContent = "Richtig gefunden!";
+      message.className = "message success";
+
+      document.getElementById("resultText").textContent =
+        "Zeit: " + elapsedTime + " Sekunden · Versuche: " + attempts;
+
+      setTimeout(() => {
+        document.getElementById("resultOverlay").style.display = "flex";
+      }, 700);
+    }
+
+    function showWrong() {
+      const message = document.getElementById("message");
+      message.textContent = "Das war es noch nicht!";
+      message.className = "message wrong";
+
+      document.body.classList.remove("wrong-flash");
+      void document.body.offsetWidth;
+      document.body.classList.add("wrong-flash");
+
+      setTimeout(() => {
+        document.body.classList.remove("wrong-flash");
+      }, 350);
+    }
+
+    function updateTimer() {
+      document.getElementById("timeDisplay").textContent =
+        "Zeit: " + getElapsedSeconds() + " s";
+    }
+
+    function getElapsedSeconds() {
+      const currentTime = new Date();
+      return Math.floor((currentTime - startTime) / 1000);
+    }
+
+    function goFullscreen() {
+      const element = document.documentElement;
+
+      if (element.requestFullscreen) {
+        element.requestFullscreen();
+      } else if (element.webkitRequestFullscreen) {
+        element.webkitRequestFullscreen();
+      }
+    }
+
+    window.onload = startNewGame;
+  </script>
+</body>
+</html>
