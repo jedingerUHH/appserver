@@ -44,6 +44,10 @@
       gap: 10px;
     }
 
+    .setup-topbar {
+      margin-bottom: 0;
+    }
+
     .small-button {
       font-size: 1.15rem;
       border: none;
@@ -248,13 +252,6 @@
       filter: drop-shadow(0 10px 12px rgba(0, 0, 0, 0.6));
     }
 
-    #pokemonName {
-      font-size: 1.8rem;
-      margin: 8px 0;
-      color: #ffd84d;
-      font-weight: bold;
-    }
-
     .hidden {
       display: none;
     }
@@ -377,11 +374,6 @@
         max-height: 160px;
         max-width: 160px;
       }
-
-      #pokemonName {
-        font-size: 1.3rem;
-        margin: 4px 0;
-      }
     }
   </style>
 </head>
@@ -390,6 +382,11 @@
   <div class="game">
 
     <div id="setupScreen" class="setup">
+      <div class="topbar setup-topbar">
+        <div></div>
+        <button class="small-button" onclick="goFullscreen()">Vollbild</button>
+      </div>
+
       <h1>Mathe-Spiel</h1>
 
       <div class="setup-grid">
@@ -461,7 +458,6 @@
         <img id="pokemonReward" src="" alt="Pokémon-Belohnung">
       </div>
 
-      <p id="pokemonName">Du hast ein Pokémon bekommen!</p>
       <p id="finalScore">Du hast 0 von 10 richtig.</p>
       <p id="finalComment">Gut gemacht!</p>
 
@@ -713,12 +709,9 @@
         ".webp";
 
       const image = document.getElementById("pokemonReward");
-      const label = document.getElementById("pokemonName");
 
       image.src = imageUrl;
       image.alt = "Pokémon Nummer " + pokemonNumber;
-
-      label.textContent = "Du hast Pokémon #" + pokemonNumber + " bekommen!";
     }
 
     function goFullscreen() {
