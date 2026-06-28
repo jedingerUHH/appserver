@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Mathe-Spiel</title>
+  <title>Poke-Mathe</title>
 
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#111111">
@@ -56,6 +56,9 @@
       color: white;
       background: linear-gradient(#68c64a, #289313);
       box-shadow: 0 4px 0 #17640d;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
     }
 
     .small-button.orange {
@@ -135,6 +138,9 @@
       color: white;
       background: linear-gradient(#68c64a, #289313);
       box-shadow: 0 7px 0 #17640d;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
     }
 
     .task {
@@ -150,14 +156,14 @@
     .progress {
       font-size: 1.6rem;
       color: #ddd;
-      min-width: 180px;
-      text-align: left;
+      min-width: 160px;
+      text-align: center;
     }
 
     .score {
       font-size: 1.6rem;
       color: #ddd;
-      min-width: 180px;
+      min-width: 160px;
       text-align: right;
     }
 
@@ -202,9 +208,12 @@
       color: white;
       background: linear-gradient(#39b5e8, #0097cf);
       box-shadow: 0 5px 0 #006b93;
+      cursor: pointer;
     }
 
-    button:active {
+    button:active,
+    .small-button:active,
+    .start-button:active {
       transform: translateY(4px);
       box-shadow: 0 1px 0 #006b93;
     }
@@ -399,6 +408,7 @@
       .progress,
       .score {
         font-size: 1.2rem;
+        min-width: 100px;
       }
 
       .status {
@@ -486,12 +496,12 @@
 
     <div id="setupScreen" class="setup">
       <div class="topbar setup-topbar">
-        <button class="small-button orange" href="index.html">Zurück</button>
+        <a class="small-button orange" href="index.html">Zurück</a>
         <button class="small-button" onclick="showCollection()">Sammlung</button>
         <button class="small-button" onclick="goFullscreen()">Vollbild</button>
       </div>
 
-      <h1>Mathe-Spiel</h1>
+      <h1>Poke-Mathe</h1>
 
       <div class="setup-grid">
         <div class="setting">
@@ -524,12 +534,12 @@
     </div>
 
     <div id="gameScreen" class="hidden">
-        <div class="topbar">
-        <button class="small-button orange" href="index.html">Zurück</button>
+      <div class="topbar">
+        <a class="small-button orange" href="index.html">Zurück</a>
         <div id="progress" class="progress">Runde 1 / 10</div>
         <button class="small-button" onclick="goFullscreen()">Vollbild</button>
         <div id="score" class="score">Richtig: 0</div>
-</div>
+      </div>
 
       <div id="task" class="task">4 × 5</div>
 
