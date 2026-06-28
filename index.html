@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Spielesammlung</title>
+
+  <meta name="theme-color" content="#111111">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      touch-action: manipulation;
+      user-select: none;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .home {
+      width: 100%;
+      max-width: 1100px;
+      padding: 24px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin: 0 0 35px;
+    }
+
+    .tiles {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .tile {
+      min-height: 260px;
+      border-radius: 32px;
+      padding: 28px;
+      text-decoration: none;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 9px 0 #000;
+      transform: translateY(0);
+    }
+
+    .tile:active {
+      transform: translateY(6px);
+      box-shadow: 0 3px 0 #000;
+    }
+
+    .tile.poke {
+      background: linear-gradient(#c045b7, #9d168e);
+    }
+
+    .tile.placeholder {
+      background: linear-gradient(#39b5e8, #0097cf);
+    }
+
+    .tile-icon {
+      font-size: 5rem;
+      margin-bottom: 18px;
+    }
+
+    .tile-title {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .tile-subtitle {
+      font-size: 1.5rem;
+      color: #f0f0f0;
+    }
+
+    .disabled {
+      opacity: 0.65;
+    }
+
+    @media (max-width: 700px), (max-height: 650px) {
+      .home {
+        padding: 14px;
+      }
+
+      h1 {
+        font-size: 2.8rem;
+        margin-bottom: 20px;
+      }
+
+      .tiles {
+        gap: 16px;
+      }
+
+      .tile {
+        min-height: 190px;
+        border-radius: 24px;
+        padding: 18px;
+      }
+
+      .tile-icon {
+        font-size: 3.6rem;
+        margin-bottom: 10px;
+      }
+
+      .tile-title {
+        font-size: 2.1rem;
+      }
+
+      .tile-subtitle {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="home">
+    <h1>Spielesammlung</h1>
+
+    <div class="tiles">
+      <a class="tile poke" href="poke-mathe.html">
+        <div class="tile-icon">🎮</div>
+        <div class="tile-title">Poke-Mathe</div>
+        <div class="tile-subtitle">Rechnen üben und Pokémon sammeln</div>
+      </a>
+
+      <a class="tile placeholder disabled" href="spiel-2.html">
+        <div class="tile-icon">⭐</div>
+        <div class="tile-title">Spiel 2</div>
+        <div class="tile-subtitle">Kommt als Nächstes</div>
+      </a>
+    </div>
+  </main>
+</body>
+</html>
