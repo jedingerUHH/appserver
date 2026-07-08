@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Multiplikations-Matrix</title>
+
+  <meta name="theme-color" content="#111111">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      touch-action: none;
+      user-select: none;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .game {
+      width: 100%;
+      max-width: 1180px;
+      padding: 10px 18px;
+      text-align: center;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .small-button {
+      font-size: 1.05rem;
+      border: none;
+      border-radius: 12px;
+      padding: 8px 16px;
+      color: white;
+      background: linear-gradient(#68c64a, #289313);
+      box-shadow: 0 4px 0 #17640d;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+      touch-action: manipulation;
+    }
+
+    .small-button.orange {
+      background: linear-gradient(#ff8a4b, #d94a18);
+      box-shadow: 0 4px 0 #9c2e0c;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin: 0 0 8px;
+    }
+
+    .info {
+      font-size: 1.25rem;
+      color: #ddd;
+      margin-bottom: 8px;
+      min-height: 30px;
+    }
+
+    .board-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: 70px repeat(10, 1fr);
+      grid-template-rows: 70px repeat(10, 1fr);
+      gap: 7px;
+      width: min(94vw, 920px);
+      aspect-ratio: 1 / 1;
+    }
+
+    .axis,
+    .cell {
+      border-radius: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .corner {
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .axis {
+      background: linear-gradient(#68c64a, #289313);
+      box-shadow: 0 4px 0 #17640d;
+      color: white;
+    }
+
+    .cell {
+      background: linear-gradient(#2d789b, #075f81);
+      box-shadow: inset 0 3px 0 rgba(255, 255, 255, 0.15);
+      border: 3px solid transparent;
+      position: relative;
+    }
+
+    .cell.hover {
+      border-color: #ffd84d;
+      background: linear-gradient(#3a8fb5, #0b789f);
+    }
+
+    .cell.correct-target {
+      animation: goodCell 0.35s;
+    }
+
+    .cell.filled {
+      background: linear-gradient(#4bb72d, #228b11);
+      box-shadow: 0 4px 0 #17640d;
+      color: white;
+    }
+
+    .cell.filled .placed-value {
+      font-size: 1.75rem;
+      font-weight: bold;
+    }
+
+    .tray {
+      margin: 14px auto 0;
+      min-height: 95px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .piece {
+      width: 110px;
+      height: 70px;
+      border-radius: 18px;
+      background: linear-gradient(#c045b7, #9d168e);
+      box-shadow: 0 6px 0 #6f0c66;
+      color: white;
+      font-size: 2.6rem;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: grab;
+      position: relative;
+      z-index: 10;
+      touch-action: none;
+    }
+
+    .piece.dragging {
+      position: fixed;
+      z-index: 9999;
+      pointer-events: none;
+      cursor: grabbing;
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .piece.used {
+      visibility: hidden;
+    }
+
+    .piece.wrong {
+      animation: wrongPiece 0.35s;
+    }
+
+    .message {
+      min-height: 30px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-top: 6px;
+    }
+
+    .message.good {
+      color: #58e058;
+    }
+
+    .message.bad {
+      color: #ff5555;
+    }
+
+    @keyframes wrongPiece {
+      0% { transform: translateX(0); }
+      20% { transform: translateX(-12px); }
+      40% { transform: translateX(12px); }
+      60% { transform: translateX(-8px); }
+      80% { transform: translateX(8px); }
+      100% { transform: translateX(0); }
+    }
+
+    @keyframes goodCell {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.12); }
+      100% { transform: scale(1); }
+    }
+
+    @media (max-height: 720px) {
+      .game {
+        padding: 6px 14px;
+      }
+
+      h1 {
+        font-size: 1.7rem;
+        margin-bottom: 3px;
+      }
+
+      .topbar {
+        margin-bottom: 4px;
+      }
+
+      .small-button {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+      }
+
+      .info {
+        font-size: 1rem;
+        margin-bottom: 4px;
+        min-height: 22px;
+      }
+
+      .board {
+        width: min(88vh, 94vw);
+        grid-template-columns: 48px repeat(10, 1fr);
+        grid-template-rows: 48px repeat(10, 1fr);
+        gap: 5px;
+      }
+
+      .axis,
+      .cell {
+        border-radius: 10px;
+        font-size: 1.25rem;
+      }
+
+      .cell.filled .placed-value {
+        font-size: 1.2rem;
+      }
+
+      .tray {
+        margin-top: 8px;
+        min-height: 72px;
+        gap: 18px;
+      }
+
+      .piece {
+        width: 88px;
+        height: 54px;
+        border-radius: 14px;
+        font-size: 2rem;
+      }
+
+      .message {
+        font-size: 1rem;
+        min-height: 22px;
+        margin-top: 3px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="game">
+    <div class="topbar">
+      <a class="small-button orange" href="index.html">Zurück</a>
+      <button class="small-button" onclick="resetGame()">Neu starten</button>
+      <button class="small-button" onclick="goFullscreen()">Vollbild</button>
+    </div>
+
+    <h1>Multiplikations-Matrix</h1>
+    <div id="info" class="info">Ziehe die Ergebnisse in die passenden Felder.</div>
+
+    <div class="board-wrap">
+      <div id="board" class="board"></div>
+    </div>
+
+    <div id="tray" class="tray"></div>
+    <div id="message" class="message"></div>
+  </main>
+
+  <script>
+    const SIZE = 10;
+    const PIECES_PER_ROUND = 3;
+
+    let solvedCells = new Set();
+    let activePieces = [];
+    let draggedPiece = null;
+    let dragOffsetX = 0;
+    let dragOffsetY = 0;
+    let currentHoverCell = null;
+
+    function cellKey(row, col) {
+      return row + "-" + col;
+    }
+
+    function buildBoard() {
+      const board = document.getElementById("board");
+      board.innerHTML = "";
+
+      const corner = document.createElement("div");
+      corner.className = "corner";
+      board.appendChild(corner);
+
+      for (let col = 1; col <= SIZE; col++) {
+        const axis = document.createElement("div");
+        axis.className = "axis";
+        axis.textContent = col;
+        board.appendChild(axis);
+      }
+
+      for (let row = 1; row <= SIZE; row++) {
+        const axis = document.createElement("div");
+        axis.className = "axis";
+        axis.textContent = row;
+        board.appendChild(axis);
+
+        for (let col = 1; col <= SIZE; col++) {
+          const cell = document.createElement("div");
+          cell.className = "cell";
+          cell.dataset.row = row;
+          cell.dataset.col = col;
+          cell.dataset.value = row * col;
+          cell.dataset.key = cellKey(row, col);
+          board.appendChild(cell);
+        }
+      }
+    }
+
+    function resetGame() {
+      solvedCells = new Set();
+      activePieces = [];
+
+      buildBoard();
+      createNextPieces();
+
+      setMessage("", "");
+      updateInfo();
+    }
+
+    function updateInfo() {
+      document.getElementById("info").textContent =
+        "Gelöst: " + solvedCells.size + " von " + (SIZE * SIZE);
+    }
+
+    function createNextPieces() {
+      const tray = document.getElementById("tray");
+      tray.innerHTML = "";
+      activePieces = [];
+
+      const freeCells = getFreeCells();
+
+      if (freeCells.length === 0) {
+        setMessage("Alles ausgefüllt! Super! 🎉", "good");
+        return;
+      }
+
+      const amount = Math.min(PIECES_PER_ROUND, freeCells.length);
+      const chosenCells = chooseRandomItems(freeCells, amount);
+
+      chosenCells.forEach((cell, index) => {
+        const value = Number(cell.dataset.value);
+
+        const piece = document.createElement("div");
+        piece.className = "piece";
+        piece.textContent = value;
+        piece.dataset.value = value;
+        piece.dataset.index = index;
+
+        piece.addEventListener("pointerdown", startDrag);
+
+        tray.appendChild(piece);
+        activePieces.push(piece);
+      });
+    }
+
+    function getFreeCells() {
+      return Array.from(document.querySelectorAll(".cell"))
+        .filter(cell => !solvedCells.has(cell.dataset.key));
+    }
+
+    function chooseRandomItems(items, amount) {
+      const copy = [...items];
+      const result = [];
+
+      while (result.length < amount && copy.length > 0) {
+        const index = Math.floor(Math.random() * copy.length);
+        result.push(copy.splice(index, 1)[0]);
+      }
+
+      return result;
+    }
+
+    function startDrag(event) {
+      const piece = event.currentTarget;
+
+      if (piece.classList.contains("used")) {
+        return;
+      }
+
+      draggedPiece = piece;
+
+      const rect = piece.getBoundingClientRect();
+      dragOffsetX = event.clientX - rect.left;
+      dragOffsetY = event.clientY - rect.top;
+
+      piece.dataset.originalLeft = rect.left;
+      piece.dataset.originalTop = rect.top;
+
+      piece.style.width = rect.width + "px";
+      piece.style.height = rect.height + "px";
+      piece.classList.add("dragging");
+
+      movePiece(event.clientX, event.clientY);
+
+      document.addEventListener("pointermove", onDragMove);
+      document.addEventListener("pointerup", endDrag);
+    }
+
+    function onDragMove(event) {
+      if (!draggedPiece) {
+        return;
+      }
+
+      movePiece(event.clientX, event.clientY);
+
+      const cell = getCellUnderPoint(event.clientX, event.clientY);
+      updateHoverCell(cell);
+    }
+
+    function movePiece(clientX, clientY) {
+      draggedPiece.style.left = (clientX - dragOffsetX) + "px";
+      draggedPiece.style.top = (clientY - dragOffsetY) + "px";
+    }
+
+    function endDrag(event) {
+      if (!draggedPiece) {
+        return;
+      }
+
+      const targetCell = getCellUnderPoint(event.clientX, event.clientY);
+
+      if (currentHoverCell) {
+        currentHoverCell.classList.remove("hover");
+        currentHoverCell = null;
+      }
+
+      document.removeEventListener("pointermove", onDragMove);
+      document.removeEventListener("pointerup", endDrag);
+
+      if (targetCell && isCorrectPlacement(draggedPiece, targetCell)) {
+        placePiece(draggedPiece, targetCell);
+      } else {
+        returnPiece(draggedPiece);
+      }
+
+      draggedPiece = null;
+    }
+
+    function getCellUnderPoint(clientX, clientY) {
+      const element = document.elementFromPoint(clientX, clientY);
+
+      if (!element) {
+        return null;
+      }
+
+      if (element.classList.contains("cell")) {
+        return element;
+      }
+
+      return element.closest(".cell");
+    }
+
+    function updateHoverCell(cell) {
+      if (currentHoverCell && currentHoverCell !== cell) {
+        currentHoverCell.classList.remove("hover");
+      }
+
+      currentHoverCell = cell;
+
+      if (currentHoverCell && !currentHoverCell.classList.contains("filled")) {
+        currentHoverCell.classList.add("hover");
+      }
+    }
+
+    function isCorrectPlacement(piece, cell) {
+      if (!cell || cell.classList.contains("filled")) {
+        return false;
+      }
+
+      const pieceValue = Number(piece.dataset.value);
+      const cellValue = Number(cell.dataset.value);
+
+      return pieceValue === cellValue;
+    }
+
+    function placePiece(piece, cell) {
+      const value = piece.dataset.value;
+
+      solvedCells.add(cell.dataset.key);
+
+      cell.classList.add("filled", "correct-target");
+      cell.innerHTML = '<div class="placed-value">' + value + '</div>';
+
+      piece.classList.remove("dragging");
+      piece.classList.add("used");
+      piece.style.left = "";
+      piece.style.top = "";
+      piece.style.width = "";
+      piece.style.height = "";
+
+      setMessage("Richtig!", "good");
+      updateInfo();
+
+      setTimeout(() => {
+        cell.classList.remove("correct-target");
+      }, 400);
+
+      if (allCurrentPiecesUsed()) {
+        setTimeout(createNextPieces, 550);
+      }
+    }
+
+    function returnPiece(piece) {
+      setMessage("Das passt noch nicht.", "bad");
+
+      piece.classList.remove("dragging");
+      piece.style.left = "";
+      piece.style.top = "";
+      piece.style.width = "";
+      piece.style.height = "";
+
+      piece.classList.remove("wrong");
+      void piece.offsetWidth;
+      piece.classList.add("wrong");
+
+      setTimeout(() => {
+        piece.classList.remove("wrong");
+      }, 400);
+    }
+
+    function allCurrentPiecesUsed() {
+      return activePieces.every(piece => piece.classList.contains("used"));
+    }
+
+    function setMessage(text, type) {
+      const message = document.getElementById("message");
+      message.textContent = text;
+      message.className = "message";
+
+      if (type) {
+        message.classList.add(type);
+      }
+    }
+
+    function goFullscreen() {
+      const element = document.documentElement;
+
+      if (element.requestFullscreen) {
+        element.requestFullscreen();
+      } else if (element.webkitRequestFullscreen) {
+        element.webkitRequestFullscreen();
+      }
+    }
+
+    window.onload = resetGame;
+  </script>
+</body>
+</html>
