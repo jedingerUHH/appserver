@@ -614,6 +614,7 @@
     let numberB;
     let correctResult;
     let currentAnswer = "";
+    let answerLocked = false;
 
     function selectOperation(operation) {
       selectedOperation = operation;
@@ -637,7 +638,7 @@
     function startGame() {
       minNumber = Number(document.getElementById("minInput").value);
       maxNumber = Number(document.getElementById("maxInput").value);
-      totalRounds = 10;//Number(document.getElementById("roundsInput").value);
+      totalRounds = 10;
 
       if (Number.isNaN(minNumber)) minNumber = 1;
       if (Number.isNaN(maxNumber)) maxNumber = 10;
@@ -659,6 +660,7 @@
 
       currentRound = 1;
       correctCount = 0;
+      answerLocked = false;
 
       document.getElementById("setupScreen").classList.add("hidden");
       document.getElementById("resultScreen").classList.add("hidden");
@@ -676,6 +678,7 @@
     }
 
     function newTask() {
+      answerLocked = false;
       currentAnswer = "";
 
       if (selectedOperation === "+") {
@@ -752,6 +755,7 @@
     }
 
     function addDigit(digit) {
+      if (answerLocked) return;
       if (currentAnswer.length >= 8) return;
 
       currentAnswer += digit;
@@ -759,11 +763,15 @@
     }
 
     function clearAnswer() {
+      if (answerLocked) return;
+
       currentAnswer = currentAnswer.slice(0, -1);
       document.getElementById("answer").textContent = currentAnswer || "?";
     }
 
     function checkAnswer() {
+      if (answerLocked) return;
+
       const message = document.getElementById("message");
       const givenAnswer = Number(currentAnswer);
 
@@ -774,6 +782,8 @@
         message.className = "message wrong";
         return;
       }
+
+      answerLocked = true;
 
       if (givenAnswer === correctResult) {
         correctCount++;
