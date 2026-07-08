@@ -200,14 +200,32 @@
     }
 
     .cell.filled {
-      background: linear-gradient(#d99a4a, #b86f24);
+      background-color: #b86f24;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
       box-shadow: 0 4px 0 #7f4a18;
       color: white;
+      overflow: hidden;
+    }
+
+    .cell.filled::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: inherit;
+      pointer-events: none;
     }
 
     .cell.filled .placed-value {
+      position: relative;
+      z-index: 2;
       font-size: 1.75rem;
       font-weight: bold;
+      text-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.9),
+        0 0 8px rgba(0, 0, 0, 0.8);
     }
 
     .tray {
@@ -433,6 +451,7 @@
   <script>
     const SIZE = 10;
     const PIECES_PER_ROUND = 3;
+    const NUMBER_OF_POKEMON = 1025;
 
     let mode = "multiply";
     let solvedCells = new Set();
@@ -695,6 +714,7 @@
       solvedCells.add(cell.dataset.key);
 
       cell.classList.add("filled", "correct-target");
+      cell.style.backgroundImage = 'url("' + getRandomPokemonImageUrl() + '")';
       cell.innerHTML = '<div class="placed-value">' + value + '</div>';
 
       piece.classList.remove("dragging");
@@ -758,6 +778,25 @@
 
       document.removeEventListener("pointermove", onDragMove);
       document.removeEventListener("pointerup", endDrag);
+    }
+
+    function padPokemonNumber(pokemonNumber) {
+      return String(pokemonNumber).padStart(3, "0");
+    }
+
+    function getPokemonImageUrl(pokemonNumber) {
+      return "https://db.pokemongohub.net/images/official/full/" +
+        padPokemonNumber(pokemonNumber) +
+        ".webp";
+    }
+
+    function getRandomPokemonImageUrl() {
+      const pokemonNumber = randomNumber(1, NUMBER_OF_POKEMON);
+      return getPokemonImageUrl(pokemonNumber);
+    }
+
+    function randomNumber(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
     function goFullscreen() {
