@@ -613,8 +613,8 @@
     let numberA;
     let numberB;
     let correctResult;
-    let currentAnswer = "";
     let answerLocked = false;
+    let resultShown = false;
 
     function selectOperation(operation) {
       selectedOperation = operation;
@@ -660,6 +660,7 @@
 
       currentRound = 1;
       correctCount = 0;
+      resultShown = false;
       answerLocked = false;
 
       document.getElementById("setupScreen").classList.add("hidden");
@@ -811,6 +812,10 @@
     }
 
     function nextRound() {
+      if (resultShown) {
+        return;
+      }
+    
       if (currentRound >= totalRounds) {
         showResult();
       } else {
@@ -820,18 +825,25 @@
     }
 
     function showResult() {
+      if (resultShown) {
+        return;
+      }
+    
+      resultShown = true;
+      answerLocked = true;
+    
       document.getElementById("gameScreen").classList.add("hidden");
       document.getElementById("resultScreen").classList.remove("hidden");
-
+    
       showPokemonReward();
-
+    
       document.getElementById("finalScore").textContent =
         "Du hast " + correctCount + " von " + totalRounds + " richtig.";
-
+    
       const percentage = correctCount / totalRounds;
-
+    
       let comment = "Gut gemacht!";
-
+    
       if (percentage === 1) {
         comment = "Alles richtig! Super! 🏆";
       } else if (percentage >= 0.8) {
@@ -841,7 +853,7 @@
       } else {
         comment = "Das üben wir einfach nochmal.";
       }
-
+    
       document.getElementById("finalComment").textContent = comment;
     }
 
