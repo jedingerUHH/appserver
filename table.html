@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Multiplikations-Matrix</title>
+  <title>Rechentabellen</title>
 
   <meta name="theme-color" content="#111111">
   <meta name="mobile-web-app-capable" content="yes">
@@ -74,6 +74,77 @@
       min-height: 30px;
     }
 
+    .hidden {
+      display: none;
+    }
+
+    .mode-screen {
+      background: #1d1d1d;
+      border-radius: 28px;
+      padding: 30px;
+      box-shadow: 0 8px 0 #000;
+    }
+
+    .mode-screen h1 {
+      font-size: 3.4rem;
+      margin: 0 0 12px;
+    }
+
+    .mode-screen p {
+      font-size: 1.5rem;
+      color: #ddd;
+      margin: 0 0 28px;
+    }
+
+    .mode-tiles {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .mode-tile {
+      min-height: 230px;
+      border: none;
+      border-radius: 30px;
+      color: white;
+      padding: 24px;
+      box-shadow: 0 8px 0 #000;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .mode-tile:active {
+      transform: translateY(5px);
+      box-shadow: 0 3px 0 #000;
+    }
+
+    .mode-tile.plus {
+      background: linear-gradient(#39b5e8, #0097cf);
+    }
+
+    .mode-tile.multiply {
+      background: linear-gradient(#c045b7, #9d168e);
+    }
+
+    .mode-icon {
+      font-size: 5rem;
+      margin-bottom: 14px;
+    }
+
+    .mode-title {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .mode-subtitle {
+      font-size: 1.3rem;
+      color: #f0f0f0;
+    }
+
     .board-wrap {
       display: flex;
       justify-content: center;
@@ -102,6 +173,8 @@
     .corner {
       background: transparent;
       box-shadow: none;
+      font-size: 2rem;
+      color: #aaa;
     }
 
     .axis {
@@ -126,11 +199,11 @@
       animation: goodCell 0.35s;
     }
 
-.cell.filled {
-  background: linear-gradient(#d99a4a, #b86f24);
-  box-shadow: 0 4px 0 #7f4a18;
-  color: white;
-}
+    .cell.filled {
+      background: linear-gradient(#d99a4a, #b86f24);
+      box-shadow: 0 4px 0 #7f4a18;
+      color: white;
+    }
 
     .cell.filled .placed-value {
       font-size: 1.75rem;
@@ -150,8 +223,8 @@
       width: 110px;
       height: 70px;
       border-radius: 18px;
-      background: linear-gradient(#c045b7, #9d168e);
-      box-shadow: 0 6px 0 #6f0c66;
+      background: linear-gradient(#4f8fab, #2d6f8c);
+      box-shadow: 0 6px 0 #1f4f66;
       color: white;
       font-size: 2.6rem;
       font-weight: bold;
@@ -235,6 +308,42 @@
         min-height: 22px;
       }
 
+      .mode-screen {
+        padding: 18px;
+      }
+
+      .mode-screen h1 {
+        font-size: 2.4rem;
+      }
+
+      .mode-screen p {
+        font-size: 1.1rem;
+        margin-bottom: 16px;
+      }
+
+      .mode-tiles {
+        gap: 16px;
+      }
+
+      .mode-tile {
+        min-height: 170px;
+        border-radius: 22px;
+        padding: 16px;
+      }
+
+      .mode-icon {
+        font-size: 3.6rem;
+        margin-bottom: 8px;
+      }
+
+      .mode-title {
+        font-size: 2.1rem;
+      }
+
+      .mode-subtitle {
+        font-size: 1rem;
+      }
+
       .board {
         width: min(88vh, 94vw);
         grid-template-columns: 48px repeat(10, 1fr);
@@ -276,33 +385,116 @@
 
 <body>
   <main class="game">
-    <div class="topbar">
-      <a class="small-button orange" href="index.html">Zurück</a>
-      <button class="small-button" onclick="resetGame()">Neu starten</button>
-      <button class="small-button" onclick="goFullscreen()">Vollbild</button>
-    </div>
 
-    <h1>Multiplikations-Matrix</h1>
-    <div id="info" class="info">Ziehe die Ergebnisse in die passenden Felder.</div>
+    <section id="modeScreen" class="mode-screen">
+      <div class="topbar">
+        <a class="small-button orange" href="index.html">Zurück</a>
+        <button class="small-button" onclick="goFullscreen()">Vollbild</button>
+      </div>
 
-    <div class="board-wrap">
-      <div id="board" class="board"></div>
-    </div>
+      <h1>Rechentabellen</h1>
+      <p>Wähle eine Tabelle aus.</p>
 
-    <div id="tray" class="tray"></div>
-    <div id="message" class="message"></div>
+      <div class="mode-tiles">
+        <button class="mode-tile plus" onclick="startMode('plus')">
+          <div class="mode-icon">＋</div>
+          <div class="mode-title">Plus</div>
+          <div class="mode-subtitle">Additionstabelle 1 bis 10</div>
+        </button>
+
+        <button class="mode-tile multiply" onclick="startMode('multiply')">
+          <div class="mode-icon">×</div>
+          <div class="mode-title">Mal</div>
+          <div class="mode-subtitle">Multiplikationstabelle 1 bis 10</div>
+        </button>
+      </div>
+    </section>
+
+    <section id="gameScreen" class="hidden">
+      <div class="topbar">
+        <button class="small-button orange" onclick="showModeScreen()">Zurück</button>
+        <button class="small-button" onclick="resetCurrentGame()">Neu starten</button>
+        <button class="small-button" onclick="goFullscreen()">Vollbild</button>
+      </div>
+
+      <h1 id="gameTitle">Multiplikations-Matrix</h1>
+      <div id="info" class="info">Ziehe die Ergebnisse in die passenden Felder.</div>
+
+      <div class="board-wrap">
+        <div id="board" class="board"></div>
+      </div>
+
+      <div id="tray" class="tray"></div>
+      <div id="message" class="message"></div>
+    </section>
+
   </main>
 
   <script>
     const SIZE = 10;
     const PIECES_PER_ROUND = 3;
 
+    let mode = "multiply";
     let solvedCells = new Set();
     let activePieces = [];
     let draggedPiece = null;
     let dragOffsetX = 0;
     let dragOffsetY = 0;
     let currentHoverCell = null;
+
+    function startMode(selectedMode) {
+      mode = selectedMode;
+
+      document.getElementById("modeScreen").classList.add("hidden");
+      document.getElementById("gameScreen").classList.remove("hidden");
+
+      resetCurrentGame();
+    }
+
+    function showModeScreen() {
+      document.getElementById("gameScreen").classList.add("hidden");
+      document.getElementById("modeScreen").classList.remove("hidden");
+
+      clearDragState();
+    }
+
+    function resetCurrentGame() {
+      solvedCells = new Set();
+      activePieces = [];
+
+      buildBoard();
+      createNextPieces();
+
+      setMessage("", "");
+      updateTitle();
+      updateInfo();
+    }
+
+    function updateTitle() {
+      const title = document.getElementById("gameTitle");
+
+      if (mode === "plus") {
+        title.textContent = "Plus-Tabelle";
+      } else {
+        title.textContent = "Mal-Tabelle";
+      }
+    }
+
+    function getCellValue(row, col) {
+      if (mode === "plus") {
+        return row + col;
+      }
+
+      return row * col;
+    }
+
+    function getOperatorSymbol() {
+      if (mode === "plus") {
+        return "+";
+      }
+
+      return "×";
+    }
 
     function cellKey(row, col) {
       return row + "-" + col;
@@ -314,6 +506,7 @@
 
       const corner = document.createElement("div");
       corner.className = "corner";
+      corner.textContent = getOperatorSymbol();
       board.appendChild(corner);
 
       for (let col = 1; col <= SIZE; col++) {
@@ -334,27 +527,18 @@
           cell.className = "cell";
           cell.dataset.row = row;
           cell.dataset.col = col;
-          cell.dataset.value = row * col;
+          cell.dataset.value = getCellValue(row, col);
           cell.dataset.key = cellKey(row, col);
           board.appendChild(cell);
         }
       }
     }
 
-    function resetGame() {
-      solvedCells = new Set();
-      activePieces = [];
-
-      buildBoard();
-      createNextPieces();
-
-      setMessage("", "");
-      updateInfo();
-    }
-
     function updateInfo() {
+      const modeText = mode === "plus" ? "Plus-Tabelle" : "Mal-Tabelle";
+
       document.getElementById("info").textContent =
-        "Gelöst: " + solvedCells.size + " von " + (SIZE * SIZE);
+        modeText + " · Gelöst: " + solvedCells.size + " von " + (SIZE * SIZE);
     }
 
     function createNextPieces() {
@@ -417,9 +601,6 @@
       const rect = piece.getBoundingClientRect();
       dragOffsetX = event.clientX - rect.left;
       dragOffsetY = event.clientY - rect.top;
-
-      piece.dataset.originalLeft = rect.left;
-      piece.dataset.originalTop = rect.top;
 
       piece.style.width = rect.width + "px";
       piece.style.height = rect.height + "px";
@@ -567,6 +748,18 @@
       }
     }
 
+    function clearDragState() {
+      draggedPiece = null;
+
+      if (currentHoverCell) {
+        currentHoverCell.classList.remove("hover");
+        currentHoverCell = null;
+      }
+
+      document.removeEventListener("pointermove", onDragMove);
+      document.removeEventListener("pointerup", endDrag);
+    }
+
     function goFullscreen() {
       const element = document.documentElement;
 
@@ -576,8 +769,6 @@
         element.webkitRequestFullscreen();
       }
     }
-
-    window.onload = resetGame;
   </script>
 </body>
 </html>
