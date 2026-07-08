@@ -199,34 +199,35 @@
       animation: goodCell 0.35s;
     }
 
-    .cell.filled {
-      background-color: #b86f24;
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      box-shadow: 0 4px 0 #7f4a18;
-      color: white;
-      overflow: hidden;
-    }
+	.cell.filled {
+	  background-color: #e3e3e3;
+	  background-size: contain;
+	  background-position: center;
+	  background-repeat: no-repeat;
+	  box-shadow: 0 4px 0 #737373;
+	  color: white;
+	  overflow: hidden;
+	}
 
-    .cell.filled::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.25);
-      border-radius: inherit;
-      pointer-events: none;
-    }
+	.cell.filled::after {
+	  content: "";
+	  position: absolute;
+	  inset: 0;
+	  background: rgba(240, 240, 240, 0.00);
+	  border-radius: inherit;
+	  pointer-events: none;
+	}
 
-    .cell.filled .placed-value {
-      position: relative;
-      z-index: 2;
-      font-size: 1.75rem;
-      font-weight: bold;
-      text-shadow:
-        0 2px 4px rgba(0, 0, 0, 0.9),
-        0 0 8px rgba(0, 0, 0, 0.8);
-    }
+	.cell.filled .placed-value {
+	  position: relative;
+	  z-index: 2;
+	  font-size: 1.75rem;
+	  font-weight: bold;
+	  opacity: 0.85;
+	  text-shadow:
+		0 2px 4px rgba(0, 0, 0, 0.7),
+		0 0 8px rgba(0, 0, 0, 0.5);
+	}
 
     .tray {
       margin: 14px auto 0;
