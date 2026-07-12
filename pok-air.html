@@ -95,6 +95,9 @@
       background: #2b2b2b;
       border-radius: 18px;
       padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .setting label {
@@ -113,6 +116,7 @@
       text-align: center;
       background: white;
       color: #111;
+      margin-top: auto;
     }
 
     .start-button {
@@ -280,13 +284,13 @@
 
     .pokemon-drop {
       position: absolute;
-      width: 112px;
-      height: 112px;
+      width: 150px;
+      height: 150px;
       object-fit: contain;
       z-index: 30;
       pointer-events: none;
-      animation: pokemonFall 1.3s ease-in forwards;
-      filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.6));
+      animation: pokemonFall 2.2s ease-in forwards;
+      filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.75));
     }
 
     .floating-message {
@@ -357,14 +361,17 @@
 
     @keyframes pokemonFall {
       0% {
-        transform: translateY(0) scale(0.8);
+        transform: translateY(0) scale(0.75);
         opacity: 0;
       }
-      15% {
+      10% {
+        opacity: 1;
+      }
+      70% {
         opacity: 1;
       }
       100% {
-        transform: translateY(320px) scale(1);
+        transform: translateY(360px) scale(1.15);
         opacity: 0;
       }
     }
@@ -449,8 +456,8 @@
       }
 
       .pokemon-drop {
-        width: 82px;
-        height: 82px;
+        width: 110px;
+        height: 110px;
       }
 
       .ground {
@@ -489,7 +496,7 @@
       <div class="setup-grid">
         <div class="setting">
           <label for="roundsInput">Runden</label>
-          <input id="roundsInput" type="number" min="1" max="50" value="5">
+          <input id="roundsInput" type="number" min="1" max="50" value="1">
         </div>
 
         <div class="setting">
@@ -499,7 +506,7 @@
 
         <div class="setting">
           <label for="maxInput">Größte Zahl in Aufgabe</label>
-          <input id="maxInput" type="number" min="5" max="999" value="100">
+          <input id="maxInput" type="number" min="5" max="999" value="20">
         </div>
 
         <div class="setting">
@@ -518,7 +525,7 @@
         <a class="small-button orange" href="index.html">Zurück</a>
 
         <div class="stats">
-          <div id="roundDisplay">Runde 1 / 5</div>
+          <div id="roundDisplay">Runde 1 / 1</div>
           <div id="hitDisplay">Richtig: 0</div>
           <div id="errorDisplay">Fehler: 0</div>
         </div>
@@ -547,7 +554,7 @@
     const BALLOONS_PER_ROUND = 10;
     const MIN_CORRECT_BALLOONS = 3;
 
-    let totalRounds = 5;
+    let totalRounds = 1;
     let currentRound = 1;
     let minNumber = 1;
     let maxNumber = 100;
@@ -567,7 +574,7 @@
       maxNumber = Number(document.getElementById("maxInput").value);
       flightDuration = Number(document.getElementById("durationInput").value);
 
-      if (Number.isNaN(totalRounds)) totalRounds = 5;
+      if (Number.isNaN(totalRounds)) totalRounds = 1;
       if (Number.isNaN(minNumber)) minNumber = 1;
       if (Number.isNaN(maxNumber)) maxNumber = 100;
       if (Number.isNaN(flightDuration)) flightDuration = 24;
@@ -867,14 +874,14 @@
       pokemon.className = "pokemon-drop";
       pokemon.src = imageUrl;
       pokemon.alt = "Pokémon Nummer " + padPokemonNumber(pokemonNumber);
-      pokemon.style.left = (x - 56) + "px";
-      pokemon.style.top = (y - 56) + "px";
+      pokemon.style.left = (x - 75) + "px";
+      pokemon.style.top = (y - 75) + "px";
 
       document.getElementById("playfield").appendChild(pokemon);
 
       setTimeout(() => {
         pokemon.remove();
-      }, 1400);
+      }, 2300);
     }
 
     function showMessage(text, type) {
