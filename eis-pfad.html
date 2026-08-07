@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Eis-Pfad</title>
+
+  <meta name="theme-color" content="#111111">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      touch-action: manipulation;
+      user-select: none;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: white;
+      overflow: hidden;
+    }
+
+    .app {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 45%, rgba(25, 35, 45, 0.45), #000 70%),
+        #000;
+    }
+
+    .topbar {
+      position: absolute;
+      top: 10px;
+      left: 12px;
+      right: 12px;
+      z-index: 50;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      pointer-events: none;
+    }
+
+    .topbar > * {
+      pointer-events: auto;
+    }
+
+    .small-button {
+      font-size: 1.05rem;
+      border: none;
+      border-radius: 12px;
+      padding: 8px 16px;
+      color: white;
+      background: linear-gradient(#68c64a, #289313);
+      box-shadow: 0 4px 0 #17640d;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .small-button.orange {
+      background: linear-gradient(#ff8a4b, #d94a18);
+      box-shadow: 0 4px 0 #9c2e0c;
+    }
+
+    .stats {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      background: rgba(20, 20, 20, 0.78);
+      border-radius: 16px;
+      padding: 8px 16px;
+      font-size: 1.2rem;
+      color: #eee;
+    }
+
+    .title {
+      position: absolute;
+      top: 58px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 2.4rem;
+      font-weight: bold;
+      z-index: 20;
+      color: rgba(255, 255, 255, 0.92);
+    }
+
+    .message {
+      position: absolute;
+      top: 108px;
+      left: 50%;
+      transform: translateX(-50%);
+      min-height: 42px;
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      z-index: 60;
+      text-shadow: 0 3px 5px rgba(0, 0, 0, 0.9);
+    }
+
+    .message.good {
+      color: #58e058;
+    }
+
+    .message.bad {
+      color: #ff5555;
+    }
+
+    .scene {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 190px 1fr 190px;
+      align-items: center;
+      padding: 120px 22px 40px;
+      gap: 18px;
+    }
+
+    .pokemon-side {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      position: relative;
+      z-index: 10;
+    }
+
+    .pokemon {
+      width: 175px;
+      height: 175px;
+      object-fit: contain;
+      filter: drop-shadow(0 12px 14px rgba(0, 0, 0, 0.75));
+      transition: transform 0.3s;
+    }
+
+    .pokemon.left {
+      transform: scaleX(-1);
+    }
+
+    .pokemon.goal.crash {
+      animation: crashPokemon 1.3s ease-in forwards;
+    }
+
+    .board-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .board {
+      width: min(100%, 1120px);
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(7, 1fr);
+      gap: 18px 30px;
+    }
+
+    .cell {
+      height: 72px;
+      border: none;
+      cursor: pointer;
+      color: #111;
+      font-size: 1.5rem;
+      font-weight: bold;
+      position: relative;
+      background:
+        radial-gradient(circle at 50% 22%, rgba(255,255,255,0.75), rgba(255,255,255,0.25) 38%, rgba(255,255,255,0) 39%),
+        linear-gradient(#d8f8ff, #9bddeb 58%, #75cbdc);
+      border-radius: 48% 52% 45% 55% / 48% 45% 55% 52%;
+      box-shadow:
+        inset 0 -9px 0 rgba(43, 159, 180, 0.25),
+        inset 0 5px 0 rgba(255,255,255,0.55),
+        0 5px 0 #5bb6c9,
+        0 9px 12px rgba(0,0,0,0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cell::before {
+      content: "";
+      position: absolute;
+      inset: 6px 12px auto 12px;
+      height: 18px;
+      background: rgba(255,255,255,0.32);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .cell.reachable {
+      outline: 4px solid rgba(255, 216, 77, 0.70);
+      outline-offset: 3px;
+    }
+
+    .cell.correct {
+      background:
+        radial-gradient(circle at 50% 22%, rgba(255,255,255,0.45), rgba(255,255,255,0.08) 38%, rgba(255,255,255,0) 39%),
+        linear-gradient(#8ee878, #43ba34 58%, #238c18);
+      box-shadow:
+        inset 0 -9px 0 rgba(0, 80, 0, 0.22),
+        inset 0 5px 0 rgba(255,255,255,0.35),
+        0 5px 0 #17640d,
+        0 9px 12px rgba(0,0,0,0.35);
+      color: white;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+      animation: goodStep 0.35s;
+    }
+
+    .cell.wrong {
+      background:
+        radial-gradient(circle at 50% 22%, rgba(255,255,255,0.45), rgba(255,255,255,0.08) 38%, rgba(255,255,255,0) 39%),
+        linear-gradient(#ff8a8a, #e63636 58%, #a80e0e);
+      box-shadow:
+        inset 0 -9px 0 rgba(80, 0, 0, 0.22),
+        inset 0 5px 0 rgba(255,255,255,0.35),
+        0 5px 0 #6f0c0c,
+        0 9px 12px rgba(0,0,0,0.35);
+      color: white;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+      animation: wrongShake 0.35s;
+    }
+
+    .firework {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      z-index: 100;
+      pointer-events: none;
+      animation: firework 1s ease-out forwards;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 90;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.45);
+    }
+
+    .overlay.visible {
+      display: flex;
+    }
+
+    .result-box {
+      width: min(680px, calc(100vw - 36px));
+      background: #1d1d1d;
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: 0 8px 0 #000;
+      text-align: center;
+    }
+
+    .result-box h1 {
+      font-size: 3.4rem;
+      margin: 0 0 16px;
+    }
+
+    .result-box p {
+      font-size: 1.8rem;
+      margin: 12px 0 24px;
+    }
+
+    .big-button {
+      width: 100%;
+      font-size: 2.5rem;
+      border: none;
+      border-radius: 22px;
+      padding: 14px 0;
+      color: white;
+      background: linear-gradient(#68c64a, #289313);
+      box-shadow: 0 7px 0 #17640d;
+      cursor: pointer;
+    }
+
+    @keyframes goodStep {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes wrongShake {
+      0% { transform: translateX(0); }
+      20% { transform: translateX(-10px); }
+      40% { transform: translateX(10px); }
+      60% { transform: translateX(-7px); }
+      80% { transform: translateX(7px); }
+      100% { transform: translateX(0); }
+    }
+
+    @keyframes crashPokemon {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(120vh) rotate(160deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes firework {
+      0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(var(--dx), var(--dy)) scale(0.2);
+        opacity: 0;
+      }
+    }
+
+    @media (max-height: 720px) {
+      .title {
+        top: 48px;
+        font-size: 1.8rem;
+      }
+
+      .message {
+        top: 82px;
+        font-size: 1.45rem;
+      }
+
+      .small-button {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+      }
+
+      .stats {
+        font-size: 0.95rem;
+        padding: 6px 10px;
+        gap: 12px;
+      }
+
+      .scene {
+        grid-template-columns: 135px 1fr 135px;
+        padding: 92px 16px 24px;
+        gap: 10px;
+      }
+
+      .pokemon {
+        width: 128px;
+        height: 128px;
+      }
+
+      .board {
+        gap: 10px 18px;
+      }
+
+      .cell {
+        height: 54px;
+        font-size: 1.15rem;
+      }
+
+      .result-box h1 {
+        font-size: 2.6rem;
+      }
+
+      .result-box p {
+        font-size: 1.4rem;
+      }
+
+      .big-button {
+        font-size: 2rem;
+        padding: 10px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app">
+    <div class="topbar">
+      <a class="small-button orange" href="index.html">Zurück</a>
+
+      <div class="stats">
+        <div id="triesDisplay">Versuche: 3</div>
+        <div id="stepDisplay">Schritte: 0</div>
+      </div>
+
+      <button class="small-button" onclick="goFullscreen()">Vollbild</button>
+    </div>
+
+    <div class="title">Eis-Pfad</div>
+    <div id="message" class="message"></div>
+
+    <div class="scene">
+      <div class="pokemon-side">
+        <img id="leftPokemon" class="pokemon left" src="" alt="Start-Pokémon">
+      </div>
+
+      <div class="board-wrap">
+        <div id="board" class="board"></div>
+      </div>
+
+      <div class="pokemon-side">
+        <img id="rightPokemon" class="pokemon goal" src="" alt="Ziel-Pokémon">
+      </div>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div class="result-box">
+        <h1 id="resultTitle">Gewonnen!</h1>
+        <p id="resultText">Du hast den Eis-Pfad geschafft.</p>
+        <button class="big-button" onclick="startGame()">Noch einmal</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const ROWS = 7;
+    const COLS = 6;
+    const MAX_TRIES = 3;
+    const NUMBER_OF_POKEMON = 1025;
+
+    const MIN_WINDING_PATH_LENGTH = 12;
+    const MAX_GENERATION_ATTEMPTS = 2500;
+
+    let triesLeft = MAX_TRIES;
+    let currentRow = 0;
+    let currentCol = -1;
+    let startRow = 0;
+    let goalRow = 0;
+    let pathCells = [];
+    let gameOver = false;
+    let steps = 0;
+
+    function startGame() {
+      triesLeft = MAX_TRIES;
+      currentRow = 0;
+      currentCol = -1;
+      startRow = 0;
+      goalRow = 0;
+      pathCells = [];
+      gameOver = false;
+      steps = 0;
+
+      document.getElementById("overlay").classList.remove("visible");
+      document.getElementById("rightPokemon").classList.remove("crash");
+
+      setRandomPokemonImages();
+      generatePath();
+      buildBoard();
+      updateStats();
+      showMessage("Finde den richtigen Eis-Pfad!", "");
+      updateReachableCells();
+    }
+
+    function setRandomPokemonImages() {
+      const left = randomNumber(1, NUMBER_OF_POKEMON);
+      let right = randomNumber(1, NUMBER_OF_POKEMON);
+
+      while (right === left) {
+        right = randomNumber(1, NUMBER_OF_POKEMON);
+      }
+
+      document.getElementById("leftPokemon").src = getPokemonImageUrl(left);
+      document.getElementById("rightPokemon").src = getPokemonImageUrl(right);
+    }
+
+    function generatePath() {
+      let bestPath = null;
+      let bestStartRow = 0;
+      let bestGoalRow = 0;
+
+      for (let attempt = 0; attempt < MAX_GENERATION_ATTEMPTS; attempt++) {
+        const candidateStartRow = randomNumber(0, ROWS - 1);
+
+        pathCells = [
+          { row: candidateStartRow, col: 0 }
+        ];
+
+        const candidatePath = searchPath(candidateStartRow, 0, MIN_WINDING_PATH_LENGTH);
+
+        if (candidatePath && (!bestPath || candidatePath.length > bestPath.length)) {
+          bestPath = candidatePath;
+          bestStartRow = candidateStartRow;
+          bestGoalRow = candidatePath[candidatePath.length - 1].row;
+        }
+
+        if (bestPath && bestPath.length >= MIN_WINDING_PATH_LENGTH + 4) {
+          break;
+        }
+      }
+
+      if (bestPath) {
+        pathCells = bestPath;
+        startRow = bestStartRow;
+        goalRow = bestGoalRow;
+        currentRow = startRow;
+        currentCol = -1;
+      } else {
+        createFallbackPath();
+      }
+    }
+
+    function searchPath(row, col, minPathLength) {
+      if (col === COLS - 1) {
+        if (pathCells.length >= minPathLength) {
+          return pathCells.slice();
+        }
+
+        return null;
+      }
+
+      const candidates = getWindingMoveCandidates(row, col);
+
+      for (const candidate of candidates) {
+        if (
+          candidate.col === COLS - 1 &&
+          pathCells.length + 1 < minPathLength
+        ) {
+          continue;
+        }
+
+        if (canAddPathCell(candidate.row, candidate.col, row, col)) {
+          pathCells.push({
+            row: candidate.row,
+            col: candidate.col
+          });
+
+          const result = searchPath(candidate.row, candidate.col, minPathLength);
+
+          if (result) {
+            return result;
+          }
+
+          pathCells.pop();
+        }
+      }
+
+      return null;
+    }
+
+    function getWindingMoveCandidates(row, col) {
+      let candidates;
+
+      if (col === 0) {
+        candidates = [
+          { row: row, col: col + 1 }
+        ];
+      } else {
+        candidates = [
+          { row: row - 1, col: col },
+          { row: row + 1, col: col },
+          { row: row, col: col - 1 },
+          { row: row, col: col + 1 }
+        ];
+      }
+
+      return shuffle(candidates);
+    }
+
+    function canAddPathCell(row, col, previousRow, previousCol) {
+      if (row < 0 || row >= ROWS || col < 0 || col >= COLS) {
+        return false;
+      }
+
+      if (isPathCell(row, col)) {
+        return false;
+      }
+
+      // In der ersten Spalte darf nur die Startscholle richtig sein.
+      if (col === 0) {
+        return false;
+      }
+
+      const neighbours = [
+        { row: row - 1, col: col },
+        { row: row + 1, col: col },
+        { row: row, col: col - 1 },
+        { row: row, col: col + 1 }
+      ];
+
+      for (const neighbour of neighbours) {
+        const isPrevious =
+          neighbour.row === previousRow &&
+          neighbour.col === previousCol;
+
+        // Der Pfad darf sich nicht selbst berühren,
+        // außer am direkten Vorgängerfeld.
+        if (!isPrevious && isPathCell(neighbour.row, neighbour.col)) {
+          return false;
+        }
+      }
+
+      return true;
+    }
+
+    function createFallbackPath() {
+      pathCells = [];
+      startRow = randomNumber(0, ROWS - 1);
+      goalRow = startRow;
+
+      for (let col = 0; col < COLS; col++) {
+        pathCells.push({ row: startRow, col });
+      }
+
+      currentRow = startRow;
+      currentCol = -1;
+    }
+
+    function isPathCell(row, col) {
+      return pathCells.some(cell => cell.row === row && cell.col === col);
+    }
+
+    function buildBoard() {
+      const board = document.getElementById("board");
+      board.innerHTML = "";
+
+      for (let row = 0; row < ROWS; row++) {
+        for (let col = 0; col < COLS; col++) {
+          const cell = document.createElement("button");
+          const isCorrectPath = isPathCell(row, col);
+
+          cell.className = "cell";
+          cell.dataset.row = row;
+          cell.dataset.col = col;
+          cell.dataset.correct = isCorrectPath ? "true" : "false";
+
+          if (isCorrectPath) {
+            cell.textContent = createTrueTaskText();
+          } else {
+            cell.textContent = createFalseTaskText();
+          }
+
+          cell.addEventListener("click", () => handleCellClick(cell));
+          board.appendChild(cell);
+        }
+      }
+    }
+
+    function handleCellClick(cell) {
+      if (gameOver) {
+        return;
+      }
+
+      const row = Number(cell.dataset.row);
+      const col = Number(cell.dataset.col);
+
+      if (!isReachable(row, col)) {
+        return;
+      }
+
+      if (cell.classList.contains("correct")) {
+        return;
+      }
+
+      const isCorrect = cell.dataset.correct === "true";
+
+      if (isCorrect) {
+        cell.classList.add("correct");
+        currentRow = row;
+        currentCol = col;
+        steps++;
+
+        showMessage("Richtig!", "good");
+        updateStats();
+
+        if (col === COLS - 1 && row === goalRow) {
+          winGame();
+          return;
+        }
+
+        updateReachableCells();
+      } else {
+        if (!cell.classList.contains("wrong")) {
+          triesLeft--;
+          cell.classList.add("wrong");
+        }
+
+        showMessage("Falsche Scholle!", "bad");
+        updateStats();
+
+        if (triesLeft <= 0) {
+          loseGame();
+          return;
+        }
+
+        updateReachableCells();
+      }
+    }
+
+    function isReachable(row, col) {
+      // Am Anfang darf man überall in der ersten Spalte starten.
+      // Nur eine dieser Schollen ist richtig.
+      if (currentCol === -1) {
+        return col === 0;
+      }
+
+      const distance =
+        Math.abs(row - currentRow) +
+        Math.abs(col - currentCol);
+
+      return distance === 1;
+    }
+
+    function updateReachableCells() {
+      const cells = document.querySelectorAll(".cell");
+
+      cells.forEach(cell => {
+        const row = Number(cell.dataset.row);
+        const col = Number(cell.dataset.col);
+
+        cell.classList.remove("reachable");
+
+        if (
+          !gameOver &&
+          isReachable(row, col) &&
+          !cell.classList.contains("correct") &&
+          !cell.classList.contains("wrong")
+        ) {
+          cell.classList.add("reachable");
+        }
+      });
+    }
+
+    function winGame() {
+      gameOver = true;
+      updateReachableCells();
+
+      showMessage("Geschafft! 🎉", "good");
+      launchFireworks();
+
+      setTimeout(() => {
+        document.getElementById("resultTitle").textContent = "Gewonnen! 🎉";
+        document.getElementById("resultText").textContent =
+          "Du hast den Eis-Pfad mit " + triesLeft + " Versuch(en) übrig geschafft.";
+        document.getElementById("overlay").classList.add("visible");
+      }, 1400);
+    }
+
+    function loseGame() {
+      gameOver = true;
+      updateReachableCells();
+
+      showMessage("Keine Versuche mehr!", "bad");
+      document.getElementById("rightPokemon").classList.add("crash");
+
+      setTimeout(() => {
+        document.getElementById("resultTitle").textContent = "Verloren";
+        document.getElementById("resultText").textContent =
+          "Das Ziel-Pokémon ist abgestürzt. Versuch es noch einmal!";
+        document.getElementById("overlay").classList.add("visible");
+      }, 1300);
+    }
+
+    function createTrueTaskText() {
+      const usePlus = Math.random() < 0.5;
+
+      if (usePlus) {
+        const a = randomNumber(1, 20);
+        const b = randomNumber(1, 20);
+        return a + " + " + b + " = " + (a + b);
+      }
+
+      const a = randomNumber(1, 40);
+      const b = randomNumber(0, a);
+      return a + " - " + b + " = " + (a - b);
+    }
+
+    function createFalseTaskText() {
+      const usePlus = Math.random() < 0.5;
+
+      let a;
+      let b;
+      let correct;
+      let shown;
+
+      if (usePlus) {
+        a = randomNumber(1, 20);
+        b = randomNumber(1, 20);
+        correct = a + b;
+      } else {
+        a = randomNumber(1, 40);
+        b = randomNumber(0, a);
+        correct = a - b;
+      }
+
+      do {
+        shown = correct + randomNumber(-5, 5);
+      } while (shown === correct || shown < 0);
+
+      if (usePlus) {
+        return a + " + " + b + " = " + shown;
+      }
+
+      return a + " - " + b + " = " + shown;
+    }
+
+    function updateStats() {
+      document.getElementById("triesDisplay").textContent =
+        "Versuche: " + triesLeft;
+
+      document.getElementById("stepDisplay").textContent =
+        "Schritte: " + steps;
+    }
+
+    function showMessage(text, type) {
+      const message = document.getElementById("message");
+      message.textContent = text;
+      message.className = "message";
+
+      if (type) {
+        message.classList.add(type);
+      }
+
+      clearTimeout(showMessage.timeoutId);
+      showMessage.timeoutId = setTimeout(() => {
+        if (!gameOver) {
+          message.textContent = "";
+          message.className = "message";
+        }
+      }, 1200);
+    }
+
+    function launchFireworks() {
+      for (let burst = 0; burst < 6; burst++) {
+        setTimeout(() => {
+          createFireworkBurst(
+            randomNumber(220, window.innerWidth - 220),
+            randomNumber(120, window.innerHeight - 180)
+          );
+        }, burst * 180);
+      }
+    }
+
+    function createFireworkBurst(x, y) {
+      const colors = ["#ff5555", "#ffd84d", "#58e058", "#39b5e8", "#c045b7", "#ffffff"];
+
+      for (let i = 0; i < 28; i++) {
+        const spark = document.createElement("div");
+        spark.className = "firework";
+
+        const angle = (Math.PI * 2 * i) / 28;
+        const distance = randomNumber(70, 160);
+
+        spark.style.left = x + "px";
+        spark.style.top = y + "px";
+        spark.style.background = colors[randomNumber(0, colors.length - 1)];
+        spark.style.setProperty("--dx", Math.cos(angle) * distance + "px");
+        spark.style.setProperty("--dy", Math.sin(angle) * distance + "px");
+
+        document.querySelector(".app").appendChild(spark);
+
+        setTimeout(() => {
+          spark.remove();
+        }, 1100);
+      }
+    }
+
+    function padPokemonNumber(pokemonNumber) {
+      return String(pokemonNumber).padStart(3, "0");
+    }
+
+    function getPokemonImageUrl(pokemonNumber) {
+      return "https://db.pokemongohub.net/images/official/full/" +
+        padPokemonNumber(pokemonNumber) +
+        ".webp";
+    }
+
+    function randomNumber(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = randomNumber(0, i);
+        const temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+      }
+
+      return array;
+    }
+
+    function goFullscreen() {
+      const element = document.documentElement;
+
+      if (element.requestFullscreen) {
+        element.requestFullscreen();
+      } else if (element.webkitRequestFullscreen) {
+        element.webkitRequestFullscreen();
+      }
+    }
+
+    window.onload = startGame;
+  </script>
+</body>
+</html>
