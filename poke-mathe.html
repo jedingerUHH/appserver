@@ -497,7 +497,6 @@
     <div id="setupScreen" class="setup">
       <div class="topbar setup-topbar">
         <a class="small-button orange" href="index.html">Zurück</a>
-        <button class="small-button" onclick="showCollection()">Sammlung</button>
         <button class="small-button" onclick="goFullscreen()">Vollbild</button>
       </div>
 
@@ -579,23 +578,6 @@
       <button class="start-button" onclick="showSetup()">Neue Runde</button>
     </div>
 
-    <div id="collectionScreen" class="collection-screen hidden">
-      <div class="topbar setup-topbar">
-        <button class="small-button" onclick="showSetup()">Zurück</button>
-        <button class="small-button" onclick="goFullscreen()">Vollbild</button>
-      </div>
-
-      <h1>Meine Sammlung</h1>
-      <p id="collectionCount">0 von 1025 Pokémon gesammelt</p>
-
-      <div id="collectionGrid" class="collection-grid"></div>
-
-      <div class="collection-actions">
-        <button class="small-button orange" onclick="clearCollection()">Sammlung löschen</button>
-        <button class="small-button" onclick="showSetup()">Weiter üben</button>
-      </div>
-    </div>
-
   </div>
 
   <script>
@@ -665,7 +647,6 @@
 
       document.getElementById("setupScreen").classList.add("hidden");
       document.getElementById("resultScreen").classList.add("hidden");
-      document.getElementById("collectionScreen").classList.add("hidden");
       document.getElementById("gameScreen").classList.remove("hidden");
 
       newTask();
@@ -674,7 +655,6 @@
     function showSetup() {
       document.getElementById("resultScreen").classList.add("hidden");
       document.getElementById("gameScreen").classList.add("hidden");
-      document.getElementById("collectionScreen").classList.add("hidden");
       document.getElementById("setupScreen").classList.remove("hidden");
     }
 
@@ -911,58 +891,7 @@
         localStorage.setItem(COLLECTION_STORAGE_KEY, JSON.stringify(collection));
       }
     }
-
-    function showCollection() {
-      document.getElementById("setupScreen").classList.add("hidden");
-      document.getElementById("gameScreen").classList.add("hidden");
-      document.getElementById("resultScreen").classList.add("hidden");
-      document.getElementById("collectionScreen").classList.remove("hidden");
-
-      renderCollection();
-    }
-
-    function renderCollection() {
-      const collection = getPokemonCollection();
-      const grid = document.getElementById("collectionGrid");
-      const count = document.getElementById("collectionCount");
-
-      count.textContent = collection.length + " von 1025 Pokémon gesammelt";
-      grid.innerHTML = "";
-
-      if (collection.length === 0) {
-        const empty = document.createElement("div");
-        empty.className = "empty-collection";
-        empty.textContent = "Noch keine Pokémon gesammelt.";
-        grid.appendChild(empty);
-        return;
-      }
-
-      collection.forEach(pokemonNumber => {
-        const item = document.createElement("div");
-        item.className = "collection-item";
-
-        const image = document.createElement("img");
-        image.src = getPokemonImageUrl(pokemonNumber);
-        image.alt = "Pokémon Nummer " + padPokemonNumber(pokemonNumber);
-
-        const label = document.createElement("div");
-        label.className = "collection-number";
-        label.textContent = "#" + padPokemonNumber(pokemonNumber);
-
-        item.appendChild(image);
-        item.appendChild(label);
-        grid.appendChild(item);
-      });
-    }
-
-    function clearCollection() {
-      const reallyDelete = confirm("Soll die Pokémon-Sammlung wirklich gelöscht werden?");
-
-      if (!reallyDelete) {
-        return;
-      }
-
-      localStorage.removeItem(COLLECTION_STORAGE_KEY);
+localStorage.removeItem(COLLECTION_STORAGE_KEY);
       renderCollection();
     }
 

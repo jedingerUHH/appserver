@@ -25,6 +25,10 @@
       overflow: hidden;
     }
 
+    .hidden {
+      display: none !important;
+    }
+
     .app {
       width: 100vw;
       height: 100vh;
@@ -35,20 +39,45 @@
         #000;
     }
 
-    .topbar {
+    .setup {
+      width: min(980px, calc(100vw - 32px));
+      margin: 24px auto;
+      background: #1d1d1d;
+      border-radius: 28px;
+      padding: 26px;
+      box-shadow: 0 8px 0 #000;
+      text-align: center;
+    }
+
+    .setup h1 {
+      font-size: 4rem;
+      margin: 0 0 10px;
+    }
+
+    .setup p {
+      font-size: 1.4rem;
+      color: #ddd;
+      margin: 0 0 22px;
+    }
+
+    .topbar,
+    .game-topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .game-topbar {
       position: absolute;
       top: 10px;
       left: 12px;
       right: 12px;
       z-index: 50;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
       pointer-events: none;
     }
 
-    .topbar > * {
+    .game-topbar > * {
       pointer-events: auto;
     }
 
@@ -68,6 +97,53 @@
     .small-button.orange {
       background: linear-gradient(#ff8a4b, #d94a18);
       box-shadow: 0 4px 0 #9c2e0c;
+    }
+
+    .difficulty-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin: 22px 0;
+    }
+
+    .difficulty-button {
+      min-height: 180px;
+      border: none;
+      border-radius: 28px;
+      padding: 18px;
+      color: white;
+      background: linear-gradient(#39b5e8, #0097cf);
+      box-shadow: 0 8px 0 #006b93;
+      cursor: pointer;
+    }
+
+    .difficulty-button.selected {
+      background: linear-gradient(#c045b7, #9d168e);
+      box-shadow: 0 8px 0 #6f0c66;
+    }
+
+    .difficulty-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .difficulty-text {
+      font-size: 1.1rem;
+      line-height: 1.35;
+    }
+
+    .start-button,
+    .big-button {
+      width: 100%;
+      font-size: 2.8rem;
+      border: none;
+      border-radius: 22px;
+      padding: 14px 0;
+      color: white;
+      background: linear-gradient(#68c64a, #289313);
+      box-shadow: 0 7px 0 #17640d;
+      cursor: pointer;
     }
 
     .stats {
@@ -138,7 +214,6 @@
       height: 175px;
       object-fit: contain;
       filter: drop-shadow(0 12px 14px rgba(0, 0, 0, 0.75));
-      transition: transform 0.3s;
     }
 
     .pokemon.left {
@@ -147,6 +222,22 @@
 
     .pokemon.goal.crash {
       animation: crashPokemon 1.3s ease-in forwards;
+    }
+
+    .runner {
+      position: absolute;
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+      z-index: 80;
+      pointer-events: none;
+      filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.8));
+      transition: left 0.42s ease, top 0.42s ease, transform 0.25s ease;
+      transform: translate(-50%, -50%) scaleX(-1);
+    }
+
+    .runner.jump {
+      transform: translate(-50%, -58%) scaleX(-1) scale(1.08);
     }
 
     .board-wrap {
@@ -160,8 +251,6 @@
     .board {
       width: min(100%, 1120px);
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      grid-template-rows: repeat(7, 1fr);
       gap: 18px 30px;
     }
 
@@ -273,16 +362,10 @@
       margin: 12px 0 24px;
     }
 
-    .big-button {
-      width: 100%;
-      font-size: 2.5rem;
-      border: none;
-      border-radius: 22px;
-      padding: 14px 0;
-      color: white;
-      background: linear-gradient(#68c64a, #289313);
-      box-shadow: 0 7px 0 #17640d;
-      cursor: pointer;
+    .result-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
     }
 
     @keyframes goodStep {
@@ -323,6 +406,39 @@
     }
 
     @media (max-height: 720px) {
+      .setup {
+        margin: 10px auto;
+        padding: 18px;
+      }
+
+      .setup h1 {
+        font-size: 2.8rem;
+      }
+
+      .setup p {
+        font-size: 1.1rem;
+        margin-bottom: 14px;
+      }
+
+      .difficulty-grid {
+        gap: 12px;
+        margin: 14px 0;
+      }
+
+      .difficulty-button {
+        min-height: 132px;
+        border-radius: 20px;
+        padding: 12px;
+      }
+
+      .difficulty-title {
+        font-size: 1.8rem;
+      }
+
+      .difficulty-text {
+        font-size: 0.9rem;
+      }
+
       .title {
         top: 48px;
         font-size: 1.8rem;
@@ -355,6 +471,11 @@
         height: 128px;
       }
 
+      .runner {
+        width: 54px;
+        height: 54px;
+      }
+
       .board {
         gap: 10px 18px;
       }
@@ -373,7 +494,7 @@
       }
 
       .big-button {
-        font-size: 2rem;
+        font-size: 1.8rem;
         padding: 10px 0;
       }
     }
@@ -382,53 +503,126 @@
 
 <body>
   <div class="app">
-    <div class="topbar">
-      <a class="small-button orange" href="index.html">Zurück</a>
 
-      <div class="stats">
-        <div id="triesDisplay">Versuche: 3</div>
-        <div id="stepDisplay">Schritte: 0</div>
+    <section id="setupScreen" class="setup">
+      <div class="topbar">
+        <a class="small-button orange" href="index.html">Zurück</a>
+        <button class="small-button" onclick="goFullscreen()">Vollbild</button>
       </div>
 
-      <button class="small-button" onclick="goFullscreen()">Vollbild</button>
-    </div>
+      <h1>Eis-Pfad</h1>
+      <p>Finde den einzigen richtigen Weg über die Eisschollen.</p>
 
-    <div class="title">Eis-Pfad</div>
-    <div id="message" class="message"></div>
+      <div class="difficulty-grid">
+        <button id="easyButton" class="difficulty-button" onclick="selectDifficulty('easy')">
+          <div class="difficulty-title">Leicht</div>
+          <div class="difficulty-text">Kürzere Wege, mehr Versuche, einfachere Aufgaben</div>
+        </button>
 
-    <div class="scene">
-      <div class="pokemon-side">
-        <img id="leftPokemon" class="pokemon left" src="" alt="Start-Pokémon">
+        <button id="mediumButton" class="difficulty-button selected" onclick="selectDifficulty('medium')">
+          <div class="difficulty-title">Mittel</div>
+          <div class="difficulty-text">Gemischte Wege, 3 Versuche, normale Aufgaben</div>
+        </button>
+
+        <button id="hardButton" class="difficulty-button" onclick="selectDifficulty('hard')">
+          <div class="difficulty-title">Schwer</div>
+          <div class="difficulty-text">Längere Wege, weniger Versuche, schwerere Aufgaben</div>
+        </button>
       </div>
 
-      <div class="board-wrap">
-        <div id="board" class="board"></div>
+      <button class="start-button" onclick="startGame()">Start</button>
+    </section>
+
+    <section id="gameScreen" class="hidden">
+      <div class="game-topbar">
+        <button class="small-button orange" onclick="showSetup()">Zurück</button>
+
+        <div class="stats">
+          <div id="difficultyDisplay">Mittel</div>
+          <div id="triesDisplay">Versuche: 3</div>
+          <div id="stepDisplay">Schritte: 0</div>
+        </div>
+
+        <button class="small-button" onclick="goFullscreen()">Vollbild</button>
       </div>
 
-      <div class="pokemon-side">
-        <img id="rightPokemon" class="pokemon goal" src="" alt="Ziel-Pokémon">
+      <div class="title">Eis-Pfad</div>
+      <div id="message" class="message"></div>
+
+      <div class="scene">
+        <div class="pokemon-side">
+          <img id="leftPokemon" class="pokemon left" src="" alt="Start-Pokémon">
+        </div>
+
+        <div class="board-wrap">
+          <div id="board" class="board"></div>
+        </div>
+
+        <div class="pokemon-side">
+          <img id="rightPokemon" class="pokemon goal" src="" alt="Ziel-Pokémon">
+        </div>
       </div>
-    </div>
+
+      <img id="runnerPokemon" class="runner hidden" src="" alt="Laufendes Pokémon">
+    </section>
 
     <div id="overlay" class="overlay">
       <div class="result-box">
         <h1 id="resultTitle">Gewonnen!</h1>
         <p id="resultText">Du hast den Eis-Pfad geschafft.</p>
-        <button class="big-button" onclick="startGame()">Noch einmal</button>
+
+        <div class="result-actions">
+          <button class="big-button" onclick="startGame()">Nochmal</button>
+          <button class="big-button" onclick="showSetup()">Einstellungen</button>
+        </div>
       </div>
     </div>
   </div>
 
   <script>
-    const ROWS = 7;
-    const COLS = 6;
-    const MAX_TRIES = 3;
+    const COLLECTION_STORAGE_KEY = "pokemonCollection";
     const NUMBER_OF_POKEMON = 1025;
 
-    const MIN_WINDING_PATH_LENGTH = 12;
-    const MAX_GENERATION_ATTEMPTS = 2500;
+    const DIFFICULTIES = {
+      easy: {
+        label: "Leicht",
+        rows: 5,
+        cols: 5,
+        tries: 5,
+        pathMin: 5,
+        pathMax: 9,
+        plusMax: 10,
+        minusMax: 20
+      },
+      medium: {
+        label: "Mittel",
+        rows: 6,
+        cols: 6,
+        tries: 3,
+        pathMin: 7,
+        pathMax: 13,
+        plusMax: 20,
+        minusMax: 40
+      },
+      hard: {
+        label: "Schwer",
+        rows: 7,
+        cols: 6,
+        tries: 3,
+        pathMin: 10,
+        pathMax: 18,
+        plusMax: 30,
+        minusMax: 60
+      }
+    };
 
-    let triesLeft = MAX_TRIES;
+    let selectedDifficulty = "medium";
+    let config = DIFFICULTIES[selectedDifficulty];
+
+    let rows = config.rows;
+    let cols = config.cols;
+    let triesLeft = config.tries;
+
     let currentRow = 0;
     let currentCol = -1;
     let startRow = 0;
@@ -437,8 +631,32 @@
     let gameOver = false;
     let steps = 0;
 
+    let leftPokemonNumber = 1;
+    let rightPokemonNumber = 7;
+
+    function selectDifficulty(difficulty) {
+      selectedDifficulty = difficulty;
+      config = DIFFICULTIES[selectedDifficulty];
+
+      document.getElementById("easyButton").classList.remove("selected");
+      document.getElementById("mediumButton").classList.remove("selected");
+      document.getElementById("hardButton").classList.remove("selected");
+
+      if (difficulty === "easy") {
+        document.getElementById("easyButton").classList.add("selected");
+      } else if (difficulty === "medium") {
+        document.getElementById("mediumButton").classList.add("selected");
+      } else {
+        document.getElementById("hardButton").classList.add("selected");
+      }
+    }
+
     function startGame() {
-      triesLeft = MAX_TRIES;
+      config = DIFFICULTIES[selectedDifficulty];
+      rows = config.rows;
+      cols = config.cols;
+      triesLeft = config.tries;
+
       currentRow = 0;
       currentCol = -1;
       startRow = 0;
@@ -447,8 +665,11 @@
       gameOver = false;
       steps = 0;
 
+      document.getElementById("setupScreen").classList.add("hidden");
+      document.getElementById("gameScreen").classList.remove("hidden");
       document.getElementById("overlay").classList.remove("visible");
       document.getElementById("rightPokemon").classList.remove("crash");
+      document.getElementById("runnerPokemon").classList.add("hidden");
 
       setRandomPokemonImages();
       generatePath();
@@ -458,39 +679,58 @@
       updateReachableCells();
     }
 
-    function setRandomPokemonImages() {
-      const left = randomNumber(1, NUMBER_OF_POKEMON);
-      let right = randomNumber(1, NUMBER_OF_POKEMON);
+    function showSetup() {
+      gameOver = true;
 
-      while (right === left) {
-        right = randomNumber(1, NUMBER_OF_POKEMON);
+      document.getElementById("gameScreen").classList.add("hidden");
+      document.getElementById("overlay").classList.remove("visible");
+      document.getElementById("setupScreen").classList.remove("hidden");
+      document.getElementById("runnerPokemon").classList.add("hidden");
+    }
+
+    function setRandomPokemonImages() {
+      leftPokemonNumber = randomNumber(1, NUMBER_OF_POKEMON);
+      rightPokemonNumber = randomNumber(1, NUMBER_OF_POKEMON);
+
+      while (rightPokemonNumber === leftPokemonNumber) {
+        rightPokemonNumber = randomNumber(1, NUMBER_OF_POKEMON);
       }
 
-      document.getElementById("leftPokemon").src = getPokemonImageUrl(left);
-      document.getElementById("rightPokemon").src = getPokemonImageUrl(right);
+      const leftUrl = getPokemonImageUrl(leftPokemonNumber);
+      const rightUrl = getPokemonImageUrl(rightPokemonNumber);
+
+      document.getElementById("leftPokemon").src = leftUrl;
+      document.getElementById("rightPokemon").src = rightUrl;
+
+      const runner = document.getElementById("runnerPokemon");
+      runner.src = leftUrl;
     }
 
     function generatePath() {
+      const targetLength = randomNumber(config.pathMin, config.pathMax);
+      const maxLength = Math.min(rows * cols, targetLength + randomNumber(0, 4));
+      const maxAttempts = 2500;
+
       let bestPath = null;
       let bestStartRow = 0;
       let bestGoalRow = 0;
 
-      for (let attempt = 0; attempt < MAX_GENERATION_ATTEMPTS; attempt++) {
-        const candidateStartRow = randomNumber(0, ROWS - 1);
+      for (let attempt = 0; attempt < maxAttempts; attempt++) {
+        const candidateStartRow = randomNumber(0, rows - 1);
 
         pathCells = [
           { row: candidateStartRow, col: 0 }
         ];
 
-        const candidatePath = searchPath(candidateStartRow, 0, MIN_WINDING_PATH_LENGTH);
+        const candidatePath = searchPath(candidateStartRow, 0, targetLength, maxLength);
 
-        if (candidatePath && (!bestPath || candidatePath.length > bestPath.length)) {
+        if (candidatePath && (!bestPath || scorePath(candidatePath, targetLength) > scorePath(bestPath, targetLength))) {
           bestPath = candidatePath;
           bestStartRow = candidateStartRow;
           bestGoalRow = candidatePath[candidatePath.length - 1].row;
         }
 
-        if (bestPath && bestPath.length >= MIN_WINDING_PATH_LENGTH + 4) {
+        if (bestPath && bestPath.length >= targetLength) {
           break;
         }
       }
@@ -506,21 +746,57 @@
       }
     }
 
-    function searchPath(row, col, minPathLength) {
-      if (col === COLS - 1) {
-        if (pathCells.length >= minPathLength) {
+    function scorePath(path, targetLength) {
+      const lengthScore = 100 - Math.abs(path.length - targetLength);
+      const verticalMoves = countVerticalMoves(path);
+      const backMoves = countBackMoves(path);
+
+      return lengthScore + verticalMoves * 3 + backMoves * 2;
+    }
+
+    function countVerticalMoves(path) {
+      let count = 0;
+
+      for (let i = 1; i < path.length; i++) {
+        if (path[i].row !== path[i - 1].row) {
+          count++;
+        }
+      }
+
+      return count;
+    }
+
+    function countBackMoves(path) {
+      let count = 0;
+
+      for (let i = 1; i < path.length; i++) {
+        if (path[i].col < path[i - 1].col) {
+          count++;
+        }
+      }
+
+      return count;
+    }
+
+    function searchPath(row, col, targetLength, maxLength) {
+      if (pathCells.length > maxLength) {
+        return null;
+      }
+
+      if (col === cols - 1) {
+        if (pathCells.length >= targetLength) {
           return pathCells.slice();
         }
 
         return null;
       }
 
-      const candidates = getWindingMoveCandidates(row, col);
+      const candidates = getMoveCandidates(row, col);
 
       for (const candidate of candidates) {
         if (
-          candidate.col === COLS - 1 &&
-          pathCells.length + 1 < minPathLength
+          candidate.col === cols - 1 &&
+          pathCells.length + 1 < targetLength
         ) {
           continue;
         }
@@ -531,7 +807,7 @@
             col: candidate.col
           });
 
-          const result = searchPath(candidate.row, candidate.col, minPathLength);
+          const result = searchPath(candidate.row, candidate.col, targetLength, maxLength);
 
           if (result) {
             return result;
@@ -544,7 +820,7 @@
       return null;
     }
 
-    function getWindingMoveCandidates(row, col) {
+    function getMoveCandidates(row, col) {
       let candidates;
 
       if (col === 0) {
@@ -552,19 +828,30 @@
           { row: row, col: col + 1 }
         ];
       } else {
-        candidates = [
-          { row: row - 1, col: col },
-          { row: row + 1, col: col },
-          { row: row, col: col - 1 },
-          { row: row, col: col + 1 }
-        ];
+        const preferStraight = Math.random() < 0.42;
+
+        if (preferStraight) {
+          candidates = [
+            { row: row, col: col + 1 },
+            { row: row - 1, col: col },
+            { row: row + 1, col: col },
+            { row: row, col: col - 1 }
+          ];
+        } else {
+          candidates = [
+            { row: row - 1, col: col },
+            { row: row + 1, col: col },
+            { row: row, col: col - 1 },
+            { row: row, col: col + 1 }
+          ];
+        }
       }
 
       return shuffle(candidates);
     }
 
     function canAddPathCell(row, col, previousRow, previousCol) {
-      if (row < 0 || row >= ROWS || col < 0 || col >= COLS) {
+      if (row < 0 || row >= rows || col < 0 || col >= cols) {
         return false;
       }
 
@@ -572,7 +859,7 @@
         return false;
       }
 
-      // In der ersten Spalte darf nur die Startscholle richtig sein.
+      // In der ersten Spalte darf nur eine einzige richtige Startscholle liegen.
       if (col === 0) {
         return false;
       }
@@ -589,8 +876,6 @@
           neighbour.row === previousRow &&
           neighbour.col === previousCol;
 
-        // Der Pfad darf sich nicht selbst berühren,
-        // außer am direkten Vorgängerfeld.
         if (!isPrevious && isPathCell(neighbour.row, neighbour.col)) {
           return false;
         }
@@ -601,10 +886,10 @@
 
     function createFallbackPath() {
       pathCells = [];
-      startRow = randomNumber(0, ROWS - 1);
+      startRow = randomNumber(0, rows - 1);
       goalRow = startRow;
 
-      for (let col = 0; col < COLS; col++) {
+      for (let col = 0; col < cols; col++) {
         pathCells.push({ row: startRow, col });
       }
 
@@ -620,8 +905,11 @@
       const board = document.getElementById("board");
       board.innerHTML = "";
 
-      for (let row = 0; row < ROWS; row++) {
-        for (let col = 0; col < COLS; col++) {
+      board.style.gridTemplateColumns = "repeat(" + cols + ", 1fr)";
+      board.style.gridTemplateRows = "repeat(" + rows + ", 1fr)";
+
+      for (let row = 0; row < rows; row++) {
+        for (let col = 0; col < cols; col++) {
           const cell = document.createElement("button");
           const isCorrectPath = isPathCell(row, col);
 
@@ -666,10 +954,12 @@
         currentCol = col;
         steps++;
 
+        moveRunnerToCell(cell);
+
         showMessage("Richtig!", "good");
         updateStats();
 
-        if (col === COLS - 1 && row === goalRow) {
+        if (col === cols - 1 && row === goalRow) {
           winGame();
           return;
         }
@@ -693,9 +983,22 @@
       }
     }
 
+    function moveRunnerToCell(cell) {
+      const runner = document.getElementById("runnerPokemon");
+      const rect = cell.getBoundingClientRect();
+
+      runner.classList.remove("hidden");
+      runner.style.left = (rect.left + rect.width / 2) + "px";
+      runner.style.top = (rect.top + rect.height / 2) + "px";
+
+      runner.classList.add("jump");
+
+      setTimeout(() => {
+        runner.classList.remove("jump");
+      }, 260);
+    }
+
     function isReachable(row, col) {
-      // Am Anfang darf man überall in der ersten Spalte starten.
-      // Nur eine dieser Schollen ist richtig.
       if (currentCol === -1) {
         return col === 0;
       }
@@ -731,13 +1034,15 @@
       gameOver = true;
       updateReachableCells();
 
+      savePokemonToCollection(rightPokemonNumber);
+
       showMessage("Geschafft! 🎉", "good");
       launchFireworks();
 
       setTimeout(() => {
         document.getElementById("resultTitle").textContent = "Gewonnen! 🎉";
         document.getElementById("resultText").textContent =
-          "Du hast den Eis-Pfad mit " + triesLeft + " Versuch(en) übrig geschafft.";
+          "Du hast den Eis-Pfad geschafft. Das Ziel-Pokémon wurde gesammelt!";
         document.getElementById("overlay").classList.add("visible");
       }, 1400);
     }
@@ -761,12 +1066,12 @@
       const usePlus = Math.random() < 0.5;
 
       if (usePlus) {
-        const a = randomNumber(1, 20);
-        const b = randomNumber(1, 20);
+        const a = randomNumber(1, config.plusMax);
+        const b = randomNumber(1, config.plusMax);
         return a + " + " + b + " = " + (a + b);
       }
 
-      const a = randomNumber(1, 40);
+      const a = randomNumber(1, config.minusMax);
       const b = randomNumber(0, a);
       return a + " - " + b + " = " + (a - b);
     }
@@ -780,11 +1085,11 @@
       let shown;
 
       if (usePlus) {
-        a = randomNumber(1, 20);
-        b = randomNumber(1, 20);
+        a = randomNumber(1, config.plusMax);
+        b = randomNumber(1, config.plusMax);
         correct = a + b;
       } else {
-        a = randomNumber(1, 40);
+        a = randomNumber(1, config.minusMax);
         b = randomNumber(0, a);
         correct = a - b;
       }
@@ -801,6 +1106,8 @@
     }
 
     function updateStats() {
+      document.getElementById("difficultyDisplay").textContent = config.label;
+
       document.getElementById("triesDisplay").textContent =
         "Versuche: " + triesLeft;
 
@@ -827,7 +1134,7 @@
     }
 
     function launchFireworks() {
-      for (let burst = 0; burst < 6; burst++) {
+      for (let burst = 0; burst < 7; burst++) {
         setTimeout(() => {
           createFireworkBurst(
             randomNumber(220, window.innerWidth - 220),
@@ -840,11 +1147,11 @@
     function createFireworkBurst(x, y) {
       const colors = ["#ff5555", "#ffd84d", "#58e058", "#39b5e8", "#c045b7", "#ffffff"];
 
-      for (let i = 0; i < 28; i++) {
+      for (let i = 0; i < 30; i++) {
         const spark = document.createElement("div");
         spark.className = "firework";
 
-        const angle = (Math.PI * 2 * i) / 28;
+        const angle = (Math.PI * 2 * i) / 30;
         const distance = randomNumber(70, 160);
 
         spark.style.left = x + "px";
@@ -871,6 +1178,38 @@
         ".webp";
     }
 
+    function getPokemonCollection() {
+      const saved = localStorage.getItem(COLLECTION_STORAGE_KEY);
+
+      if (!saved) {
+        return [];
+      }
+
+      try {
+        const parsed = JSON.parse(saved);
+
+        if (Array.isArray(parsed)) {
+          return parsed
+            .map(Number)
+            .filter(number => Number.isInteger(number) && number >= 1 && number <= NUMBER_OF_POKEMON);
+        }
+
+        return [];
+      } catch {
+        return [];
+      }
+    }
+
+    function savePokemonToCollection(pokemonNumber) {
+      const collection = getPokemonCollection();
+
+      if (!collection.includes(pokemonNumber)) {
+        collection.push(pokemonNumber);
+        collection.sort((a, b) => a - b);
+        localStorage.setItem(COLLECTION_STORAGE_KEY, JSON.stringify(collection));
+      }
+    }
+
     function randomNumber(min, max) {
       return Math.floor(Math.random() * (max - min + 1)) + min;
     }
@@ -895,8 +1234,6 @@
         element.webkitRequestFullscreen();
       }
     }
-
-    window.onload = startGame;
   </script>
 </body>
 </html>
