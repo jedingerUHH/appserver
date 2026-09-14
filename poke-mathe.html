@@ -882,18 +882,15 @@
       }
     }
 
-    function savePokemonToCollection(pokemonNumber) {
-      const collection = getPokemonCollection();
+function savePokemonToCollection(pokemonNumber) {
+  const collection = getPokemonCollection();
 
-      if (!collection.includes(pokemonNumber)) {
-        collection.push(pokemonNumber);
-        collection.sort((a, b) => a - b);
-        localStorage.setItem(COLLECTION_STORAGE_KEY, JSON.stringify(collection));
-      }
-    }
-localStorage.removeItem(COLLECTION_STORAGE_KEY);
-      renderCollection();
-    }
+  if (!collection.includes(pokemonNumber)) {
+    collection.push(pokemonNumber);
+    collection.sort((a, b) => a - b);
+    localStorage.setItem(COLLECTION_STORAGE_KEY, JSON.stringify(collection));
+  }
+}
 
     function goFullscreen() {
       const element = document.documentElement;
