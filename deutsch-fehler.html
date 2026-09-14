@@ -854,7 +854,15 @@
         }
 
         const rawText = await response.text();
-        const data = JSON.parse(rawText);
+
+        // Akzeptiert UTF-8 mit BOM und versehentliche letzte Kommata
+        // vor einer schließenden ] oder }.
+        const cleanedText = rawText
+          .replace(/^\uFEFF/, "")
+          .trim()
+          .replace(/,\s*([}\]])/g, "$1");
+
+        const data = JSON.parse(cleanedText);
         const tasks = normalizeLoadedTasks(data);
 
         if (tasks.length === 0) {
@@ -868,18 +876,31 @@
         console.error(error);
         allTasks = FALLBACK_TASKS;
         textFileLoaded = false;
-        setLoadStatus("Textdatei nicht geladen. Fallback-Aufgaben aktiv. Über GitHub Pages funktioniert das Laden normalerweise.", true);
+        setLoadStatus(
+          "Textdatei konnte nicht geladen werden: " + error.message +
+          ". Fallback-Aufgaben sind aktiv.",
+          true
+        );
       }
 
       document.getElementById("startButton").disabled = false;
     }
 
     function normalizeLoadedTasks(data) {
-      if (!data || !Array.isArray(data.tasks)) {
+      // Unterstützt beide Formate:
+      // 1) [ { ... }, { ... } ]
+      // 2) { "tasks": [ { ... }, { ... } ] }
+      let rawTasks = [];
+
+      if (Array.isArray(data)) {
+        rawTasks = data;
+      } else if (data && Array.isArray(data.tasks)) {
+        rawTasks = data.tasks;
+      } else {
         return [];
       }
 
-      return data.tasks
+      return rawTasks
         .map((task, index) => normalizeTask(task, index))
         .filter(task => task && task.words.length > 0 && task.words.some(word => word.wrong));
     }
