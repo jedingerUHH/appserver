@@ -1,0 +1,782 @@
+{
+  "version": "deutsch-fehler-texte-v001",
+  "description": "Aufgabensammlung für Fehler-Finder. shown enthält die sichtbaren Wörter; corrections ordnet Wortpositionen (0-basiert) die korrekte Schreibweise zu.",
+  "tasks": [
+    {
+      "level": 1,
+      "topic": "Rechtschreibung",
+      "shown": "Lisa färt gerne Fahrrad. Sie had sich letzte Woche ein neues Rennrat gekauft.",
+      "corrections": {
+        "1": "fährt",
+        "5": "hat",
+        "11": "Rennrad"
+      }
+    },
+    {
+      "level": 1,
+      "topic": "Satzanfang und ie",
+      "shown": "der Hund rennt über die Wisse.",
+      "corrections": {
+        "0": "Der",
+        "5": "Wiese."
+      }
+    },
+    {
+      "level": 1,
+      "topic": "Nomen groß",
+      "shown": "Mia liest ein spannendes buch.",
+      "corrections": {
+        "4": "Buch."
+      }
+    },
+    {
+      "level": 1,
+      "topic": "ck",
+      "shown": "Tom geht zum Bäker.",
+      "corrections": {
+        "3": "Bäcker."
+      }
+    },
+    {
+      "level": 1,
+      "topic": "Nomen groß",
+      "shown": "Im garten blühen viele Blumen.",
+      "corrections": {
+        "1": "Garten"
+      }
+    },
+    {
+      "level": 1,
+      "topic": "ie",
+      "shown": "Der Vogel fligt hoch in den Himmel.",
+      "corrections": {
+        "2": "fliegt"
+      }
+    },
+    {
+      "level": 1,
+      "topic": "Satzanfang",
+      "shown": "Lena malt eine gelbe Sonne. dan malt sie eine Wolke.",
+      "corrections": {
+        "5": "Dann"
+      }
+    },
+    {
+      "level": 1,
+      "topic": "Verb klein",
+      "shown": "Ben hat einen neuen Stift. Er Schreibt seinen Namen.",
+      "corrections": {
+        "6": "schreibt"
+      }
+    },
+    {
+      "level": 1,
+      "topic": "Doppelkonsonant",
+      "shown": "Ein kleiner Hase sitzt unter dem Baum. Er isst eine Karote.",
+      "corrections": {
+        "10": "Karotte."
+      }
+    },
+    {
+      "level": 1,
+      "topic": "Buchstabendreher",
+      "shown": "Heute regnet es. Anna nimmt ihren Schriem.",
+      "corrections": {
+        "6": "Schirm."
+      }
+    },
+    {
+      "level": 1,
+      "topic": "ck",
+      "shown": "Papa kocht eine Suppe. Sie schmekt sehr gut.",
+      "corrections": {
+        "5": "schmeckt"
+      }
+    },
+    {
+      "level": 1,
+      "topic": "ie",
+      "shown": "Wir spielen im Park. Der Ball ligt im Gras.",
+      "corrections": {
+        "6": "liegt"
+      }
+    },
+    {
+      "level": 1,
+      "topic": "Adverb klein",
+      "shown": "Oma liest eine Geschichte. Die Kinder hören Leise zu.",
+      "corrections": {
+        "7": "leise"
+      }
+    },
+    {
+      "level": 1,
+      "topic": "Nomen groß",
+      "shown": "Max trinkt Wasser. Das glas steht auf dem Tisch.",
+      "corrections": {
+        "4": "Glas"
+      }
+    },
+    {
+      "level": 1,
+      "topic": "falscher Buchstabe",
+      "shown": "Am Abend scheint der Mont.",
+      "corrections": {
+        "4": "Mond."
+      }
+    },
+    {
+      "level": 1,
+      "topic": "Vokal",
+      "shown": "Sina hat eine kleine Katze. Die Katze schleeft viel.",
+      "corrections": {
+        "7": "schläft"
+      }
+    },
+    {
+      "level": 1,
+      "topic": "Doppelkonsonant",
+      "shown": "Der Fisch schwimmt im Waser.",
+      "corrections": {
+        "4": "Wasser."
+      }
+    },
+    {
+      "level": 1,
+      "topic": "fehlender Buchstabe",
+      "shown": "Nico sucht seine Jacke. Sie hängt am Hackn.",
+      "corrections": {
+        "7": "Haken."
+      }
+    },
+    {
+      "level": 1,
+      "topic": "ie",
+      "shown": "Die Blume duftet gut. Eine Bine fliegt herbei.",
+      "corrections": {
+        "5": "Biene"
+      }
+    },
+    {
+      "level": 1,
+      "topic": "Name groß",
+      "shown": "moritz baut einen Turm aus Klötzen.",
+      "corrections": {
+        "0": "Moritz"
+      }
+    },
+    {
+      "level": 1,
+      "topic": "Nomen groß",
+      "shown": "Das Kind lacht. Es freut sich über das geschenk.",
+      "corrections": {
+        "8": "Geschenk."
+      }
+    },
+    {
+      "level": 1,
+      "topic": "ß",
+      "shown": "Im Winter fällt Schnee. Die Straße ist weis.",
+      "corrections": {
+        "7": "weiß."
+      }
+    },
+    {
+      "level": 1,
+      "topic": "Bahnhof",
+      "shown": "Der Zug kommt spät. Viele Menschen warten am Banhof.",
+      "corrections": {
+        "8": "Bahnhof."
+      }
+    },
+    {
+      "level": 1,
+      "topic": "Doppelbuchstabe falsch",
+      "shown": "Jule isst einen Apfel. Danach trinkt sie Safft.",
+      "corrections": {
+        "7": "Saft."
+      }
+    },
+    {
+      "level": 1,
+      "topic": "g/ch",
+      "shown": "Der kleine Drache spuckt Feuer. Er ist sehr mutich.",
+      "corrections": {
+        "8": "mutig."
+      }
+    },
+    {
+      "level": 1,
+      "topic": "Adjektiv klein",
+      "shown": "Lukas läuft schnell. Sein Freund läuft Langsam hinterher.",
+      "corrections": {
+        "6": "langsam"
+      }
+    },
+    {
+      "level": 1,
+      "topic": "Satzanfang",
+      "shown": "Die Tür ist offen. Mama macht sie zu. danach ist es leise.",
+      "corrections": {
+        "8": "Danach"
+      }
+    },
+    {
+      "level": 1,
+      "topic": "d/t",
+      "shown": "Ella findet einen Stein. Der Stein ist runt.",
+      "corrections": {
+        "7": "rund."
+      }
+    },
+    {
+      "level": 1,
+      "topic": "tz",
+      "shown": "Der Frosch springt in den Teich. Das Wasser spritst",
+      "corrections": {
+        "8": "spritzt"
+      }
+    },
+    {
+      "level": 1,
+      "topic": "t/d",
+      "shown": "Mila hat einen roten Rucksack. Darin liegt ein Heffd.",
+      "corrections": {
+        "8": "Heft."
+      }
+    },
+    {
+      "level": 1,
+      "topic": "h falsch",
+      "shown": "Der Affe isst eine Banahne.",
+      "corrections": {
+        "4": "Banane."
+      }
+    },
+    {
+      "level": 1,
+      "topic": "h fehlt",
+      "shown": "Sofie setzt sich auf den Stul.",
+      "corrections": {
+        "5": "Stuhl."
+      }
+    },
+    {
+      "level": 1,
+      "topic": "tz",
+      "shown": "Ein Pirat sucht einen Schaz.",
+      "corrections": {
+        "4": "Schatz."
+      }
+    },
+    {
+      "level": 1,
+      "topic": "Nomen groß",
+      "shown": "Die maus läuft in ihr Loch.",
+      "corrections": {
+        "1": "Maus"
+      }
+    },
+    {
+      "level": 1,
+      "topic": "Adjektiv klein",
+      "shown": "Rico wirft den Ball. Er fliegt Weit.",
+      "corrections": {
+        "6": "weit."
+      }
+    },
+    {
+      "level": 1,
+      "topic": "mm",
+      "shown": "Heute ist mein Geburtstag. Ich bekome einen Kuchen.",
+      "corrections": {
+        "5": "bekomme"
+      }
+    },
+    {
+      "level": 1,
+      "topic": "z",
+      "shown": "Das Baby schläft. Alle sind ganß leise.",
+      "corrections": {
+        "5": "ganz"
+      }
+    },
+    {
+      "level": 1,
+      "topic": "d/t",
+      "shown": "Finn hat einen bunten Drachen. Er fliegt im Wint.",
+      "corrections": {
+        "8": "Wind."
+      }
+    },
+    {
+      "level": 1,
+      "topic": "Nomen groß",
+      "shown": "Die Sonne scheint. Der himmel ist blau.",
+      "corrections": {
+        "4": "Himmel"
+      }
+    },
+    {
+      "level": 1,
+      "topic": "Adjektiv klein",
+      "shown": "Noah isst eine Pizza. Sie ist sehr Heiß.",
+      "corrections": {
+        "7": "heiß."
+      }
+    },
+    {
+      "level": 2,
+      "topic": "Satzanfang und mm",
+      "shown": "am Morgen packt Ben seinen Ranzen. Er nimt ein Heft und einen Stift mit.",
+      "corrections": {
+        "0": "Am",
+        "7": "nimmt"
+      }
+    },
+    {
+      "level": 2,
+      "topic": "Satzanfang und Nomen",
+      "shown": "Die Kinder spielen auf dem Schulhof. plötzlich fällt ein Ball unter die bank.",
+      "corrections": {
+        "6": "Plötzlich",
+        "12": "Bank."
+      }
+    },
+    {
+      "level": 2,
+      "topic": "doppelter Konsonant und klein",
+      "shown": "Lena malt ein großes Bild. Sie benutzt blaue Farbe und einen Diken Pinsel.",
+      "corrections": {
+        "11": "dicken"
+      }
+    },
+    {
+      "level": 2,
+      "topic": "Nomen und Verb klein",
+      "shown": "Nach der Schule läuft Oskar nach hause. Sein Bruder wartet schon an der Tür. Er Klingelt laut.",
+      "corrections": {
+        "6": "Hause.",
+        "15": "klingelt"
+      }
+    },
+    {
+      "level": 2,
+      "topic": "Doppelkonsonant und klein",
+      "shown": "Der Mond scheint hell am Himel. Eine Eule sitzt Leise auf einem Ast.",
+      "corrections": {
+        "5": "Himmel.",
+        "9": "leise"
+      }
+    },
+    {
+      "level": 2,
+      "topic": "ck und Verb klein",
+      "shown": "Papa kocht eine warme Suppe. Sie schmekt sehr gut. Alle Essen am Tisch.",
+      "corrections": {
+        "6": "schmeckt",
+        "10": "essen"
+      }
+    },
+    {
+      "level": 2,
+      "topic": "ll und Zahl klein",
+      "shown": "Der Zirkus kommt in die Stadt. Viele Kinder freuen sich auf die Vorstelung. Sie beginnt um Sechs Uhr.",
+      "corrections": {
+        "12": "Vorstellung.",
+        "16": "sechs"
+      }
+    },
+    {
+      "level": 2,
+      "topic": "Nomen und Verb klein",
+      "shown": "Im Sommer fahren wir ans Meer. Dort bauen wir eine große Sandburg. Das wasser ist kalt und salzig. Ich Springe hinein.",
+      "corrections": {
+        "13": "Wasser",
+        "19": "springe"
+      }
+    },
+    {
+      "level": 2,
+      "topic": "nn und Satzanfang",
+      "shown": "Mara liest jeden Abend in ihrem Bett. Ihr Lieblingsbuch handelt von einem kleinen Drachen. Der Drache kan fliegen und Feuer spucken. das findet Mara toll.",
+      "corrections": {
+        "16": "kann",
+        "21": "Das"
+      }
+    },
+    {
+      "level": 2,
+      "topic": "Nomen und Adjektiv",
+      "shown": "Auf dem Markt kauft Oma frisches Obst. Sie legt Äpfel, Birnen und Trauben in einen korb. Der Korb ist ziemlich Schweer.",
+      "corrections": {
+        "15": "Korb.",
+        "20": "schwer."
+      }
+    },
+    {
+      "level": 2,
+      "topic": "fehlende Endung",
+      "shown": "Der Lehrer erklärt eine neue Aufgabe. Alle Kinder hören gut zu. Nur Paul schaut kurz aus dem Fensta. Dann schreibt er weiter.",
+      "corrections": {
+        "17": "Fenster."
+      }
+    },
+    {
+      "level": 2,
+      "topic": "Satzanfang und Nomen",
+      "shown": "In der Pause essen die Kinder ihr Frühstück. Milan hat ein Brot mit Käse. dazu trinkt er eine flasche Wasser.",
+      "corrections": {
+        "14": "Dazu",
+        "18": "Flasche"
+      }
+    },
+    {
+      "level": 2,
+      "topic": "au und klein",
+      "shown": "Die Familie macht einen Ausflug in den Wald. Sie sehen Rehe und viele Vögel. Ein Specht klopft laut an einen Bam. Alle bleiben Leise stehen.",
+      "corrections": {
+        "20": "Baum.",
+        "23": "leise"
+      }
+    },
+    {
+      "level": 2,
+      "topic": "Nomen und Adjektiv",
+      "shown": "Nele räumt ihr Zimmer auf. Sie legt die Bücher ins Regal und die Stifte in die Dose. Auf dem boden liegt noch ein Kleid. Das hebt sie Schnell auf.",
+      "corrections": {
+        "19": "Boden",
+        "27": "schnell"
+      }
+    },
+    {
+      "level": 2,
+      "topic": "Artikel klein und Umlaut",
+      "shown": "Der kleine Zug fährt durch einen Tunnel. Danach kommt er an einem Bahnhof an. Viele Leute steigen aus und Ein Mann winkt freundlich. Der Zugführer lachelt.",
+      "corrections": {
+        "19": "ein",
+        "25": "lächelt."
+      }
+    },
+    {
+      "level": 2,
+      "topic": "Nomen und Adjektiv",
+      "shown": "Am Sonntag backt Sara einen Kuchen. Sie rührt Mehl, Eier und Zucker zusammen. Der Teig kommt in eine form. Nach einer Stunde duftet es Köstlich.",
+      "corrections": {
+        "18": "Form.",
+        "24": "köstlich."
+      }
+    },
+    {
+      "level": 2,
+      "topic": "Nomen und Verb klein",
+      "shown": "Im Zoo beobachtet Tim die Affen. Ein Affe wirft eine Banane in die Luft. Dann fängt er sie mit einer hand. Tim lacht sehr laut. Seine Schwester Lacht auch.",
+      "corrections": {
+        "20": "Hand.",
+        "27": "lacht"
+      }
+    },
+    {
+      "level": 2,
+      "topic": "nn und klein",
+      "shown": "Die Klasse besucht ein Museum. Dort sehen die Kinder alte Bilder und große Statuen. Frau Meier erklärt viel über die Kunst. Alle hören gespant zu. Niemand redet Dazwischen",
+      "corrections": {
+        "23": "gespannt",
+        "27": "dazwischen"
+      }
+    },
+    {
+      "level": 2,
+      "topic": "Nomen und Doppelkonsonant",
+      "shown": "Jonas schreibt einen Brief an seinen Freund. Er erzählt von seinem neuen Fahrrad. Zum Schluss malt er ein kleines Bild auf das papier. Dan steckt er den Brief in einen Umschlag.",
+      "corrections": {
+        "22": "Papier.",
+        "23": "Dann"
+      }
+    },
+    {
+      "level": 2,
+      "topic": "Adjektiv und g/ch",
+      "shown": "Clara hilft ihrer Mutter im Garten. Sie gießt die Blumen mit einer kleinen Kanne. Eine Blume ist besonders Schön und duftet nach Honich.",
+      "corrections": {
+        "18": "schön",
+        "22": "Honig."
+      }
+    },
+    {
+      "level": 2,
+      "topic": "Nomen und d/t",
+      "shown": "Der Bäcker holt die frischen Brötchen aus dem Ofen. Sie sind warm und knusprig. Viele kunden stehen schon vor dem Laden. Alle warten gedultig.",
+      "corrections": {
+        "15": "Kunden",
+        "23": "geduldig."
+      }
+    },
+    {
+      "level": 2,
+      "topic": "Adjektiv und ff",
+      "shown": "Beim Sport wirft Hanna den Ball weit. Ihr Freund fängt ihn sicher auf. Danach rennen beide Schnell zum Tor. Hanna trift genau.",
+      "corrections": {
+        "16": "schnell",
+        "20": "trifft"
+      }
+    },
+    {
+      "level": 2,
+      "topic": "Nomen und t/d",
+      "shown": "Am Fluss sitzt ein Angler. Er wartet ruhig auf einen Fisch. Plötzlich zappelt die Angel. Der Angler zieht einen kleinen fisch aus dem Wasser. Er freud sich.",
+      "corrections": {
+        "20": "Fisch",
+        "25": "freut"
+      }
+    },
+    {
+      "level": 2,
+      "topic": "Adjektiv und Nomen",
+      "shown": "Im Herbst fallen die Blätter von den Bäumen. Viele Blätter sind gelb oder rot. Lotte sammelt sie in einem Korb. Zu Hause bastelt sie ein Schönes bild.",
+      "corrections": {
+        "25": "schönes",
+        "26": "Bild."
+      }
+    },
+    {
+      "level": 2,
+      "topic": "Adjektiv klein und g/ch",
+      "shown": "Der Wecker klingelt früh. Emil steht müde auf und zieht sich an. Seine Socken findet er unter dem Bett. Eine Socke ist blau, die Andere ist grün. Das sieht lustich.",
+      "corrections": {
+        "24": "andere",
+        "29": "lustig."
+      }
+    },
+    {
+      "level": 2,
+      "topic": "nn und Adjektiv klein",
+      "shown": "Im Schwimmbad springt Tilda vom Beckenrand ins Wasser. Sie taucht kurz unter und winkt dan ihrer Freundin. Beide lachen Fröhlich.",
+      "corrections": {
+        "14": "dann",
+        "19": "fröhlich."
+      }
+    },
+    {
+      "level": 2,
+      "topic": "z/s und Adjektiv klein",
+      "shown": "Der Förster geht durch den Wald. Er findet Spuren von einem Reh im weichen Boden. Neben dem Weg wachsen viele Pilse. Sie sehen Bunt aus.",
+      "corrections": {
+        "20": "Pilze.",
+        "23": "bunt"
+      }
+    },
+    {
+      "level": 2,
+      "topic": "Kleinschreibung",
+      "shown": "Am Bahnhof wartet Rafi auf seine Oma. Der Zug kommt auf Gleis drei an. Rafi winkt schon von Weitem und rennt Freudig los.",
+      "corrections": {
+        "18": "weitem",
+        "21": "freudig"
+      }
+    },
+    {
+      "level": 2,
+      "topic": "Verb klein und pp",
+      "shown": "Die Kinder üben für das Theaterstück. Mila spricht ihren Text laut und deutlich. Ben vergisst ein Wort und muss Lachen Dann versucht er es nochmal. Alles klapt.",
+      "corrections": {
+        "19": "lachen",
+        "26": "klappt."
+      }
+    },
+    {
+      "level": 2,
+      "topic": "Adverb klein und n",
+      "shown": "Auf dem Dach sitzt eine Amsel. Sie singt ein lautes Lied und schaut in den Garten. Der Kater beobachtet sie Ganz still. Dann springt die Amsel davonn.",
+      "corrections": {
+        "20": "ganz",
+        "26": "davon."
+      }
+    },
+    {
+      "level": 3,
+      "topic": "Satzanfang, ff, Adjektiv",
+      "shown": "gestern besuchte Nora ihre Tante in Hamburg. Sie fuhren mit der Bahn zum Hafen und sahen große Schife. Am Abend aßen sie ein Leckeres Eis.",
+      "corrections": {
+        "0": "Gestern",
+        "17": "Schiffe.",
+        "23": "leckeres"
+      }
+    },
+    {
+      "level": 3,
+      "topic": "tt, klein, mm",
+      "shown": "Im Winter bauen die Kinder einen Schneemann. Seine Nase besteht aus einer Karote. Dann lachen Alle laut. Der Schneemann bekomt auch einen alten Hut.",
+      "corrections": {
+        "12": "Karotte.",
+        "15": "alle",
+        "19": "bekommt"
+      }
+    },
+    {
+      "level": 3,
+      "topic": "Adjektiv, nn, Nomen",
+      "shown": "Auf dem Spielplatz steht eine lange Rutsche. Moritz klettert Mutig hinauf und rutscht dan nach unten. Seine Schwester wartet schon am Ende der rutsche.",
+      "corrections": {
+        "9": "mutig",
+        "13": "dann",
+        "23": "Rutsche."
+      }
+    },
+    {
+      "level": 3,
+      "topic": "ss und Adjektiv klein",
+      "shown": "Die Katze schläft auf dem Sofa. Neben ihr liegt ein kleines Kisen. Das Fenster ist Offen. Draußen singt ein Vogel ein Schönes Lied.",
+      "corrections": {
+        "11": "Kissen.",
+        "15": "offen.",
+        "21": "schönes"
+      }
+    },
+    {
+      "level": 3,
+      "topic": "tz, Nomen, Adjektiv",
+      "shown": "Heute schreibt die Klasse eine Geschichte. Jeder denkt sich einen lustigen Saz aus. Frau Meier liest alle Texte vor. Manche geschichten sind besonders Witzig.",
+      "corrections": {
+        "11": "Satz",
+        "20": "Geschichten",
+        "23": "witzig."
+      }
+    },
+    {
+      "level": 3,
+      "topic": "Adjektiv klein und ll",
+      "shown": "Die Feuerwehr fährt mit lautem Signal durch die Straße. Vor einem Haus steht viel Rauch. Die Leute bleiben Ruhig stehen und machen Platz. Ein Feuerwehrmann holt einen Schlauch aus dem Auto. Alle helfen schnel.",
+      "corrections": {
+        "18": "ruhig",
+        "33": "schnell."
+      }
+    },
+    {
+      "level": 3,
+      "topic": "ä und ss",
+      "shown": "Am Nachmittag fährt die Familie mit dem Fahrrad zum See. Dort legen sie eine Decke auf die Wiese. Der Vater holt einen Korb mit Essen hervor. Lina isst ein Brot mit Kähse. Danach springt sie fröhlich ins Waser.",
+      "corrections": {
+        "31": "Käse.",
+        "37": "Wasser."
+      }
+    },
+    {
+      "level": 3,
+      "topic": "Nomen und d/t",
+      "shown": "Im Sachunterricht lernen die Kinder etwas über Bienen. Die Lehrerin zeigt ein großes Bild von einem Bienenstock. Darin leben sehr viele tiere. Sie arbeiten gemeinsam und sammeln Nektar. Das findet die Klasse spannent.",
+      "corrections": {
+        "21": "Tiere.",
+        "32": "spannend."
+      }
+    },
+    {
+      "level": 3,
+      "topic": "g/ch und Pronomen klein",
+      "shown": "Während des Ausflugs beginnt es plötzlich zu regnen. Die Kinder ziehen ihre Jacken an und laufen schnell unter ein Dach. Dort warten sie geduldich auf den Bus. Als er kommt, steigen Alle ein.",
+      "corrections": {
+        "23": "geduldig",
+        "31": "alle"
+      }
+    },
+    {
+      "level": 3,
+      "topic": "Nomen und Adverb klein",
+      "shown": "In der Bibliothek ist es sehr leise. Viele Kinder suchen sich ein Buch aus. Mats findet ein Buch über Ritter und Burgen. Er setzt sich an einen tisch. und liest Sofort los.",
+      "corrections": {
+        "27": "Tisch.",
+        "30": "sofort"
+      }
+    },
+    {
+      "level": 3,
+      "topic": "Umlaut und t/d",
+      "shown": "Auf dem Bauernhof füttert Lea die Tiere. Die Hühner picken Körner vom Boden. Eine Kuh steht ruhig im Stall und kaut Heu. Der Bauer tragt einen vollen Eimer. Lea hilfd ihm gern.",
+      "corrections": {
+        "24": "trägt",
+        "29": "hilft"
+      }
+    },
+    {
+      "level": 3,
+      "topic": "Adjektiv klein und ß",
+      "shown": "Beim Klassenfest gibt es Kuchen, Saft und viele Spiele. Die Kinder stellen Tische und Stühle auf. Frau Schulz begrüßt alle Eltern freundlich. Später singen alle ein Lustiges Lied. Das Fest macht viel Spas.",
+      "corrections": {
+        "26": "lustiges",
+        "32": "Spaß."
+      }
+    },
+    {
+      "level": 3,
+      "topic": "Adjektiv klein und fehlende Endung",
+      "shown": "Der kleine Roboter rollt durch das Zimmer. Er sucht einen roten Baustein und legt ihn in eine Kiste. Dann piept er laut und blinkt Blau. Tom findet den Roboter richtig cool. Seine Schwester möcht auch spielen.",
+      "corrections": {
+        "24": "blau.",
+        "33": "möchte"
+      }
+    },
+    {
+      "level": 3,
+      "topic": "Stimme und Adverb klein",
+      "shown": "Im Theater sitzt das Publikum gespannt auf den Plätzen. Der Vorhang öffnet sich langsam. Auf der Bühne steht ein König mit einer goldenen Krone. Er spricht mit lauter stime. Alle Kinder klatschen Begeistert.",
+      "corrections": {
+        "28": "Stimme.",
+        "32": "begeistert."
+      }
+    },
+    {
+      "level": 3,
+      "topic": "ö und Possessiv klein",
+      "shown": "Am Meer sammelt Jona bunte Muscheln. Manche sind klein und weiß, andere sind groß und braun. Eine Muschel glänzt besonders schöhn. Jona steckt sie vorsichtig in seine Tasche. Später zeigt er sie Seinem Vater.",
+      "corrections": {
+        "20": "schön.",
+        "32": "seinem"
+      }
+    },
+    {
+      "level": 3,
+      "topic": "Adjektiv klein und f",
+      "shown": "Am ersten Schultag ist alles besonders aufregend. Die Kinder suchen ihre Plätze und legen die neuen Hefte auf den Tisch. Frau Hansen begrüßt die Klasse Freundlich und schreibt das Datum an die Taffel.",
+      "corrections": {
+        "25": "freundlich",
+        "32": "Tafel."
+      }
+    },
+    {
+      "level": 3,
+      "topic": "Adverb und nn",
+      "shown": "Im Zeltlager schlafen die Kinder in großen Zelten. Abends sitzen alle am Lagerfeuer und erzählen spannende Geschichten. Ein Junge hört ein Geräusch im Gebüsch. Er fragt Leise nach, ob dort ein Tier ist. Dann raschelt es nochmal kurz. Alle sind gespant.",
+      "corrections": {
+        "26": "leise",
+        "40": "gespannt."
+      }
+    },
+    {
+      "level": 3,
+      "topic": "Adjektiv klein und z",
+      "shown": "Bei der Fahrradprüfung müssen die Kinder besonders gut aufpassen. Sie fahren langsam an einem Stoppschild vorbei und zeigen mit der Hand die Richtung an. Lina vergisst zuerst den Schulterblick. Dann macht sie es Richtig und bekommt ein Lob von der Polizistin. Sie ist Stoltz.",
+      "corrections": {
+        "33": "richtig",
+        "43": "stolz."
+      }
+    },
+    {
+      "level": 3,
+      "topic": "Adverb und Nomen",
+      "shown": "In der Küche bereitet Ali mit seinem Vater das Abendessen vor. Sie schneiden Gemüse und rühren eine Soße an. Der Topf steht auf dem Herd und wird Langsam warm. Ali deckt den tisch. Seine Schwester holt noch Gläser aus dem Schrank.",
+      "corrections": {
+        "27": "langsam",
+        "32": "Tisch."
+      }
+    },
+    {
+      "level": 3,
+      "topic": "mm und Adverb klein",
+      "shown": "Während der Projektwoche bastelt die Klasse kleine Boote. Die Kinder kleben Holzstäbchen zusammen und malen bunte Segel. Zum Schluss setzen sie die Boote in eine Wanne mit Wasser. Ein Boot kentert sofort, aber die anderen schwimen. Das finden alle Sehr lustig.",
+      "corrections": {
+        "35": "schwimmen.",
+        "39": "sehr"
+      }
+    }
+  ]
+}
