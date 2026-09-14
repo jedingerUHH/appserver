@@ -386,6 +386,18 @@
       margin-bottom: 12px;
     }
 
+    .puzzle-actions {
+      width: 380px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .puzzle-actions .big-button {
+      width: 100%;
+    }
+
     .pokemon-puzzle {
       width: 380px;
       height: 380px;
@@ -608,6 +620,11 @@
         padding: 9px 0;
       }
 
+      .puzzle-actions {
+        width: 290px;
+        margin-bottom: 9px;
+      }
+
       .pokemon-puzzle {
         width: 290px;
         height: 290px;
@@ -643,8 +660,13 @@
       }
 
       .right-card {
-        flex-direction: row;
-        gap: 18px;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .puzzle-actions {
+        width: min(100%, 320px);
+        margin-bottom: 4px;
       }
 
       .pokemon-puzzle {
@@ -713,15 +735,15 @@
         <div id="wordBoard" class="word-board"></div>
 
         <div id="message" class="message neutral">Markiere alle Fehler.</div>
-
-        <div class="actions">
-          <button id="finishButton" class="big-button" onclick="finishRound()">Fertig!</button>
-          <button id="nextButton" class="big-button blue hidden" onclick="nextRound()">Weiter</button>
-        </div>
       </div>
 
       <div class="right-card">
         <div class="side-title">Befreie das Pokémon</div>
+
+        <div class="puzzle-actions">
+          <button id="finishButton" class="big-button" onclick="finishRound()">Fertig!</button>
+          <button id="nextButton" class="big-button blue hidden" onclick="nextRound()">Weiter</button>
+        </div>
 
         <div class="pokemon-puzzle">
           <img id="pokemonImage" src="" alt="Verdecktes Pokémon">
