@@ -1,2628 +1,502 @@
-{
-  "version": "deutsch-fehler-texte-v001-extended-200",
-  "description": "Aufgabensammlung für Fehler-Finder. shown enthält die sichtbaren Wörter; corrections ordnet Wortpositionen (0-basiert) die korrekte Schreibweise zu. Enthält zusätzlich 200 weitere automatisch erzeugte Übungstexte.",
-  "tasks": [
-    {
-      "level": 1,
-      "topic": "Rechtschreibung",
-      "shown": "Lisa färt gerne Fahrrad. Sie had sich letzte Woche ein neues Rennrat gekauft.",
-      "corrections": {
-        "1": "fährt",
-        "5": "hat",
-        "11": "Rennrad"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Satzanfang und ie",
-      "shown": "der Hund rennt über die Wisse.",
-      "corrections": {
-        "0": "Der",
-        "5": "Wiese."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Nomen groß",
-      "shown": "Mia liest ein spannendes buch.",
-      "corrections": {
-        "4": "Buch."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "ck",
-      "shown": "Tom geht zum Bäker.",
-      "corrections": {
-        "3": "Bäcker."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Nomen groß",
-      "shown": "Im garten blühen viele Blumen.",
-      "corrections": {
-        "1": "Garten"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "ie",
-      "shown": "Der Vogel fligt hoch in den Himmel.",
-      "corrections": {
-        "2": "fliegt"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Satzanfang",
-      "shown": "Lena malt eine gelbe Sonne. dan malt sie eine Wolke.",
-      "corrections": {
-        "5": "Dann"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Verb klein",
-      "shown": "Ben hat einen neuen Stift. Er Schreibt seinen Namen.",
-      "corrections": {
-        "6": "schreibt"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Doppelkonsonant",
-      "shown": "Ein kleiner Hase sitzt unter dem Baum. Er isst eine Karote.",
-      "corrections": {
-        "10": "Karotte."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Buchstabendreher",
-      "shown": "Heute regnet es. Anna nimmt ihren Schriem.",
-      "corrections": {
-        "6": "Schirm."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "ck",
-      "shown": "Papa kocht eine Suppe. Sie schmekt sehr gut.",
-      "corrections": {
-        "5": "schmeckt"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "ie",
-      "shown": "Wir spielen im Park. Der Ball ligt im Gras.",
-      "corrections": {
-        "6": "liegt"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Adverb klein",
-      "shown": "Oma liest eine Geschichte. Die Kinder hören Leise zu.",
-      "corrections": {
-        "7": "leise"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Nomen groß",
-      "shown": "Max trinkt Wasser. Das glas steht auf dem Tisch.",
-      "corrections": {
-        "4": "Glas"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "falscher Buchstabe",
-      "shown": "Am Abend scheint der Mont.",
-      "corrections": {
-        "4": "Mond."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Vokal",
-      "shown": "Sina hat eine kleine Katze. Die Katze schleeft viel.",
-      "corrections": {
-        "7": "schläft"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Doppelkonsonant",
-      "shown": "Der Fisch schwimmt im Waser.",
-      "corrections": {
-        "4": "Wasser."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "fehlender Buchstabe",
-      "shown": "Nico sucht seine Jacke. Sie hängt am Hackn.",
-      "corrections": {
-        "7": "Haken."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "ie",
-      "shown": "Die Blume duftet gut. Eine Bine fliegt herbei.",
-      "corrections": {
-        "5": "Biene"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Name groß",
-      "shown": "moritz baut einen Turm aus Klötzen.",
-      "corrections": {
-        "0": "Moritz"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Nomen groß",
-      "shown": "Das Kind lacht. Es freut sich über das geschenk.",
-      "corrections": {
-        "8": "Geschenk."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "ß",
-      "shown": "Im Winter fällt Schnee. Die Straße ist weis.",
-      "corrections": {
-        "7": "weiß."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Bahnhof",
-      "shown": "Der Zug kommt spät. Viele Menschen warten am Banhof.",
-      "corrections": {
-        "8": "Bahnhof."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Doppelbuchstabe falsch",
-      "shown": "Jule isst einen Apfel. Danach trinkt sie Safft.",
-      "corrections": {
-        "7": "Saft."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "g/ch",
-      "shown": "Der kleine Drache spuckt Feuer. Er ist sehr mutich.",
-      "corrections": {
-        "8": "mutig."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Adjektiv klein",
-      "shown": "Lukas läuft schnell. Sein Freund läuft Langsam hinterher.",
-      "corrections": {
-        "6": "langsam"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Satzanfang",
-      "shown": "Die Tür ist offen. Mama macht sie zu. danach ist es leise.",
-      "corrections": {
-        "8": "Danach"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "d/t",
-      "shown": "Ella findet einen Stein. Der Stein ist runt.",
-      "corrections": {
-        "7": "rund."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "tz",
-      "shown": "Der Frosch springt in den Teich. Das Wasser spritst",
-      "corrections": {
-        "8": "spritzt"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "t/d",
-      "shown": "Mila hat einen roten Rucksack. Darin liegt ein Heffd.",
-      "corrections": {
-        "8": "Heft."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "h falsch",
-      "shown": "Der Affe isst eine Banahne.",
-      "corrections": {
-        "4": "Banane."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "h fehlt",
-      "shown": "Sofie setzt sich auf den Stul.",
-      "corrections": {
-        "5": "Stuhl."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "tz",
-      "shown": "Ein Pirat sucht einen Schaz.",
-      "corrections": {
-        "4": "Schatz."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Nomen groß",
-      "shown": "Die maus läuft in ihr Loch.",
-      "corrections": {
-        "1": "Maus"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Adjektiv klein",
-      "shown": "Rico wirft den Ball. Er fliegt Weit.",
-      "corrections": {
-        "6": "weit."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "mm",
-      "shown": "Heute ist mein Geburtstag. Ich bekome einen Kuchen.",
-      "corrections": {
-        "5": "bekomme"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "z",
-      "shown": "Das Baby schläft. Alle sind ganß leise.",
-      "corrections": {
-        "5": "ganz"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "d/t",
-      "shown": "Finn hat einen bunten Drachen. Er fliegt im Wint.",
-      "corrections": {
-        "8": "Wind."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Nomen groß",
-      "shown": "Die Sonne scheint. Der himmel ist blau.",
-      "corrections": {
-        "4": "Himmel"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Adjektiv klein",
-      "shown": "Noah isst eine Pizza. Sie ist sehr Heiß.",
-      "corrections": {
-        "7": "heiß."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Satzanfang und mm",
-      "shown": "am Morgen packt Ben seinen Ranzen. Er nimt ein Heft und einen Stift mit.",
-      "corrections": {
-        "0": "Am",
-        "7": "nimmt"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Satzanfang und Nomen",
-      "shown": "Die Kinder spielen auf dem Schulhof. plötzlich fällt ein Ball unter die bank.",
-      "corrections": {
-        "6": "Plötzlich",
-        "12": "Bank."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "doppelter Konsonant und klein",
-      "shown": "Lena malt ein großes Bild. Sie benutzt blaue Farbe und einen Diken Pinsel.",
-      "corrections": {
-        "11": "dicken"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Nomen und Verb klein",
-      "shown": "Nach der Schule läuft Oskar nach hause. Sein Bruder wartet schon an der Tür. Er Klingelt laut.",
-      "corrections": {
-        "6": "Hause.",
-        "15": "klingelt"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Doppelkonsonant und klein",
-      "shown": "Der Mond scheint hell am Himel. Eine Eule sitzt Leise auf einem Ast.",
-      "corrections": {
-        "5": "Himmel.",
-        "9": "leise"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "ck und Verb klein",
-      "shown": "Papa kocht eine warme Suppe. Sie schmekt sehr gut. Alle Essen am Tisch.",
-      "corrections": {
-        "6": "schmeckt",
-        "10": "essen"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "ll und Zahl klein",
-      "shown": "Der Zirkus kommt in die Stadt. Viele Kinder freuen sich auf die Vorstelung. Sie beginnt um Sechs Uhr.",
-      "corrections": {
-        "12": "Vorstellung.",
-        "16": "sechs"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Nomen und Verb klein",
-      "shown": "Im Sommer fahren wir ans Meer. Dort bauen wir eine große Sandburg. Das wasser ist kalt und salzig. Ich Springe hinein.",
-      "corrections": {
-        "13": "Wasser",
-        "19": "springe"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "nn und Satzanfang",
-      "shown": "Mara liest jeden Abend in ihrem Bett. Ihr Lieblingsbuch handelt von einem kleinen Drachen. Der Drache kan fliegen und Feuer spucken. das findet Mara toll.",
-      "corrections": {
-        "16": "kann",
-        "21": "Das"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Nomen und Adjektiv",
-      "shown": "Auf dem Markt kauft Oma frisches Obst. Sie legt Äpfel, Birnen und Trauben in einen korb. Der Korb ist ziemlich Schweer.",
-      "corrections": {
-        "15": "Korb.",
-        "20": "schwer."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "fehlende Endung",
-      "shown": "Der Lehrer erklärt eine neue Aufgabe. Alle Kinder hören gut zu. Nur Paul schaut kurz aus dem Fensta. Dann schreibt er weiter.",
-      "corrections": {
-        "17": "Fenster."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Satzanfang und Nomen",
-      "shown": "In der Pause essen die Kinder ihr Frühstück. Milan hat ein Brot mit Käse. dazu trinkt er eine flasche Wasser.",
-      "corrections": {
-        "14": "Dazu",
-        "18": "Flasche"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "au und klein",
-      "shown": "Die Familie macht einen Ausflug in den Wald. Sie sehen Rehe und viele Vögel. Ein Specht klopft laut an einen Bam. Alle bleiben Leise stehen.",
-      "corrections": {
-        "20": "Baum.",
-        "23": "leise"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Nomen und Adjektiv",
-      "shown": "Nele räumt ihr Zimmer auf. Sie legt die Bücher ins Regal und die Stifte in die Dose. Auf dem boden liegt noch ein Kleid. Das hebt sie Schnell auf.",
-      "corrections": {
-        "19": "Boden",
-        "27": "schnell"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Artikel klein und Umlaut",
-      "shown": "Der kleine Zug fährt durch einen Tunnel. Danach kommt er an einem Bahnhof an. Viele Leute steigen aus und Ein Mann winkt freundlich. Der Zugführer lachelt.",
-      "corrections": {
-        "19": "ein",
-        "25": "lächelt."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Nomen und Adjektiv",
-      "shown": "Am Sonntag backt Sara einen Kuchen. Sie rührt Mehl, Eier und Zucker zusammen. Der Teig kommt in eine form. Nach einer Stunde duftet es Köstlich.",
-      "corrections": {
-        "18": "Form.",
-        "24": "köstlich."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Nomen und Verb klein",
-      "shown": "Im Zoo beobachtet Tim die Affen. Ein Affe wirft eine Banane in die Luft. Dann fängt er sie mit einer hand. Tim lacht sehr laut. Seine Schwester Lacht auch.",
-      "corrections": {
-        "20": "Hand.",
-        "27": "lacht"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "nn und klein",
-      "shown": "Die Klasse besucht ein Museum. Dort sehen die Kinder alte Bilder und große Statuen. Frau Meier erklärt viel über die Kunst. Alle hören gespant zu. Niemand redet Dazwischen",
-      "corrections": {
-        "23": "gespannt",
-        "27": "dazwischen"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Nomen und Doppelkonsonant",
-      "shown": "Jonas schreibt einen Brief an seinen Freund. Er erzählt von seinem neuen Fahrrad. Zum Schluss malt er ein kleines Bild auf das papier. Dan steckt er den Brief in einen Umschlag.",
-      "corrections": {
-        "22": "Papier.",
-        "23": "Dann"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Adjektiv und g/ch",
-      "shown": "Clara hilft ihrer Mutter im Garten. Sie gießt die Blumen mit einer kleinen Kanne. Eine Blume ist besonders Schön und duftet nach Honich.",
-      "corrections": {
-        "18": "schön",
-        "22": "Honig."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Nomen und d/t",
-      "shown": "Der Bäcker holt die frischen Brötchen aus dem Ofen. Sie sind warm und knusprig. Viele kunden stehen schon vor dem Laden. Alle warten gedultig.",
-      "corrections": {
-        "15": "Kunden",
-        "23": "geduldig."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Adjektiv und ff",
-      "shown": "Beim Sport wirft Hanna den Ball weit. Ihr Freund fängt ihn sicher auf. Danach rennen beide Schnell zum Tor. Hanna trift genau.",
-      "corrections": {
-        "16": "schnell",
-        "20": "trifft"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Nomen und t/d",
-      "shown": "Am Fluss sitzt ein Angler. Er wartet ruhig auf einen Fisch. Plötzlich zappelt die Angel. Der Angler zieht einen kleinen fisch aus dem Wasser. Er freud sich.",
-      "corrections": {
-        "20": "Fisch",
-        "25": "freut"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Adjektiv und Nomen",
-      "shown": "Im Herbst fallen die Blätter von den Bäumen. Viele Blätter sind gelb oder rot. Lotte sammelt sie in einem Korb. Zu Hause bastelt sie ein Schönes bild.",
-      "corrections": {
-        "25": "schönes",
-        "26": "Bild."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Adjektiv klein und g/ch",
-      "shown": "Der Wecker klingelt früh. Emil steht müde auf und zieht sich an. Seine Socken findet er unter dem Bett. Eine Socke ist blau, die Andere ist grün. Das sieht lustich.",
-      "corrections": {
-        "24": "andere",
-        "29": "lustig."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "nn und Adjektiv klein",
-      "shown": "Im Schwimmbad springt Tilda vom Beckenrand ins Wasser. Sie taucht kurz unter und winkt dan ihrer Freundin. Beide lachen Fröhlich.",
-      "corrections": {
-        "14": "dann",
-        "19": "fröhlich."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "z/s und Adjektiv klein",
-      "shown": "Der Förster geht durch den Wald. Er findet Spuren von einem Reh im weichen Boden. Neben dem Weg wachsen viele Pilse. Sie sehen Bunt aus.",
-      "corrections": {
-        "20": "Pilze.",
-        "23": "bunt"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Kleinschreibung",
-      "shown": "Am Bahnhof wartet Rafi auf seine Oma. Der Zug kommt auf Gleis drei an. Rafi winkt schon von Weitem und rennt Freudig los.",
-      "corrections": {
-        "18": "weitem",
-        "21": "freudig"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Verb klein und pp",
-      "shown": "Die Kinder üben für das Theaterstück. Mila spricht ihren Text laut und deutlich. Ben vergisst ein Wort und muss Lachen Dann versucht er es nochmal. Alles klapt.",
-      "corrections": {
-        "19": "lachen",
-        "26": "klappt."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Adverb klein und n",
-      "shown": "Auf dem Dach sitzt eine Amsel. Sie singt ein lautes Lied und schaut in den Garten. Der Kater beobachtet sie Ganz still. Dann springt die Amsel davonn.",
-      "corrections": {
-        "20": "ganz",
-        "26": "davon."
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang, ff, Adjektiv",
-      "shown": "gestern besuchte Nora ihre Tante in Hamburg. Sie fuhren mit der Bahn zum Hafen und sahen große Schife. Am Abend aßen sie ein Leckeres Eis.",
-      "corrections": {
-        "0": "Gestern",
-        "17": "Schiffe.",
-        "23": "leckeres"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "tt, klein, mm",
-      "shown": "Im Winter bauen die Kinder einen Schneemann. Seine Nase besteht aus einer Karote. Dann lachen Alle laut. Der Schneemann bekomt auch einen alten Hut.",
-      "corrections": {
-        "12": "Karotte.",
-        "15": "alle",
-        "19": "bekommt"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Adjektiv, nn, Nomen",
-      "shown": "Auf dem Spielplatz steht eine lange Rutsche. Moritz klettert Mutig hinauf und rutscht dan nach unten. Seine Schwester wartet schon am Ende der rutsche.",
-      "corrections": {
-        "9": "mutig",
-        "13": "dann",
-        "23": "Rutsche."
-      }
-    },
-    {
-      "level": 3,
-      "topic": "ss und Adjektiv klein",
-      "shown": "Die Katze schläft auf dem Sofa. Neben ihr liegt ein kleines Kisen. Das Fenster ist Offen. Draußen singt ein Vogel ein Schönes Lied.",
-      "corrections": {
-        "11": "Kissen.",
-        "15": "offen.",
-        "21": "schönes"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "tz, Nomen, Adjektiv",
-      "shown": "Heute schreibt die Klasse eine Geschichte. Jeder denkt sich einen lustigen Saz aus. Frau Meier liest alle Texte vor. Manche geschichten sind besonders Witzig.",
-      "corrections": {
-        "11": "Satz",
-        "20": "Geschichten",
-        "23": "witzig."
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Adjektiv klein und ll",
-      "shown": "Die Feuerwehr fährt mit lautem Signal durch die Straße. Vor einem Haus steht viel Rauch. Die Leute bleiben Ruhig stehen und machen Platz. Ein Feuerwehrmann holt einen Schlauch aus dem Auto. Alle helfen schnel.",
-      "corrections": {
-        "18": "ruhig",
-        "33": "schnell."
-      }
-    },
-    {
-      "level": 3,
-      "topic": "ä und ss",
-      "shown": "Am Nachmittag fährt die Familie mit dem Fahrrad zum See. Dort legen sie eine Decke auf die Wiese. Der Vater holt einen Korb mit Essen hervor. Lina isst ein Brot mit Kähse. Danach springt sie fröhlich ins Waser.",
-      "corrections": {
-        "31": "Käse.",
-        "37": "Wasser."
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Nomen und d/t",
-      "shown": "Im Sachunterricht lernen die Kinder etwas über Bienen. Die Lehrerin zeigt ein großes Bild von einem Bienenstock. Darin leben sehr viele tiere. Sie arbeiten gemeinsam und sammeln Nektar. Das findet die Klasse spannent.",
-      "corrections": {
-        "21": "Tiere.",
-        "32": "spannend."
-      }
-    },
-    {
-      "level": 3,
-      "topic": "g/ch und Pronomen klein",
-      "shown": "Während des Ausflugs beginnt es plötzlich zu regnen. Die Kinder ziehen ihre Jacken an und laufen schnell unter ein Dach. Dort warten sie geduldich auf den Bus. Als er kommt, steigen Alle ein.",
-      "corrections": {
-        "23": "geduldig",
-        "31": "alle"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Nomen und Adverb klein",
-      "shown": "In der Bibliothek ist es sehr leise. Viele Kinder suchen sich ein Buch aus. Mats findet ein Buch über Ritter und Burgen. Er setzt sich an einen tisch. und liest Sofort los.",
-      "corrections": {
-        "27": "Tisch.",
-        "30": "sofort"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Umlaut und t/d",
-      "shown": "Auf dem Bauernhof füttert Lea die Tiere. Die Hühner picken Körner vom Boden. Eine Kuh steht ruhig im Stall und kaut Heu. Der Bauer tragt einen vollen Eimer. Lea hilfd ihm gern.",
-      "corrections": {
-        "24": "trägt",
-        "29": "hilft"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Adjektiv klein und ß",
-      "shown": "Beim Klassenfest gibt es Kuchen, Saft und viele Spiele. Die Kinder stellen Tische und Stühle auf. Frau Schulz begrüßt alle Eltern freundlich. Später singen alle ein Lustiges Lied. Das Fest macht viel Spas.",
-      "corrections": {
-        "26": "lustiges",
-        "32": "Spaß."
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Adjektiv klein und fehlende Endung",
-      "shown": "Der kleine Roboter rollt durch das Zimmer. Er sucht einen roten Baustein und legt ihn in eine Kiste. Dann piept er laut und blinkt Blau. Tom findet den Roboter richtig cool. Seine Schwester möcht auch spielen.",
-      "corrections": {
-        "24": "blau.",
-        "33": "möchte"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Stimme und Adverb klein",
-      "shown": "Im Theater sitzt das Publikum gespannt auf den Plätzen. Der Vorhang öffnet sich langsam. Auf der Bühne steht ein König mit einer goldenen Krone. Er spricht mit lauter stime. Alle Kinder klatschen Begeistert.",
-      "corrections": {
-        "28": "Stimme.",
-        "32": "begeistert."
-      }
-    },
-    {
-      "level": 3,
-      "topic": "ö und Possessiv klein",
-      "shown": "Am Meer sammelt Jona bunte Muscheln. Manche sind klein und weiß, andere sind groß und braun. Eine Muschel glänzt besonders schöhn. Jona steckt sie vorsichtig in seine Tasche. Später zeigt er sie Seinem Vater.",
-      "corrections": {
-        "20": "schön.",
-        "32": "seinem"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Adjektiv klein und f",
-      "shown": "Am ersten Schultag ist alles besonders aufregend. Die Kinder suchen ihre Plätze und legen die neuen Hefte auf den Tisch. Frau Hansen begrüßt die Klasse Freundlich und schreibt das Datum an die Taffel.",
-      "corrections": {
-        "25": "freundlich",
-        "32": "Tafel."
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Adverb und nn",
-      "shown": "Im Zeltlager schlafen die Kinder in großen Zelten. Abends sitzen alle am Lagerfeuer und erzählen spannende Geschichten. Ein Junge hört ein Geräusch im Gebüsch. Er fragt Leise nach, ob dort ein Tier ist. Dann raschelt es nochmal kurz. Alle sind gespant.",
-      "corrections": {
-        "26": "leise",
-        "40": "gespannt."
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Adjektiv klein und z",
-      "shown": "Bei der Fahrradprüfung müssen die Kinder besonders gut aufpassen. Sie fahren langsam an einem Stoppschild vorbei und zeigen mit der Hand die Richtung an. Lina vergisst zuerst den Schulterblick. Dann macht sie es Richtig und bekommt ein Lob von der Polizistin. Sie ist Stoltz.",
-      "corrections": {
-        "33": "richtig",
-        "43": "stolz."
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Adverb und Nomen",
-      "shown": "In der Küche bereitet Ali mit seinem Vater das Abendessen vor. Sie schneiden Gemüse und rühren eine Soße an. Der Topf steht auf dem Herd und wird Langsam warm. Ali deckt den tisch. Seine Schwester holt noch Gläser aus dem Schrank.",
-      "corrections": {
-        "27": "langsam",
-        "32": "Tisch."
-      }
-    },
-    {
-      "level": 3,
-      "topic": "mm und Adverb klein",
-      "shown": "Während der Projektwoche bastelt die Klasse kleine Boote. Die Kinder kleben Holzstäbchen zusammen und malen bunte Segel. Zum Schluss setzen sie die Boote in eine Wanne mit Wasser. Ein Boot kentert sofort, aber die anderen schwimen. Das finden alle Sehr lustig.",
-      "corrections": {
-        "35": "schwimmen.",
-        "39": "sehr"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Nomen groß + Wort klein",
-      "shown": "Anton trägt eine rote mütze. Die Mütze Liegt später im Zimmer.",
-      "corrections": {
-        "4": "Mütze.",
-        "7": "liegt"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Nomen groß",
-      "shown": "Jana spielt im Garten. Der Ball rollt ins gras.",
-      "corrections": {
-        "8": "Gras."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Nomen groß + Satzanfang",
-      "shown": "Ein igel sucht Blätter. er baut ein kleines Nest.",
-      "corrections": {
-        "1": "Igel",
-        "4": "Er"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Satzanfang + Rechtschreibung",
-      "shown": "marie Mahlt eine Sonne. Danach zeichnet sie eine Wolke.",
-      "corrections": {
-        "0": "Marie",
-        "1": "malt"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Rechtschreibung",
-      "shown": "Oma Bakt einen Kuchen. Der Kuchen ist warm.",
-      "corrections": {
-        "1": "backt"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Rechtschreibung + Nomen groß",
-      "shown": "Leon öfnet die Tür. Im Zimmer steht eine lampe.",
-      "corrections": {
-        "1": "öffnet",
-        "8": "Lampe."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Satzanfang",
-      "shown": "jonas liest ein Buch. Danach schreibt er einen Satz.",
-      "corrections": {
-        "0": "Jonas"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Rechtschreibung + Wort klein",
-      "shown": "Der Fuchs läuft durch den Walt. Er ist Sehr leise.",
-      "corrections": {
-        "5": "Wald.",
-        "8": "sehr"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Rechtschreibung",
-      "shown": "Anton Tregt eine rote Mütze. Die Mütze liegt später im Zimer.",
-      "corrections": {
-        "1": "trägt",
-        "10": "Zimmer."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Rechtschreibung",
-      "shown": "Papa kocht suphe. Die Suppe schmeckt gut.",
-      "corrections": {
-        "2": "Suppe."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Satzanfang + Rechtschreibung",
-      "shown": "Tom trägt eine rote Mütze. die Mütze liegt später im Zimer.",
-      "corrections": {
-        "5": "Die",
-        "10": "Zimmer."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Nomen groß + Rechtschreibung",
-      "shown": "Papa kocht suppe. Die Suppe schmekt gut.",
-      "corrections": {
-        "2": "Suppe.",
-        "5": "schmeckt"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Wort klein + Nomen groß",
-      "shown": "Jona Isst einen Apfel. Der apfel schmeckt süß.",
-      "corrections": {
-        "1": "isst",
-        "5": "Apfel"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Rechtschreibung + Satzanfang",
-      "shown": "Das Kind Tringt Wasser. das Glas steht auf dem Tisch.",
-      "corrections": {
-        "2": "trinkt",
-        "4": "Das"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Rechtschreibung",
-      "shown": "Der Buss hält an der Straße. Viele Kinder steigen ein.",
-      "corrections": {
-        "1": "Bus"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Nomen groß",
-      "shown": "Die katze sitzt auf dem Sofa. Sie schaut aus dem Fenster.",
-      "corrections": {
-        "1": "Katze"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Rechtschreibung + Satzanfang",
-      "shown": "Die Ende schwimmt im Wasser. das Wasser ist kalt.",
-      "corrections": {
-        "1": "Ente",
-        "5": "Das"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Wort klein + Nomen groß",
-      "shown": "Die Maus Sitzt im Loch. Die katze wartet davor.",
-      "corrections": {
-        "2": "sitzt",
-        "6": "Katze"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Satzanfang",
-      "shown": "nino liest ein Buch. Danach schreibt er einen Satz.",
-      "corrections": {
-        "0": "Nino"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Rechtschreibung",
-      "shown": "Das Kind trinkt Waser. Das Glas steht auf dem Tisch.",
-      "corrections": {
-        "3": "Wasser."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Satzanfang",
-      "shown": "der Hund schläft unter dem Tisch. Neben ihm liegt ein Knochen.",
-      "corrections": {
-        "0": "Der"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Wort klein",
-      "shown": "Nora isst einen Apfel. Der Apfel Schmeckt süß.",
-      "corrections": {
-        "6": "schmeckt"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Rechtschreibung + Satzanfang",
-      "shown": "Paul färt mit dem Fahrrad. der Weg ist lang.",
-      "corrections": {
-        "1": "fährt",
-        "5": "Der"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Satzanfang + Wort klein",
-      "shown": "jonas Öffnet die Tür. Im Zimmer steht eine Lampe.",
-      "corrections": {
-        "0": "Jonas",
-        "1": "öffnet"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Satzanfang + Nomen groß",
-      "shown": "marie findet eine blume. Die Blume ist gelb.",
-      "corrections": {
-        "0": "Marie",
-        "3": "Blume."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Satzanfang",
-      "shown": "Im Park fliegt ein Vogel. mia schaut ihm lange nach.",
-      "corrections": {
-        "5": "Mia"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Nomen groß",
-      "shown": "Nora malt eine sonne. Danach zeichnet sie eine Wolke.",
-      "corrections": {
-        "3": "Sonne."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Satzanfang",
-      "shown": "Die Katze sitzt auf dem Sofa. sie schaut aus dem Fenster.",
-      "corrections": {
-        "6": "Sie"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Rechtschreibung",
-      "shown": "Marie Mahlt eine Sonne. Danach zeichnet sie eine Wolke.",
-      "corrections": {
-        "1": "malt"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Wort klein",
-      "shown": "Anton Kauft beim Bäcker ein Brötchen. Es schmeckt sehr gut.",
-      "corrections": {
-        "1": "kauft"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Wort klein",
-      "shown": "Ben sucht den Schlüssel. Er Liegt in der Jacke.",
-      "corrections": {
-        "5": "liegt"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Nomen groß + Satzanfang",
-      "shown": "Ein hase springt über die Wiese. der Hase ist schnell.",
-      "corrections": {
-        "1": "Hase",
-        "6": "Der"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Rechtschreibung + Wort klein",
-      "shown": "Oma Bakt einen Kuchen. Der Kuchen ist Warm.",
-      "corrections": {
-        "1": "backt",
-        "7": "warm."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Satzanfang + Wort klein",
-      "shown": "das Kind trinkt Wasser. Das Glas Steht auf dem Tisch.",
-      "corrections": {
-        "0": "Das",
-        "6": "steht"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Wort klein",
-      "shown": "Leon Kauft beim Bäcker ein Brötchen. Es schmeckt sehr gut.",
-      "corrections": {
-        "1": "kauft"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Rechtschreibung",
-      "shown": "Lia Mahlt ein Haus. Das Dach ist rot.",
-      "corrections": {
-        "1": "malt"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Rechtschreibung + Wort klein",
-      "shown": "Der Fuchs leuft durch den Wald. Er ist Sehr leise.",
-      "corrections": {
-        "2": "läuft",
-        "8": "sehr"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Nomen groß",
-      "shown": "Jana malt eine sonne. Danach zeichnet sie eine wolke.",
-      "corrections": {
-        "3": "Sonne.",
-        "8": "Wolke."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Rechtschreibung",
-      "shown": "Der Fuchs läuft durch den Walt. Er ist sehr leise.",
-      "corrections": {
-        "5": "Wald."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Wort klein",
-      "shown": "Im Wald Sitzt eine Eule. Die Eule Ruft laut.",
-      "corrections": {
-        "2": "sitzt",
-        "7": "ruft"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Wort klein",
-      "shown": "Sara Kauft beim Bäcker ein Brötchen. Es schmeckt sehr gut.",
-      "corrections": {
-        "1": "kauft"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Rechtschreibung",
-      "shown": "Der Zuck fährt zum Bahnhof. Lena wartet auf dem Bahnsteig.",
-      "corrections": {
-        "1": "Zug"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Satzanfang",
-      "shown": "Die Sonne scheint hell. paul zieht die Jacke aus.",
-      "corrections": {
-        "4": "Paul"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Satzanfang",
-      "shown": "tom spielt im Garten. der Ball rollt ins Gras.",
-      "corrections": {
-        "0": "Tom",
-        "4": "Der"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Nomen groß + Satzanfang",
-      "shown": "Der Fuchs läuft durch den wald. er ist sehr leise.",
-      "corrections": {
-        "5": "Wald.",
-        "6": "Er"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Satzanfang + Nomen groß",
-      "shown": "sofia fährt mit dem fahrrad. Der Weg ist lang.",
-      "corrections": {
-        "0": "Sofia",
-        "4": "Fahrrad."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Satzanfang",
-      "shown": "Marie fährt mit dem Fahrrad. der Weg ist lang.",
-      "corrections": {
-        "5": "Der"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Satzanfang + Wort klein",
-      "shown": "am Morgen packt Sofia die Tasche. In der Schule Liest sie laut.",
-      "corrections": {
-        "0": "Am",
-        "9": "liest"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Satzanfang + Nomen groß",
-      "shown": "Ali findet eine Blume. die blume ist gelb.",
-      "corrections": {
-        "4": "Die",
-        "5": "Blume"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Rechtschreibung",
-      "shown": "Ohma Bakt einen Kuchen. Der Kuchen ist warm.",
-      "corrections": {
-        "0": "Oma",
-        "1": "backt"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Nomen groß + Wort klein",
-      "shown": "Nino spielt fußball. Der Ball Fliegt ins Tor.",
-      "corrections": {
-        "2": "Fußball.",
-        "5": "fliegt"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Wort klein",
-      "shown": "Nora liest ein Buch. Danach Schreibt sie einen Satz.",
-      "corrections": {
-        "5": "schreibt"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Nomen groß",
-      "shown": "Ali spielt fußball. Der ball fliegt ins Tor.",
-      "corrections": {
-        "2": "Fußball.",
-        "4": "Ball"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Nomen groß + Rechtschreibung",
-      "shown": "Im wald sitzt eine Eulle. Die Eule ruft laut.",
-      "corrections": {
-        "1": "Wald",
-        "4": "Eule."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Rechtschreibung + Wort klein",
-      "shown": "Oskar öffnet die Tür. Im Zimer Steht eine Lampe.",
-      "corrections": {
-        "5": "Zimmer",
-        "6": "steht"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Nomen groß + Wort klein",
-      "shown": "Oskar isst einen apfel. Der Apfel Schmeckt süß.",
-      "corrections": {
-        "3": "Apfel.",
-        "6": "schmeckt"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Rechtschreibung + Nomen groß",
-      "shown": "Im Walt sitzt eine Eule. Die eule ruft laut.",
-      "corrections": {
-        "1": "Wald",
-        "6": "Eule"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Nomen groß + Rechtschreibung",
-      "shown": "Mila sucht den schlüssel. Er liegt in der Jaqke.",
-      "corrections": {
-        "3": "Schlüssel.",
-        "8": "Jacke."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Rechtschreibung + Wort klein",
-      "shown": "Sofia isst einen Apfel. Der Apfl Schmeckt süß.",
-      "corrections": {
-        "5": "Apfel",
-        "6": "schmeckt"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Nomen groß",
-      "shown": "Die Maus sitzt im Loch. Die katze wartet davor.",
-      "corrections": {
-        "6": "Katze"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Satzanfang + Nomen groß",
-      "shown": "Oskar malt ein Haus. das dach ist rot.",
-      "corrections": {
-        "4": "Das",
-        "5": "Dach"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Satzanfang + Nomen groß",
-      "shown": "nino liest ein buch. Danach schreibt er einen Satz.",
-      "corrections": {
-        "0": "Nino",
-        "3": "Buch."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Satzanfang",
-      "shown": "sofia spielt im Garten. Der Ball rollt ins Gras.",
-      "corrections": {
-        "0": "Sofia"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Wort klein",
-      "shown": "Jona Öffnet die Tür. Im Zimmer steht eine Lampe.",
-      "corrections": {
-        "1": "öffnet"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Satzanfang + Rechtschreibung",
-      "shown": "jonas liest ein Buch. Danach schreibt er einen Saz.",
-      "corrections": {
-        "0": "Jonas",
-        "8": "Satz."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Satzanfang + Wort klein",
-      "shown": "am Morgen packt Leon die Tasche. In der Schule liest er Laut.",
-      "corrections": {
-        "0": "Am",
-        "11": "laut."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Nomen groß",
-      "shown": "Papa kocht Suppe. Die suppe schmeckt gut.",
-      "corrections": {
-        "4": "Suppe"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Rechtschreibung",
-      "shown": "Ben Mahlt ein Haus. Das Dach ist rot.",
-      "corrections": {
-        "1": "malt"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Wort klein",
-      "shown": "Lia Spielt im Garten. Der Ball rollt ins Gras.",
-      "corrections": {
-        "1": "spielt"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Nomen groß + Rechtschreibung",
-      "shown": "Oma backt einen Kuchen. Der kuchen ist Wahrm.",
-      "corrections": {
-        "5": "Kuchen",
-        "7": "warm."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Nomen groß",
-      "shown": "Der zug fährt zum bahnhof. Mia wartet auf dem Bahnsteig.",
-      "corrections": {
-        "1": "Zug",
-        "4": "Bahnhof."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Satzanfang",
-      "shown": "Der Bus hält an der Straße. viele Kinder steigen ein.",
-      "corrections": {
-        "6": "Viele"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Nomen groß",
-      "shown": "Der hund schläft unter dem tisch. Neben ihm liegt ein Knochen.",
-      "corrections": {
-        "1": "Hund",
-        "5": "Tisch."
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Satzanfang + Wort klein",
-      "shown": "marie Schreibt mit einem Stift. Der Stift ist blau.",
-      "corrections": {
-        "0": "Marie",
-        "1": "schreibt"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Rechtschreibung + Wort klein",
-      "shown": "Jana kauft beim Bäcker ein Brötchen. Es schmekt Sehr gut.",
-      "corrections": {
-        "7": "schmeckt",
-        "8": "sehr"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Satzanfang + Nomen groß",
-      "shown": "die ente schwimmt im Wasser. Das Wasser ist kalt.",
-      "corrections": {
-        "0": "Die",
-        "1": "Ente"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Wort klein",
-      "shown": "Nora Sucht den Schlüssel. Er liegt in der Jacke.",
-      "corrections": {
-        "1": "sucht"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Wort klein + Satzanfang",
-      "shown": "Oma Backt einen Kuchen. der Kuchen ist warm.",
-      "corrections": {
-        "1": "backt",
-        "4": "Der"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Rechtschreibung",
-      "shown": "Die Sonne scheint hell. Tom Ziht die Jacke aus.",
-      "corrections": {
-        "5": "zieht"
-      }
-    },
-    {
-      "level": 1,
-      "topic": "Satzanfang + Wort klein",
-      "shown": "ali findet eine Blume. Die Blume ist Gelb.",
-      "corrections": {
-        "0": "Ali",
-        "7": "gelb."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Nomen groß",
-      "shown": "Auf dem tisch liegen brot, Butter und ein messer. Nora macht ein Pausenbrot.",
-      "corrections": {
-        "2": "Tisch",
-        "4": "Brot,",
-        "8": "Messer."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Rechtschreibung + Nomen groß",
-      "shown": "Auf dem Tisch liegen Broht, butter und ein Mesar. Paul macht ein Pausenbrot.",
-      "corrections": {
-        "4": "Brot,",
-        "5": "Butter",
-        "8": "Messer."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Rechtschreibung + Wort klein",
-      "shown": "Am Abent liest Mutter eine Geschichte. Die Kinder hören Leise zu.",
-      "corrections": {
-        "1": "Abend",
-        "9": "leise"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Rechtschreibung + Nomen groß",
-      "shown": "Jonas Wescht die hände. Danach trocknet er sie mit einem Handtuch.",
-      "corrections": {
-        "1": "wäscht",
-        "3": "Hände."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Rechtschreibung + Nomen groß",
-      "shown": "Der Drachen fligt hoch in den himmel. Tom hält die Schnur fest.",
-      "corrections": {
-        "2": "fliegt",
-        "6": "Himmel."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Rechtschreibung + Wort klein",
-      "shown": "Im Garten kriecht eine Schneke. Neben ihr Sitzt ein kleiner Käfer.",
-      "corrections": {
-        "4": "Schnecke.",
-        "7": "sitzt"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Satzanfang + Rechtschreibung",
-      "shown": "Der Mond scheint am Himmel. eine Eule sitzt auf einem Asst.",
-      "corrections": {
-        "5": "Eine",
-        "10": "Ast."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Satzanfang + Nomen groß",
-      "shown": "Die Katze schläft auf dem Kissen. das fenster ist offen.",
-      "corrections": {
-        "6": "Das",
-        "7": "Fenster"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Rechtschreibung + Nomen groß",
-      "shown": "Am Abent liest mutter eine Geschichte. Die Kinder hören leise zu.",
-      "corrections": {
-        "1": "Abend",
-        "3": "Mutter"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Nomen groß",
-      "shown": "Pepe packt den rucksack. In der Tasche liegen ein Heft und ein stift.",
-      "corrections": {
-        "3": "Rucksack.",
-        "12": "Stift."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Rechtschreibung",
-      "shown": "Lia Pakt den Rucksack. In der Tasche liegen ein Häft und ein Stift.",
-      "corrections": {
-        "1": "packt",
-        "9": "Heft"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Satzanfang + Wort klein",
-      "shown": "am Morgen sucht Emil die Mütze. Sie Liegt unter dem Bett.",
-      "corrections": {
-        "0": "Am",
-        "7": "liegt"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Satzanfang",
-      "shown": "der Mond scheint am Himmel. eine Eule sitzt auf einem Ast.",
-      "corrections": {
-        "0": "Der",
-        "5": "Eine"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Nomen groß",
-      "shown": "Oskar hilft in der Küche. Er deckt den tisch und holt eine gabel.",
-      "corrections": {
-        "8": "Tisch",
-        "12": "Gabel."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Nomen groß + Rechtschreibung + Wort klein",
-      "shown": "Auf dem spielplatz steht eine lange Rutsche. Mia Kletert Mutig hinauf.",
-      "corrections": {
-        "2": "Spielplatz",
-        "8": "klettert",
-        "9": "mutig"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Nomen groß + Satzanfang",
-      "shown": "Die Katze schläft auf dem kissen. das Fenster ist offen.",
-      "corrections": {
-        "5": "Kissen.",
-        "6": "Das"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Rechtschreibung",
-      "shown": "Im Zoo Siht Tom einen Elefanten. Danach Mahlt er das große Tier.",
-      "corrections": {
-        "2": "sieht",
-        "7": "malt"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Rechtschreibung",
-      "shown": "Auf dem Spilplatz steht eine lange Rutsche. Nino Kletert mutig hinauf.",
-      "corrections": {
-        "2": "Spielplatz",
-        "8": "klettert"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Rechtschreibung + Satzanfang",
-      "shown": "Im Garten kriecht eine Schneke. neben ihr sitzt ein kleiner Käfer.",
-      "corrections": {
-        "4": "Schnecke.",
-        "5": "Neben"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Rechtschreibung",
-      "shown": "Marie Mahlt ein großes Bild. Sie benutzt blaue Farbe und einen dicken Pinnsel.",
-      "corrections": {
-        "1": "malt",
-        "12": "Pinsel."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Satzanfang + Nomen groß + Rechtschreibung",
-      "shown": "die feuerwehr fährt schnell durch die Strase. Das blaue Licht blinkt.",
-      "corrections": {
-        "0": "Die",
-        "1": "Feuerwehr",
-        "6": "Straße."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Wort klein + Rechtschreibung",
-      "shown": "Die Katze Schläft auf dem Kisen. Das Fenster ist offen.",
-      "corrections": {
-        "2": "schläft",
-        "5": "Kissen."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Rechtschreibung + Satzanfang",
-      "shown": "Beim Frühstück Tringt Jonas Milch. danach putzt er die Zene.",
-      "corrections": {
-        "2": "trinkt",
-        "5": "Danach",
-        "9": "Zähne."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Satzanfang + Nomen groß",
-      "shown": "paul bekommt zum geburtstag ein Geschenk. In dem geschenk liegt ein Buch.",
-      "corrections": {
-        "0": "Paul",
-        "3": "Geburtstag",
-        "8": "Geschenk"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Satzanfang + Rechtschreibung",
-      "shown": "der Drachen fliegt hoch in den Himel. Leon hält die Schnur fest.",
-      "corrections": {
-        "0": "Der",
-        "6": "Himmel."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Rechtschreibung + Wort klein",
-      "shown": "Der Leerer erzählt eine spannende Geschichte. Die Klasse Hört aufmerksam zu.",
-      "corrections": {
-        "1": "Lehrer",
-        "8": "hört"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Satzanfang + Rechtschreibung",
-      "shown": "emil Pakt den Rucksack. In der Tasche liegen ein Heft und ein Stift.",
-      "corrections": {
-        "0": "Emil",
-        "1": "packt"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Nomen groß + Rechtschreibung",
-      "shown": "Im Park steht eine alte bank. Neben der Bank wächst eine Bluhme.",
-      "corrections": {
-        "5": "Bank.",
-        "11": "Blume."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Nomen groß + Rechtschreibung",
-      "shown": "Auf dem tisch liegen Broht, Butter und ein Messer. Lena macht ein Pausenbrot.",
-      "corrections": {
-        "2": "Tisch",
-        "4": "Brot,"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Satzanfang",
-      "shown": "im Garten kriecht eine Schnecke. neben ihr sitzt ein kleiner Käfer.",
-      "corrections": {
-        "0": "Im",
-        "5": "Neben"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Satzanfang + Rechtschreibung",
-      "shown": "beim Frühstük trinkt Anton Milch. Danach putzt er die Zähne.",
-      "corrections": {
-        "0": "Beim",
-        "1": "Frühstück"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Wort klein + Rechtschreibung",
-      "shown": "Emma Wäscht die Hende. Danach trocknet sie sie mit einem Handtuch.",
-      "corrections": {
-        "1": "wäscht",
-        "3": "Hände."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Satzanfang + Wort klein + Nomen groß",
-      "shown": "Im Garten kriecht eine Schnecke. neben ihr Sitzt ein kleiner käfer.",
-      "corrections": {
-        "5": "Neben",
-        "7": "sitzt",
-        "10": "Käfer."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Nomen groß",
-      "shown": "Am abend liest Mutter eine geschichte. Die Kinder hören leise zu.",
-      "corrections": {
-        "1": "Abend",
-        "5": "Geschichte."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Rechtschreibung",
-      "shown": "Die Katze schleft auf dem Kisen. Das Fenster ist offen.",
-      "corrections": {
-        "2": "schläft",
-        "5": "Kissen."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Nomen groß + Satzanfang",
-      "shown": "Die feuerwehr fährt schnell durch die Straße. das blaue Licht blinkt.",
-      "corrections": {
-        "1": "Feuerwehr",
-        "7": "Das"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Satzanfang + Rechtschreibung",
-      "shown": "Die Schwester liest ein Buch. der Bruder baut eine kleine Kisste.",
-      "corrections": {
-        "5": "Der",
-        "10": "Kiste."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Nomen groß + Wort klein + Rechtschreibung",
-      "shown": "Der drachen Fliegt hoch in den Himel. Lena hält die Schnur fest.",
-      "corrections": {
-        "1": "Drachen",
-        "2": "fliegt",
-        "6": "Himmel."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Wort klein",
-      "shown": "Auf dem Spielplatz Steht eine lange Rutsche. Oskar klettert Mutig hinauf.",
-      "corrections": {
-        "3": "steht",
-        "9": "mutig"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Nomen groß + Wort klein",
-      "shown": "Auf dem spielplatz steht eine lange rutsche. Lina Klettert mutig hinauf.",
-      "corrections": {
-        "2": "Spielplatz",
-        "6": "Rutsche.",
-        "8": "klettert"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Wort klein + Nomen groß",
-      "shown": "Die Schwester Liest ein Buch. Der Bruder baut eine kleine kiste.",
-      "corrections": {
-        "2": "liest",
-        "10": "Kiste."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Wort klein + Nomen groß + Satzanfang",
-      "shown": "Der Drachen Fliegt hoch in den himmel. mila hält die Schnur fest.",
-      "corrections": {
-        "2": "fliegt",
-        "6": "Himmel.",
-        "7": "Mila"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Wort klein + Rechtschreibung",
-      "shown": "Der Hund Bringt einen Stock. Nora wirft ihn weit über die Wisse.",
-      "corrections": {
-        "2": "bringt",
-        "11": "Wiese."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Satzanfang + Rechtschreibung + Nomen groß",
-      "shown": "im Theater öfnet sich der Vorhang. Ein König spricht mit lauter stimme.",
-      "corrections": {
-        "0": "Im",
-        "2": "öffnet",
-        "11": "Stimme."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Satzanfang + Rechtschreibung",
-      "shown": "beim Frühstük trinkt Ben Milch. Danach putzt er die Zähne.",
-      "corrections": {
-        "0": "Beim",
-        "1": "Frühstück"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Rechtschreibung + Satzanfang",
-      "shown": "Finn Pakt den Rucksack. in der Tasche liegen ein Heft und ein Stift.",
-      "corrections": {
-        "1": "packt",
-        "4": "In"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Rechtschreibung + Nomen groß + Satzanfang",
-      "shown": "Lina bekommt zum Geburstag ein geschenk. in dem Geschenk liegt ein Buch.",
-      "corrections": {
-        "3": "Geburtstag",
-        "5": "Geschenk.",
-        "6": "In"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Nomen groß",
-      "shown": "Anton packt den rucksack. In der tasche liegen ein Heft und ein Stift.",
-      "corrections": {
-        "3": "Rucksack.",
-        "6": "Tasche"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Satzanfang + Nomen groß",
-      "shown": "auf dem Tisch liegen Brot, butter und ein Messer. Nora macht ein Pausenbrot.",
-      "corrections": {
-        "0": "Auf",
-        "5": "Butter"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Satzanfang",
-      "shown": "im Winter bauen die Kinder einen Schneemann. seine Nase ist eine Karotte.",
-      "corrections": {
-        "0": "Im",
-        "7": "Seine"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Satzanfang + Rechtschreibung",
-      "shown": "Lina packt den Rucksack. in der Tasche liegen ein Häft und ein Stifft.",
-      "corrections": {
-        "4": "In",
-        "9": "Heft",
-        "12": "Stift."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Satzanfang + Nomen groß",
-      "shown": "am Morgen sucht Marie die mütze. Sie liegt unter dem Bett.",
-      "corrections": {
-        "0": "Am",
-        "5": "Mütze."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Nomen groß + Rechtschreibung",
-      "shown": "Nach der schule Get Leon nach hause. Dort wartet schon der Bruder.",
-      "corrections": {
-        "2": "Schule",
-        "3": "geht",
-        "6": "Hause."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Nomen groß",
-      "shown": "Die schwester liest ein Buch. Der bruder baut eine kleine Kiste.",
-      "corrections": {
-        "1": "Schwester",
-        "6": "Bruder"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Nomen groß + Satzanfang + Rechtschreibung",
-      "shown": "Auf dem spielplatz steht eine lange Rutsche. sara Kletert mutig hinauf.",
-      "corrections": {
-        "2": "Spielplatz",
-        "7": "Sara",
-        "8": "klettert"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Rechtschreibung + Satzanfang + Nomen groß",
-      "shown": "Im Theater öfnet sich der Vorhang. ein König spricht mit lauter stimme.",
-      "corrections": {
-        "2": "öffnet",
-        "6": "Ein",
-        "11": "Stimme."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Satzanfang + Nomen groß + Rechtschreibung",
-      "shown": "emil malt ein großes bild. Er benutzt blaue Farbe und einen dicken Pinnsel.",
-      "corrections": {
-        "0": "Emil",
-        "4": "Bild.",
-        "12": "Pinsel."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Nomen groß + Satzanfang",
-      "shown": "Auf dem Tisch liegen brot, Butter und ein Messer. lena macht ein Pausenbrot.",
-      "corrections": {
-        "4": "Brot,",
-        "9": "Lena"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Nomen groß + Satzanfang",
-      "shown": "Die Feuerwehr fährt schnell durch die straße. das blaue Licht blinkt.",
-      "corrections": {
-        "6": "Straße.",
-        "7": "Das"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Satzanfang + Nomen groß",
-      "shown": "im Winter bauen die Kinder einen Schneemann. seine Nase ist eine karotte.",
-      "corrections": {
-        "0": "Im",
-        "7": "Seine",
-        "11": "Karotte."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Wort klein + Nomen groß",
-      "shown": "Die Katze Schläft auf dem Kissen. Das fenster ist offen.",
-      "corrections": {
-        "2": "schläft",
-        "7": "Fenster"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Nomen groß + Satzanfang",
-      "shown": "Lena bekommt zum geburtstag ein Geschenk. in dem Geschenk liegt ein Buch.",
-      "corrections": {
-        "3": "Geburtstag",
-        "6": "In"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Satzanfang + Rechtschreibung",
-      "shown": "die Kaze schläft auf dem Kissen. das Fenster ist offen.",
-      "corrections": {
-        "0": "Die",
-        "1": "Katze",
-        "6": "Das"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Rechtschreibung + Nomen groß + Wort klein",
-      "shown": "Die Klasze singt ein lied. Danach tanzen alle Kinder Fröhlich.",
-      "corrections": {
-        "1": "Klasse",
-        "4": "Lied.",
-        "9": "fröhlich."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Wort klein + Satzanfang",
-      "shown": "Nino Malt ein großes Bild. er benutzt blaue Farbe und einen dicken Pinsel.",
-      "corrections": {
-        "1": "malt",
-        "5": "Er"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Satzanfang + Rechtschreibung",
-      "shown": "im Winter bauen die Kinder einen Schneemann. Seine Nase ist eine Karote.",
-      "corrections": {
-        "0": "Im",
-        "11": "Karotte."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Nomen groß + Wort klein",
-      "shown": "Auf dem Spielplatz steht eine lange rutsche. Emma Klettert mutig hinauf.",
-      "corrections": {
-        "6": "Rutsche.",
-        "8": "klettert"
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Rechtschreibung + Nomen groß",
-      "shown": "Lia Mahlt ein großes bild. Sie benutzt blaue Farbe und einen dicken Pinsel.",
-      "corrections": {
-        "1": "malt",
-        "4": "Bild."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Rechtschreibung",
-      "shown": "Sara Mahlt ein großes Bild. Sie benutzt blaue Farbe und einen dicken Pinnsel.",
-      "corrections": {
-        "1": "malt",
-        "12": "Pinsel."
-      }
-    },
-    {
-      "level": 2,
-      "topic": "Rechtschreibung",
-      "shown": "Die Feuerwer färt schnell durch die Straße. Das blaue Licht blinkt.",
-      "corrections": {
-        "1": "Feuerwehr",
-        "2": "fährt"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Rechtschreibung",
-      "shown": "im Sachunterricht sprechen alle über Tiere. Die Lehrerin zeigt Bilder von Igel, Fux und Eulle.",
-      "corrections": {
-        "0": "Im",
-        "12": "Fuchs",
-        "14": "Eule."
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Rechtschreibung",
-      "shown": "der Roboter piept laut im Zimer. Er hebt einen Baustain auf und legt ihn in die Kiste.",
-      "corrections": {
-        "0": "Der",
-        "5": "Zimmer.",
-        "9": "Baustein"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Nomen groß + Rechtschreibung",
-      "shown": "im Sachunterricht sprechen alle über Tiere. die lehrerin zeigt Bilder von Igl, Fuchs und Eule.",
-      "corrections": {
-        "0": "Im",
-        "6": "Die",
-        "7": "Lehrerin",
-        "11": "Igel,"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Rechtschreibung",
-      "shown": "die Klasze besucht die Feuerwehr. Ein Feuerwehrmann zeigt das große Audo und erklärt die Leiter.",
-      "corrections": {
-        "0": "Die",
-        "1": "Klasse",
-        "10": "Auto"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Nomen groß",
-      "shown": "in der Pause spielen die Kinder Fußball. ein junge schießt den Ball gegen den Zaun.",
-      "corrections": {
-        "0": "In",
-        "7": "Ein",
-        "8": "Junge"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Nomen groß",
-      "shown": "während der Projektwoche bastelt die klasse kleine Boote. die Kinder kleben Holzstäbchen zusammen und malen bunte Segel.",
-      "corrections": {
-        "0": "Während",
-        "5": "Klasse",
-        "8": "Die"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Nomen groß + Satzanfang",
-      "shown": "In der pause spielen die Kinder Fußball. ein Junge schießt den ball gegen den Zaun.",
-      "corrections": {
-        "2": "Pause",
-        "7": "Ein",
-        "11": "Ball"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Rechtschreibung + Wort klein",
-      "shown": "beim Sportfest Rent Jana besonders Schnell. am Ende bekommt sie eine kleine Medaille.",
-      "corrections": {
-        "0": "Beim",
-        "2": "rennt",
-        "5": "schnell.",
-        "6": "Am"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Nomen groß",
-      "shown": "in der Bibliothek sucht Tom ein spannendes buch. auf dem Teppich sitzen schon viele Kinder und lesen.",
-      "corrections": {
-        "0": "In",
-        "7": "Buch.",
-        "8": "Auf"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Rechtschreibung",
-      "shown": "auf dem Bauernhof füttert Anton eine Kuh und ein Pfert. Danach leuft ein kleiner Hund über den Hof.",
-      "corrections": {
-        "0": "Auf",
-        "9": "Pferd.",
-        "11": "läuft"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Nomen groß + Rechtschreibung",
-      "shown": "auf dem Bauernhof füttert Ali eine Kuh und ein pferd. Danach leuft ein kleiner hund über den Hof.",
-      "corrections": {
-        "0": "Auf",
-        "9": "Pferd.",
-        "11": "läuft",
-        "14": "Hund"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Rechtschreibung",
-      "shown": "gestern besuchte Nino die Tante in Hamburg. sie fuhren mit der Bahn zum Haven und sahen große Schife.",
-      "corrections": {
-        "0": "Gestern",
-        "7": "Sie",
-        "13": "Hafen",
-        "17": "Schiffe."
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Rechtschreibung + Nomen groß",
-      "shown": "Auf dem Schreibtisch liegen ein Häft, ein Stift und ein computer. Oskar schreibt eine kurze geschichte.",
-      "corrections": {
-        "5": "Heft,",
-        "10": "Computer.",
-        "15": "Geschichte."
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Rechtschreibung",
-      "shown": "im Schwimmbad springt Oskar vorsichtig ins Waser. danach schwimmt er langsam bis zum Rand.",
-      "corrections": {
-        "0": "Im",
-        "6": "Wasser.",
-        "7": "Danach"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Rechtschreibung",
-      "shown": "im Kunstunterricht malt Lina einen Drachen. der Drachen had grüne Flügel und einen langen Schwanz.",
-      "corrections": {
-        "0": "Im",
-        "6": "Der",
-        "8": "hat"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Nomen groß + Rechtschreibung",
-      "shown": "Im Sachunterricht sprechen alle über Tiere. Die lehrerin zeigt Bilder von Igel, Fux und Eulle.",
-      "corrections": {
-        "7": "Lehrerin",
-        "12": "Fuchs",
-        "14": "Eule."
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Nomen groß + Rechtschreibung",
-      "shown": "Gestern besuchte Paul die Tante in Hamburg. sie fuhren mit der Bahn zum hafen und sahen große Schife.",
-      "corrections": {
-        "7": "Sie",
-        "13": "Hafen",
-        "17": "Schiffe."
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Wort klein",
-      "shown": "nach dem Mittagessen räumt Ben den Teller weg. dann Hilft er beim Abwasch in der Küche.",
-      "corrections": {
-        "0": "Nach",
-        "8": "Dann",
-        "9": "hilft"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Nomen groß",
-      "shown": "am meer baut Ali eine Burg aus Sand. Eine welle kommt näher und macht den Strand nass.",
-      "corrections": {
-        "0": "Am",
-        "1": "Meer",
-        "9": "Welle"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Rechtschreibung",
-      "shown": "im Sachunterricht sprechen alle über Tiere. Die Lehrerin zeigt Bilder von Igl, Fuchs und Eulle.",
-      "corrections": {
-        "0": "Im",
-        "11": "Igel,",
-        "14": "Eule."
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Wort klein",
-      "shown": "beim Sportfest Rennt Anton besonders schnell. am Ende bekommt er eine kleine Medaille.",
-      "corrections": {
-        "0": "Beim",
-        "2": "rennt",
-        "6": "Am"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Nomen groß + Rechtschreibung",
-      "shown": "in der pause spielen die Kinder Fusball. Ein Junge schießt den Ball gegen den Zaun.",
-      "corrections": {
-        "0": "In",
-        "2": "Pause",
-        "6": "Fußball."
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Rechtschreibung",
-      "shown": "Gestern besuchte Tom die Tante in Hamburg. sie fuhren mit der Bahn zum Haven und sahen große Schife.",
-      "corrections": {
-        "7": "Sie",
-        "13": "Hafen",
-        "17": "Schiffe."
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Rechtschreibung + Nomen groß",
-      "shown": "Gestern besuchte Anton die Tante in Hamburg. sie fuhren mit der Bahn zum Haven und sahen große schiffe.",
-      "corrections": {
-        "7": "Sie",
-        "13": "Hafen",
-        "17": "Schiffe."
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Wort klein + Nomen groß",
-      "shown": "bei der Fahrradprüfung müssen die Kinder Gut aufpassen. sie fahren langsam an der ampel vorbei und zeigen die Richtung an.",
-      "corrections": {
-        "0": "Bei",
-        "6": "gut",
-        "8": "Sie",
-        "13": "Ampel"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Nomen groß",
-      "shown": "in der Pause spielen die Kinder Fußball. ein Junge schießt den ball gegen den Zaun.",
-      "corrections": {
-        "0": "In",
-        "7": "Ein",
-        "11": "Ball"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Wort klein + Satzanfang + Nomen groß",
-      "shown": "Im Kunstunterricht Malt Lina einen Drachen. der drachen hat grüne Flügel und einen langen Schwanz.",
-      "corrections": {
-        "2": "malt",
-        "6": "Der",
-        "7": "Drachen"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Nomen groß + Rechtschreibung",
-      "shown": "gestern besuchte Lena die Tante in Hamburg. Sie fuhren mit der Bahn zum hafen und sahen große Schife.",
-      "corrections": {
-        "0": "Gestern",
-        "13": "Hafen",
-        "17": "Schiffe."
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Nomen groß",
-      "shown": "am ersten Schultag ist alles besonders aufregend. die Kinder suchen ihre Plätze und legen neue Hefte auf den tisch.",
-      "corrections": {
-        "0": "Am",
-        "7": "Die",
-        "18": "Tisch."
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Rechtschreibung + Nomen groß",
-      "shown": "gestern besuchte Sofia die Tante in Hamburg. Sie fuhren mit der Bahn zum Haven und sahen große schiffe.",
-      "corrections": {
-        "0": "Gestern",
-        "13": "Hafen",
-        "17": "Schiffe."
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Wort klein",
-      "shown": "die Kinder planen ein kleines Theaterstück. sara Spielt einen König und Trägt eine goldene Krone.",
-      "corrections": {
-        "0": "Die",
-        "6": "Sara",
-        "7": "spielt",
-        "11": "trägt"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Wort klein + Nomen groß",
-      "shown": "Im Herbst fallen viele Blätter vom Baum. lena Sammelt rote und gelbe Blätter für ein bild.",
-      "corrections": {
-        "7": "Lena",
-        "8": "sammelt",
-        "15": "Bild."
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Nomen groß + Satzanfang",
-      "shown": "In der Küche bereitet Mia mit dem vater das Abendessen vor. sie schneiden Gemüse und rühren eine warme suppe.",
-      "corrections": {
-        "7": "Vater",
-        "11": "Sie",
-        "18": "Suppe."
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Wort klein + Rechtschreibung",
-      "shown": "Bei der Fahrradprüfung müssen die Kinder Gut aufpassen. Sie fahren Langsam an der Ampell vorbei und zeigen die Richtung an.",
-      "corrections": {
-        "6": "gut",
-        "10": "langsam",
-        "13": "Ampel"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Wort klein",
-      "shown": "die Kinder planen ein kleines Theaterstück. ben spielt einen König und Trägt eine goldene Krone.",
-      "corrections": {
-        "0": "Die",
-        "6": "Ben",
-        "11": "trägt"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Rechtschreibung + Satzanfang",
-      "shown": "Die Klasse besucht die Feuerwer. ein Feuerwehrmann zeigt das große Audo und erklärt die Leiter.",
-      "corrections": {
-        "4": "Feuerwehr.",
-        "5": "Ein",
-        "10": "Auto"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Nomen groß",
-      "shown": "am abend geht Emma mit einer laterne durch die Straße. Die Musik klingt fröhlich und alle singen mit.",
-      "corrections": {
-        "0": "Am",
-        "1": "Abend",
-        "6": "Laterne"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Rechtschreibung",
-      "shown": "Im Sachunterricht sprechen alle über Tiere. die Lehrerin zeigt Bilder von Igl, Fuchs und Eulle.",
-      "corrections": {
-        "6": "Die",
-        "11": "Igel,",
-        "14": "Eule."
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Wort klein",
-      "shown": "im Schwimmbad Springt Mila vorsichtig ins Wasser. danach schwimmt sie langsam bis zum Rand.",
-      "corrections": {
-        "0": "Im",
-        "2": "springt",
-        "7": "Danach"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Nomen groß",
-      "shown": "in der Küche bereitet Marie mit dem vater das Abendessen vor. Sie schneiden Gemüse und rühren eine warme suppe.",
-      "corrections": {
-        "0": "In",
-        "7": "Vater",
-        "18": "Suppe."
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Rechtschreibung",
-      "shown": "am Banhof wartet die Familie auf den Zug. Der Vater trägt den Koffer und die Muter liest den Fahrplan.",
-      "corrections": {
-        "0": "Am",
-        "1": "Bahnhof",
-        "15": "Mutter"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Wort klein + Satzanfang + Nomen groß",
-      "shown": "Bei der Fahrradprüfung müssen die Kinder Gut aufpassen. sie fahren langsam an der ampel vorbei und zeigen die Richtung an.",
-      "corrections": {
-        "6": "gut",
-        "8": "Sie",
-        "13": "Ampel"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Wort klein + Rechtschreibung",
-      "shown": "im Schwimmbad Springt Finn vorsichtig ins Waser. Danach schwimmt er Langsam bis zum Rand.",
-      "corrections": {
-        "0": "Im",
-        "2": "springt",
-        "6": "Wasser.",
-        "10": "langsam"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Wort klein + Nomen groß",
-      "shown": "Im Herbst fallen viele Blätter vom Baum. jonas Sammelt rote und gelbe Blätter für ein bild.",
-      "corrections": {
-        "7": "Jonas",
-        "8": "sammelt",
-        "15": "Bild."
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Nomen groß + Wort klein + Rechtschreibung",
-      "shown": "Der roboter piept Laut im Zimmer. Er hebt einen Baustein auf und legt ihn in die Kisste.",
-      "corrections": {
-        "1": "Roboter",
-        "3": "laut",
-        "16": "Kiste."
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Rechtschreibung + Wort klein + Nomen groß",
-      "shown": "Im Wald Höhrt Lia Plötzlich ein Geräusch. Zwischen den Bäumen springt ein hase davon.",
-      "corrections": {
-        "2": "hört",
-        "4": "plötzlich",
-        "12": "Hase"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Nomen groß + Wort klein",
-      "shown": "Im Herbst fallen viele Blätter vom baum. Emma Sammelt rote und gelbe Blätter für ein bild.",
-      "corrections": {
-        "6": "Baum.",
-        "8": "sammelt",
-        "15": "Bild."
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Nomen groß + Rechtschreibung",
-      "shown": "in der Küche bereitet Pepe mit dem vater das Abendessen vor. sie schneiden Gemüse und rühren eine warme suphe.",
-      "corrections": {
-        "0": "In",
-        "7": "Vater",
-        "11": "Sie",
-        "18": "Suppe."
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Satzanfang + Nomen groß + Wort klein",
-      "shown": "im Herbst fallen viele Blätter vom baum. tom Sammelt rote und gelbe Blätter für ein Bild.",
-      "corrections": {
-        "0": "Im",
-        "6": "Baum.",
-        "7": "Tom",
-        "8": "sammelt"
-      }
-    },
-    {
-      "level": 3,
-      "topic": "Nomen groß + Rechtschreibung",
-      "shown": "Am bahnhof wartet die Familie auf den Zug. Der vater Tregt den Koffer und die Mutter liest den Fahrplan.",
-      "corrections": {
-        "1": "Bahnhof",
-        "9": "Vater",
-        "10": "trägt"
-      }
-    }
-  ]
-}
+[
+  {"level":3,"topic":"Satzanfang + Wort klein","shown":"Am Nachmittag fährt Greta mit dem Fahrrad zum See. dort Wartet schon die Familie, und gemeinsam essen alle Kuchen, Obst und frisches Brot.","corrections":{"9":"Dort","10":"wartet"}},
+  {"level":1,"topic":"Falscher Buchstabe","shown":"Im Garten blühen fiele bunte Blummen.","corrections":{"5":"Blumen.","3":"viele"}},
+  {"level":1,"topic":"Doppelkonsonant","shown":"Im Zimer steht eine große Puppe.","corrections":{"1":"Zimmer"}},
+  {"level":1,"topic":"Wort klein","shown":"Felix Spielt heute mit einem Ball.","corrections":{"1":"spielt"}},
+  {"level":3,"topic":"Falscher Buchstabe + Nomen groß","shown":"Nach dem Unterricht räumt David den Ranzen ein. Auf dem schulhof wartet schon ein Freunt, und gemeinsam laufen beide langsam durch den park nach Hause.","corrections":{"14":"Freund,","22":"Park","10":"Schulhof"}},
+  {"level":2,"topic":"Nomen groß","shown":"Sophie geht mit der Familie zum Hafen. Dort sehen alle zwei große schiffe.","corrections":{"12":"Schiffe."}},
+  {"level":1,"topic":"Nomen groß","shown":"Die katze sitzt leise auf der Decke.","corrections":{"1":"Katze"}},
+  {"level":3,"topic":"Nomen groß + Doppelkonsonant","shown":"Vor dem Schlafengehen räumt Anna noch das Zimer auf. Die Puppe kommt ins Regal, das Buch auf den tisch und die Decke ordentlich aufs Bett.","corrections":{"18":"Tisch","7":"Zimmer"}},
+  {"level":3,"topic":"Doppelkonsonant + Nomen groß","shown":"Am Morgen hilft Luisa beim frühstück. Sie stellt Tassen und Teller auf den Tisch, während die Mutter frische Brötchen und Buter aus der Küche bringt.","corrections":{"20":"Butter","5":"Frühstück."}},
+  {"level":1,"topic":"ck","shown":"Die Katze sitzt leise auf der Deke.","corrections":{"6":"Decke."}},
+  {"level":2,"topic":"Nomen groß","shown":"Mara hilft beim frühstück. Sie stellt Teller, Tassen und einen Korb mit Brötchen auf den Tisch.","corrections":{"3":"Frühstück."}},
+  {"level":3,"topic":"Wort klein","shown":"Im Wald Entdeckt Anna zwischen den Bäumen eine Kleine Hütte. Vor der Tür liegen alte Holzscheite, und hinter dem Fenster steht eine helle Lampe.","corrections":{"2":"entdeckt","8":"kleine"}},
+  {"level":3,"topic":"Nomen groß","shown":"Vor dem Schlafengehen räumt Anna noch das Zimmer auf. Die Puppe kommt ins Regal, das Buch auf den tisch und die decke ordentlich aufs Bett.","corrections":{"21":"Decke","18":"Tisch"}},
+  {"level":1,"topic":"Wort klein","shown":"Nora Spielt heute mit einem Ball.","corrections":{"1":"spielt"}},
+  {"level":2,"topic":"Satzanfang","shown":"Der Regen prasselt gegen das Fenster. im Zimmer liest Lina ein spannendes Buch.","corrections":{"6":"Im"}},
+  {"level":3,"topic":"Nomen groß + Satzanfang","shown":"am Sonntag besucht Anna mit der familie den Zoo. Nach den großen Katzen schauen alle noch bei den Vögeln vorbei und essen danach ein Brötchen.","corrections":{"6":"Familie","0":"Am"}},
+  {"level":1,"topic":"Wort klein","shown":"Auf dem Bett Liegt ein weiches Kissen.","corrections":{"3":"liegt"}},
+  {"level":1,"topic":"ck + Falscher Buchstabe","shown":"Jonas malt mit einem diken Pinsell.","corrections":{"4":"dicken","5":"Pinsel."}},
+  {"level":1,"topic":"Nomen groß","shown":"Der hund rennt schnell über die Wiese.","corrections":{"1":"Hund"}},
+  {"level":3,"topic":"Nomen groß + Wort klein","shown":"Als der bus endlich Kommt, steigen die Fahrgäste nacheinander ein. Eine ältere Dame sucht nach einem freien Sitzplatz, und Klara steht sofort freundlich auf.","corrections":{"2":"Bus","4":"kommt,"}},
+  {"level":1,"topic":"Nomen groß","shown":"Clara findet im Rucksack ein altes heft.","corrections":{"6":"Heft."}},
+  {"level":1,"topic":"Wort klein","shown":"Am Morgen Trinkt Hannes warme Milch.","corrections":{"2":"trinkt"}},
+  {"level":3,"topic":"Wort klein + tz","shown":"Nach der Schule trifft Ben einen Freund im Park. Gemeinsam spielen beide Fußball, bis plözlich starker Regen fällt und sie Schnell unter eine Brücke laufen.","corrections":{"20":"schnell","14":"plötzlich"}},
+  {"level":2,"topic":"Nomen groß + Doppelkonsonant","shown":"Mara besucht am Sonntag die Großeltern. Zum mittag gibt es Supe und frisches Brot.","corrections":{"7":"Mittag","10":"Suppe"}},
+  {"level":3,"topic":"Doppelkonsonant + Nomen groß + Satzanfang","shown":"Am Samstag backt Leo mit der Muter einen Schokoladenkuchen. zuerst kommen Mehl, Zucker und Butter in eine große schüssel, danach wird alles gut verrührt.","corrections":{"6":"Mutter","18":"Schüssel,","9":"Zuerst"}},
+  {"level":2,"topic":"Nomen groß","shown":"Am Morgen scheint die Sonne. Trotzdem nimmt Ida eine warme jacke mit.","corrections":{"10":"Jacke"}},
+  {"level":2,"topic":"Nomen groß","shown":"Im Winter bauen die Kinder einen Schneemann. Seine nase besteht aus einer langen Karotte.","corrections":{"8":"Nase"}},
+  {"level":3,"topic":"Buchstabendreher + Nomen groß + Wort klein","shown":"Am wochenende Besucht Marie mit der Familie den Zoo. Nach den großen Katzen schauen alle noch bei den Vögeln vorbei und essen danach ein Brötcehn.","corrections":{"24":"Brötchen.","1":"Wochenende","2":"besucht"}},
+  {"level":3,"topic":"Satzanfang","shown":"am Sonntag besucht David mit der Familie den Zoo. nach den großen Katzen schauen alle noch bei den Vögeln vorbei und essen danach ein Brötchen.","corrections":{"9":"Nach","0":"Am"}},
+  {"level":2,"topic":"Satzanfang + Doppelkonsonant","shown":"Anton geht mit der Familie zum Hafen. dort sehen alle zwei große Schife.","corrections":{"7":"Dort","12":"Schiffe."}},
+  {"level":1,"topic":"Wort klein + Satzanfang","shown":"der Hund Wartet vor der offenen Tür.","corrections":{"2":"wartet","0":"Der"}},
+  {"level":2,"topic":"Falscher Buchstabe + Nomen groß","shown":"Oskar malt ein großes Bilt. Dafür benutzt er einen dicken pinsel und blaue Farbe.","corrections":{"4":"Bild.","10":"Pinsel"}},
+  {"level":1,"topic":"Wort klein","shown":"Moritz malt mit einem Dicken Pinsel.","corrections":{"4":"dicken"}},
+  {"level":2,"topic":"Wort klein + Falscher Buchstabe","shown":"Im Park beobachtet Nora fiele Vögel. Ein kleiner Vogel Fliegt plötzlich auf einen Ast.","corrections":{"9":"fliegt","4":"viele"}},
+  {"level":2,"topic":"Doppelkonsonant","shown":"Am Morgen scheint die Sonne. Trotzdem nimt Leo eine warme Jacke mit.","corrections":{"6":"nimmt"}},
+  {"level":2,"topic":"Buchstabendreher + Wort klein","shown":"Der Bus kommt am Mrogn pünktlich. Ben Findet sofort einen freien Sitzplatz am Fenster.","corrections":{"4":"Morgen","7":"findet"}},
+  {"level":3,"topic":"Satzanfang","shown":"im Winter bauen die Kinder auf dem Schulhof einen großen Schneemann. seine Nase ist eine Karotte, und auf dem Kopf trägt er einen alten Hut.","corrections":{"11":"Seine","0":"Im"}},
+  {"level":3,"topic":"Nomen groß + Buchstabendreher + Doppelkonsonant","shown":"Im Graten blühen viele Blumen zwischen den Bäumen. Emma samelt vorsichtig einige Blätter, während ein kleiner vogel auf der Fahne neben dem Haus sitzt.","corrections":{"16":"Vogel","1":"Garten","9":"sammelt"}},
+  {"level":1,"topic":"Buchstabendreher","shown":"Vor der Tür steht ein rotes Fahrard.","corrections":{"6":"Fahrrad."}},
+  {"level":2,"topic":"Doppelkonsonant + Nomen groß","shown":"Oskar besucht am Sontag die Großeltern. Zum mittag gibt es Suppe und frisches Brot.","corrections":{"3":"Sonntag","7":"Mittag"}},
+  {"level":2,"topic":"Wort klein + Doppelkonsonant","shown":"Der Bus komt am Morgen pünktlich. Tom Findet sofort einen freien Sitzplatz am Fenster.","corrections":{"7":"findet","2":"kommt"}},
+  {"level":1,"topic":"Nomen groß","shown":"Paul packt den ranzen für die Schule.","corrections":{"3":"Ranzen"}},
+  {"level":1,"topic":"Wort klein","shown":"Robin Packt den Ranzen für die Schule.","corrections":{"1":"packt"}},
+  {"level":2,"topic":"Nomen groß + Doppelkonsonant","shown":"Die katze schläft auf dem Kissen. Am Mitag springt sie auf die Fensterbank.","corrections":{"1":"Katze","7":"Mittag"}},
+  {"level":1,"topic":"Nomen groß","shown":"Finn liest heute ein spannendes buch.","corrections":{"5":"Buch."}},
+  {"level":2,"topic":"Wort klein","shown":"Am Nachmittag schreibt Anna eine Geschichte. Danach liest sie den Text noch einmal Langsam.","corrections":{"13":"langsam."}},
+  {"level":3,"topic":"Nomen groß","shown":"In der Pause erzählt Ben den Freunden vom wochenende. Die Familie hat eine lange Fahrradtour durch den wald gemacht und an einer kleinen Brücke Rast gemacht.","corrections":{"8":"Wochenende.","17":"Wald"}},
+  {"level":2,"topic":"Nomen groß + Wort klein","shown":"Robin hilft beim Frühstück. Er Stellt Teller, Tassen und einen korb mit Brötchen auf den Tisch.","corrections":{"10":"Korb","5":"stellt"}},
+  {"level":1,"topic":"Nomen groß","shown":"Zum Frühstück isst Anna einen roten apfel.","corrections":{"6":"Apfel."}},
+  {"level":2,"topic":"Doppelkonsonant","shown":"Die Katze schläft auf dem Kisen. Am Mittag springt sie auf die Fensterbank.","corrections":{"5":"Kissen."}},
+  {"level":2,"topic":"Wort klein","shown":"Paula Liest ein spannendes Buch. Danach schreibt sie einen kurzen Brief an einen Freund.","corrections":{"1":"liest"}},
+  {"level":3,"topic":"Nomen groß + Wort klein","shown":"Während des Ausflugs macht die Klasse eine Pause an einem kleinen see. Noah Beobachtet mehrere Enten, die leise über das Wasser schwimmen und nach Futter suchen.","corrections":{"11":"See.","13":"beobachtet"}},
+  {"level":2,"topic":"Doppelkonsonant","shown":"Der Hund rent über die Wiese. Plötzlich bleibt er vor einer großen Pfütze stehen.","corrections":{"2":"rennt"}},
+  {"level":2,"topic":"Wort klein + Doppelkonsonant","shown":"Lena geht mit der Familie zum Hafen. Dort sehen alle zwei Große Schife.","corrections":{"11":"große","12":"Schiffe."}},
+  {"level":3,"topic":"Dehnungs-h + Doppelkonsonant + Satzanfang","shown":"Am Morgen hilft Nora beim Früstück. sie stellt Tassen und Teller auf den Tisch, während die Muter frische Brötchen und Butter aus der Küche bringt.","corrections":{"5":"Frühstück.","16":"Mutter","6":"Sie"}},
+  {"level":3,"topic":"Nomen groß + Wort klein + ss und ß","shown":"Am Samstag Backt Clara mit der mutter einen Schokoladenkuchen. Zuerst kommen Mehl, Zucker und Butter in eine große Schüßel, danach wird alles gut verrührt.","corrections":{"6":"Mutter","2":"backt","18":"Schüssel,"}},
+  {"level":1,"topic":"Nomen groß","shown":"Moritz findet im Rucksack ein altes heft.","corrections":{"6":"Heft."}},
+  {"level":3,"topic":"tz + Nomen groß","shown":"Auf dem Weg zum Bäcker entdeckt Oskar eine kleine Kaze. Sie sitzt unter einer Bank und schaut neugierig auf den Korb mit den brötchen.","corrections":{"9":"Katze.","23":"Brötchen."}},
+  {"level":1,"topic":"Doppelkonsonant","shown":"Ida backt mit der Muter einen Kuchen.","corrections":{"4":"Mutter"}},
+  {"level":3,"topic":"Nomen groß","shown":"Im winter bauen die Kinder auf dem Schulhof einen großen Schneemann. Seine nase ist eine Karotte, und auf dem Kopf trägt er einen alten Hut.","corrections":{"1":"Winter","12":"Nase"}},
+  {"level":2,"topic":"Wort klein + Doppelkonsonant","shown":"Leo Geht mit der Familie zum Hafen. Dort sehen alle zwei große Schife.","corrections":{"1":"geht","12":"Schiffe."}},
+  {"level":1,"topic":"Wort klein","shown":"Am Morgen trinkt Clara Warme Milch.","corrections":{"4":"warme"}},
+  {"level":2,"topic":"Satzanfang","shown":"Luisa geht mit der Familie zum Hafen. dort sehen alle zwei große Schiffe.","corrections":{"7":"Dort"}},
+  {"level":2,"topic":"Doppelkonsonant","shown":"Clara besucht am Sonntag die Großeltern. Zum Mitag gibt es Supe und frisches Brot.","corrections":{"10":"Suppe","7":"Mittag"}},
+  {"level":2,"topic":"Dehnungs-h","shown":"Ida hilft beim Früstück. Sie stellt Teller, Tassen und einen Korb mit Brötchen auf den Tisch.","corrections":{"3":"Frühstück."}},
+  {"level":1,"topic":"Satzanfang","shown":"die Mutter kocht eine warme Suppe.","corrections":{"0":"Die"}},
+  {"level":3,"topic":"Falscher Buchstabe + Nomen groß","shown":"Im Garten blühen fiele Blumen zwischen den Bäumen. Oskar sammelt vorsichtig einige Blätter, während ein kleiner vogel auf der Fahne neben dem Haus sitzt.","corrections":{"3":"viele","16":"Vogel"}},
+  {"level":3,"topic":"Nomen groß + Wort klein","shown":"Kurz vor dem Abendessen klingelt es an der tür. Die Nachbarin Bringt einen Korb mit frischen Äpfeln, und Paula bedankt sich freundlich bei ihr.","corrections":{"8":"Tür.","11":"bringt"}},
+  {"level":3,"topic":"Satzanfang + Wort klein","shown":"Als der Bus endlich kommt, steigen die Fahrgäste nacheinander ein. eine ältere Dame Sucht nach einem freien Sitzplatz, und Emma steht sofort freundlich auf.","corrections":{"10":"Eine","13":"sucht"}},
+  {"level":3,"topic":"ck + Nomen groß","shown":"Auf dem Weg zum Bäker entdeckt Anna eine kleine katze. Sie sitzt unter einer Bank und schaut neugierig auf den Korb mit den Brötchen.","corrections":{"4":"Bäcker","9":"Katze."}},
+  {"level":1,"topic":"Nomen groß","shown":"Der Hund rennt schnell über die wiese.","corrections":{"6":"Wiese."}},
+  {"level":3,"topic":"ie + Dehnungs-h + Wort klein","shown":"Die Klasse schreibt heute eine kurze Geschichte. Luisa Denkt lange über einen lustigen Satz nach und list den fertigen Text später der Lererin vor.","corrections":{"16":"liest","22":"Lehrerin","8":"denkt"}},
+  {"level":3,"topic":"Falscher Buchstabe + Dehnungs-h","shown":"Im Garten blühen viele Blumen zwischen den Bäumen. Leo sammelt vorsichtig einige Blätter, während ein kleiner Fogel auf der Fane neben dem Haus sitzt.","corrections":{"16":"Vogel","19":"Fahne"}},
+  {"level":1,"topic":"ie","shown":"Paul schribt einen Brief an einen Freund.","corrections":{"1":"schreibt"}},
+  {"level":2,"topic":"Nomen groß","shown":"Klara packt am Morgen den ranzen. Danach fährt sie mit dem Fahrrad zur Schule.","corrections":{"5":"Ranzen."}},
+  {"level":1,"topic":"Nomen groß","shown":"Robin fährt mit dem fahrrad zum Park.","corrections":{"4":"Fahrrad"}},
+  {"level":3,"topic":"Wort klein + Buchstabendreher","shown":"Am Sonntag Besucht Finn mit der Familie den Zoo. Nach den großen Katzen schauen alle noch bei den Vögeln vorbei und essen danach ein Brötcehn.","corrections":{"2":"besucht","24":"Brötchen."}},
+  {"level":3,"topic":"Falscher Buchstabe + ie","shown":"Die Lehrerin list der Klasse eine spannende Geschichte vor. Danach schreiben die Kinder wichtige Wörter in ihr Hefd und vergleichen gemeinsam die Ergebnisse.","corrections":{"17":"Heft","2":"liest"}},
+  {"level":2,"topic":"Doppelkonsonant","shown":"Am Morgen scheint die Sonne. Trotzdem nimt Noah eine warme Jacke mit.","corrections":{"6":"nimmt"}},
+  {"level":2,"topic":"Dehnungs-h + Nomen groß","shown":"Nach der schule färt Robin mit dem Fahrrad nach Hause. Der Rucksack liegt hinten auf dem Gepäckträger.","corrections":{"3":"fährt","2":"Schule"}},
+  {"level":3,"topic":"Nomen groß + Satzanfang","shown":"Am wochenende besucht Lina mit der Familie den Zoo. nach den großen Katzen schauen alle noch bei den Vögeln vorbei und essen danach ein Brötchen.","corrections":{"1":"Wochenende","9":"Nach"}},
+  {"level":1,"topic":"Wort klein","shown":"Auf der Wiese Läuft ein kleines Pferd.","corrections":{"3":"läuft"}},
+  {"level":3,"topic":"Buchstabendreher + Satzanfang","shown":"an einem Sonntag besucht Greta mit der Familie den Zoo. Nach den großen Katzen schauen alle noch bei den Vögeln vorbei und essen danach ein Brötcehn.","corrections":{"25":"Brötchen.","0":"An"}},
+  {"level":3,"topic":"Nomen groß + Wort klein","shown":"Im winter bauen die Kinder auf dem Schulhof einen großen schneemann. Seine Nase ist eine Karotte, und auf dem Kopf Trägt er einen alten Hut.","corrections":{"10":"Schneemann.","20":"trägt","1":"Winter"}},
+  {"level":2,"topic":"Wort klein + ss und ß","shown":"Hannes zieht die Jacke an. drausen ist es kalt und auf der Straße Liegt Schnee.","corrections":{"13":"liegt","5":"Draußen"}},
+  {"level":2,"topic":"Satzanfang + Doppelkonsonant","shown":"im Winter bauen die Kinder einen Schneemann. Seine Nase besteht aus einer langen Karote.","corrections":{"0":"Im","13":"Karotte."}},
+  {"level":3,"topic":"Falscher Buchstabe + Satzanfang","shown":"nach der Schule trifft Jonas einen Freunt im Park. Gemeinsam spielen beide Fußball, bis plötzlich starker Regen fällt und sie schnell unter eine Brücke laufen.","corrections":{"6":"Freund","0":"Nach"}},
+  {"level":2,"topic":"Nomen groß","shown":"Ben backt mit der Mutter einen Kuchen. In der Schüssel liegen Mehl, Zucker und butter.","corrections":{"14":"Butter."}},
+  {"level":2,"topic":"Wort klein","shown":"Der Bus Kommt am Morgen pünktlich. David findet sofort einen freien Sitzplatz am Fenster.","corrections":{"2":"kommt"}},
+  {"level":3,"topic":"Falscher Buchstabe + Nomen groß","shown":"Kurz vor dem Abendessen klingelt es an der Türr. Die Nachbarin bringt einen korb mit frischen Äpfeln, und David bedankt sich freundlich bei ihr.","corrections":{"8":"Tür.","13":"Korb"}},
+  {"level":3,"topic":"Nomen groß + Satzanfang","shown":"am Samstag backt Sophie mit der Mutter einen Schokoladenkuchen. Zuerst kommen Mehl, Zucker und butter in eine große Schüssel, danach wird alles gut verrührt.","corrections":{"14":"Butter","0":"Am"}},
+  {"level":3,"topic":"Nomen groß","shown":"Auf dem Marktplatz stehen viele Stände mit obst, Gemüse und frischem Brot. Ida kauft einen apfel und trägt den vollen Korb vorsichtig nach Hause.","corrections":{"15":"Apfel","7":"Obst,"}},
+  {"level":2,"topic":"Adverb groß","shown":"Im Park beobachtet Paula viele Vögel. Ein kleiner Vogel fliegt Plötzlich auf einen Ast.","corrections":{"10":"plötzlich"}},
+  {"level":3,"topic":"Doppelkonsonant + Nomen groß","shown":"Als Klara am Morgen aufwacht, prasselt der regen gegen die Fensterscheibe. Trotzdem zieht sie schnel die Jacke an und fährt mit dem fahrrad zur Schule.","corrections":{"14":"schnell","22":"Fahrrad","7":"Regen"}},
+  {"level":1,"topic":"ie","shown":"Anna list heute ein spannendes Buch.","corrections":{"1":"liest"}},
+  {"level":1,"topic":"Falscher Buchstabe","shown":"Clara backt mit der Mutter einen Kucheen.","corrections":{"6":"Kuchen."}},
+  {"level":1,"topic":"Wort klein + Nomen groß","shown":"Die Katze Sitzt leise auf der decke.","corrections":{"2":"sitzt","6":"Decke."}},
+  {"level":2,"topic":"Nomen groß","shown":"Robin räumt das Zimmer auf. Unter dem bett findet er ein altes Bilderbuch.","corrections":{"7":"Bett"}},
+  {"level":1,"topic":"Satzanfang","shown":"der Hund wartet vor der offenen Tür.","corrections":{"0":"Der"}},
+  {"level":1,"topic":"Nomen groß + Satzanfang","shown":"der Regen fällt leise auf die straße.","corrections":{"6":"Straße.","0":"Der"}},
+  {"level":2,"topic":"Wort klein","shown":"Robin malt ein großes Bild. Dafür benutzt er einen Dicken Pinsel und blaue Farbe.","corrections":{"9":"dicken"}},
+  {"level":1,"topic":"Falscher Buchstabe","shown":"Vor der Türr steht ein rotes Fahrrad.","corrections":{"2":"Tür"}},
+  {"level":1,"topic":"Buchstabe fehlt + Falscher Buchstabe","shown":"Auf der Wisse läuft ein kleines Ferd.","corrections":{"6":"Pferd.","2":"Wiese"}},
+  {"level":2,"topic":"Satzanfang + Wort klein","shown":"Am Nachmittag Schreibt Paula eine Geschichte. danach liest sie den Text noch einmal langsam.","corrections":{"6":"Danach","2":"schreibt"}},
+  {"level":3,"topic":"Nomen groß + Satzanfang","shown":"auf dem marktplatz stehen viele Stände mit Obst, Gemüse und frischem Brot. Noah kauft einen Apfel und trägt den vollen Korb vorsichtig nach Hause.","corrections":{"2":"Marktplatz","0":"Auf"}},
+  {"level":1,"topic":"Nomen groß + Satzanfang","shown":"die Katze schläft auf dem weichen kissen.","corrections":{"6":"Kissen.","0":"Die"}},
+  {"level":1,"topic":"Wort klein","shown":"Am Morgen trinkt Paula Warme Milch.","corrections":{"4":"warme"}},
+  {"level":1,"topic":"Wort klein","shown":"Der kleine Vogel Sitzt auf einem Ast.","corrections":{"3":"sitzt"}},
+  {"level":3,"topic":"Satzanfang","shown":"die Lehrerin liest der Klasse eine spannende Geschichte vor. danach schreiben die Kinder wichtige Wörter in ihr Heft und vergleichen gemeinsam die Ergebnisse.","corrections":{"9":"Danach","0":"Die"}},
+  {"level":2,"topic":"ss und ß + Doppelkonsonant","shown":"Finn backt mit der Mutter einen Kuchen. In der Schüßel liegen Mehl, Zucker und Buter.","corrections":{"9":"Schüssel","14":"Butter."}},
+  {"level":3,"topic":"Satzanfang + Wort klein","shown":"Am Morgen hilft Anna beim Frühstück. sie stellt Tassen und Teller auf den Tisch, während die Mutter frische Brötchen und Butter aus der Küche Bringt.","corrections":{"6":"Sie","24":"bringt."}},
+  {"level":1,"topic":"Falscher Buchstabe","shown":"Lena schreibt einen Brief an einen Freunt.","corrections":{"6":"Freund."}},
+  {"level":3,"topic":"Satzanfang + ie","shown":"die Lehrerin liest der Klasse eine spannende Geschichte vor. Danach schriben die Kinder wichtige Wörter in ihr Heft und vergleichen gemeinsam die Ergebnisse.","corrections":{"0":"Die","10":"schreiben"}},
+  {"level":1,"topic":"Wort klein","shown":"Lina Packt den Ranzen für die Schule.","corrections":{"1":"packt"}},
+  {"level":2,"topic":"Nomen groß + Wort klein","shown":"Die lehrerin verteilt neue Hefte. Noah Schreibt langsam den Namen auf die erste Seite.","corrections":{"1":"Lehrerin","6":"schreibt"}},
+  {"level":1,"topic":"Doppelkonsonant","shown":"Auf dem Bet liegt ein weiches Kisen.","corrections":{"2":"Bett","6":"Kissen."}},
+  {"level":1,"topic":"Nomen groß","shown":"Finn backt mit der Mutter einen kuchen.","corrections":{"6":"Kuchen."}},
+  {"level":1,"topic":"Wort klein","shown":"Der Hund Rennt schnell über die Wiese.","corrections":{"2":"rennt"}},
+  {"level":2,"topic":"Doppelkonsonant","shown":"Marie geht mit der Familie zum Hafen. Dort sehen alle zwei große Schife.","corrections":{"12":"Schiffe."}},
+  {"level":2,"topic":"Wort klein + Nomen groß","shown":"Im zoo Beobachtet Mia die Tiere. Besonders lange bleibt sie bei den großen Katzen stehen.","corrections":{"2":"beobachtet","1":"Zoo"}},
+  {"level":2,"topic":"Wort klein + Nomen groß","shown":"Früh am morgen scheint die Sonne. Trotzdem Nimmt Mara eine warme Jacke mit.","corrections":{"7":"nimmt","2":"Morgen"}},
+  {"level":2,"topic":"Nomen groß","shown":"Anna räumt das Zimmer auf. Unter dem bett findet sie ein altes Bilderbuch.","corrections":{"7":"Bett"}},
+  {"level":1,"topic":"Buchstabendreher","shown":"Emil spielt nach der Schule im Graten.","corrections":{"6":"Garten."}},
+  {"level":2,"topic":"Wort klein","shown":"Auf der Wiese Stehen viele Blumen. Zwischen ihnen fliegt ein kleiner Falter von Blüte zu Blüte.","corrections":{"3":"stehen"}},
+  {"level":3,"topic":"Satzanfang + Nomen groß","shown":"Im Wald entdeckt Anton zwischen den Bäumen eine kleine Hütte. vor der tür liegen alte Holzscheite, und hinter dem Fenster steht eine helle Lampe.","corrections":{"10":"Vor","12":"Tür"}},
+  {"level":1,"topic":"Satzanfang","shown":"auf dem Bett liegt ein weiches Kissen.","corrections":{"0":"Auf"}},
+  {"level":1,"topic":"Nomen groß","shown":"Auf der Wiese läuft ein kleines pferd.","corrections":{"6":"Pferd."}},
+  {"level":2,"topic":"Nomen groß","shown":"Noah besucht am Sonntag die Großeltern. Zum Mittag gibt es Suppe und frisches brot.","corrections":{"13":"Brot."}},
+  {"level":1,"topic":"Wort klein","shown":"Der Ball Liegt unter dem großen Tisch.","corrections":{"2":"liegt"}},
+  {"level":3,"topic":"Buchstabendreher + Satzanfang","shown":"im Museum betrachtet Nora eine alte Krate. Darauf sind Häuser, eine Straße und ein kleiner Hafen zu sehen, in dem mehrere Schiffe liegen.","corrections":{"6":"Karte.","0":"Im"}},
+  {"level":1,"topic":"Nomen groß","shown":"Am morgen trinkt Lina warme Milch.","corrections":{"1":"Morgen"}},
+  {"level":2,"topic":"Doppelkonsonant + Nomen groß","shown":"Ben backt mit der Mutter einen Kuchen. In der schüssel liegen Mehl, Zucker und Buter.","corrections":{"14":"Butter.","9":"Schüssel"}},
+  {"level":2,"topic":"Nomen groß + Doppelkonsonant","shown":"Der regen prasselt gegen das Fenster. Im Zimer liest Lena ein spannendes Buch.","corrections":{"1":"Regen","7":"Zimmer"}},
+  {"level":2,"topic":"Nomen groß","shown":"Der Hund rennt über die wiese. Plötzlich bleibt er vor einer großen Pfütze stehen.","corrections":{"5":"Wiese."}},
+  {"level":1,"topic":"ie","shown":"Der Vogel fligt hoch über die Bäume.","corrections":{"2":"fliegt"}},
+  {"level":1,"topic":"Falscher Buchstabe","shown":"Luisa malt mit einem dicken Pinsell.","corrections":{"5":"Pinsel."}},
+  {"level":1,"topic":"Nomen groß","shown":"Im Garten blühen viele bunte blumen.","corrections":{"5":"Blumen."}},
+  {"level":3,"topic":"Falscher Buchstabe + ss und ß + Wort klein","shown":"Am Abend sitzt Noah am Fenster und liest ein spannendes Buchh. drausen scheint der Mond, während eine Eule leise auf einem Ast Sitzt.","corrections":{"10":"Buch.","11":"Draußen","22":"sitzt."}},
+  {"level":2,"topic":"Doppelkonsonant","shown":"Anna besucht am Sonntag die Großeltern. Zum Mitag gibt es Suppe und frisches Brot.","corrections":{"7":"Mittag"}},
+  {"level":2,"topic":"Wort klein + ie","shown":"Am Nachmittag Schreibt Emil eine Geschichte. Danach list er den Text noch einmal langsam.","corrections":{"2":"schreibt","7":"liest"}},
+  {"level":1,"topic":"Doppelkonsonant","shown":"Die Katze schläft auf dem weichen Kisen.","corrections":{"6":"Kissen."}},
+  {"level":1,"topic":"Buchstabendreher","shown":"Im Graten blühen viele bunte Blumen.","corrections":{"1":"Garten"}},
+  {"level":3,"topic":"Nomen groß + Buchstabendreher","shown":"Am Wochenende besucht Marie mit der Familie den zoo. Nach den großen Katzen schauen alle noch bei den Vögeln vorbei und essen danach ein Brötcehn.","corrections":{"8":"Zoo.","24":"Brötchen."}},
+  {"level":1,"topic":"ck","shown":"Leo malt mit einem diken Pinsel.","corrections":{"4":"dicken"}},
+  {"level":3,"topic":"Nomen groß + Satzanfang","shown":"im Wald entdeckt Luisa zwischen den Bäumen eine kleine Hütte. Vor der Tür liegen alte Holzscheite, und hinter dem fenster steht eine helle Lampe.","corrections":{"19":"Fenster","0":"Im"}},
+  {"level":1,"topic":"Wort klein","shown":"Emil Liest am Nachmittag ein spannendes Buch.","corrections":{"1":"liest"}},
+  {"level":2,"topic":"Satzanfang","shown":"Am Nachmittag schreibt Moritz eine Geschichte. danach liest er den Text noch einmal langsam.","corrections":{"6":"Danach"}},
+  {"level":2,"topic":"tz + Nomen groß","shown":"Nora findet im Garten einen kleinen Schaz. Unter einem Stein liegt eine alte karte.","corrections":{"6":"Schatz.","13":"Karte."}},
+  {"level":3,"topic":"Nomen groß + Wort klein","shown":"Am Abend sitzt Robin am Fenster und liest ein spannendes buch. Draußen scheint der Mond, während eine Eule leise auf einem Ast Sitzt.","corrections":{"10":"Buch.","22":"sitzt."}},
+  {"level":1,"topic":"Nomen groß + Wort klein","shown":"Sophie Spielt am Nachmittag mit einem ball.","corrections":{"6":"Ball.","1":"spielt"}},
+  {"level":3,"topic":"Satzanfang + Nomen groß","shown":"Im Wald entdeckt Sophie zwischen den Bäumen eine kleine hütte. vor der Tür liegen alte Holzscheite, und hinter dem Fenster steht eine helle Lampe.","corrections":{"10":"Vor","9":"Hütte."}},
+  {"level":3,"topic":"ie + Wort klein","shown":"Die Klasse Schreibt heute eine kurze Geschichte. Clara denkt lange über einen lustigen Satz nach und list den fertigen Text später der Lehrerin vor.","corrections":{"16":"liest","2":"schreibt"}},
+  {"level":1,"topic":"Buchstabendreher","shown":"Mia spielt nach der Shcule im Graten.","corrections":{"6":"Garten.","4":"Schule"}},
+  {"level":2,"topic":"Wort klein + Nomen groß","shown":"Auf der Wiese Stehen viele Blumen. Zwischen ihnen fliegt ein kleiner falter von Blüte zu Blüte.","corrections":{"3":"stehen","11":"Falter"}},
+  {"level":2,"topic":"Doppelkonsonant","shown":"Im Garten spielt Lena mit einem Ball. Später sitzt sie im Schaten unter einem Baum.","corrections":{"11":"Schatten"}},
+  {"level":2,"topic":"Wort klein + Nomen groß","shown":"Am Nachmittag schreibt Noah eine geschichte. Danach liest er den Text noch einmal Langsam.","corrections":{"13":"langsam.","5":"Geschichte."}},
+  {"level":2,"topic":"Satzanfang","shown":"Clara räumt das Zimmer auf. unter dem Bett findet sie ein altes Bilderbuch.","corrections":{"5":"Unter"}},
+  {"level":1,"topic":"Nomen groß","shown":"Im Sommer schwimmt Hannes im kalten wasser.","corrections":{"6":"Wasser."}},
+  {"level":1,"topic":"ck","shown":"Lina bakt mit der Mutter einen Kuchen.","corrections":{"1":"backt"}},
+  {"level":3,"topic":"Nomen groß","shown":"Am Samstag backt David mit der mutter einen Schokoladenkuchen. Zuerst kommen Mehl, Zucker und Butter in eine große schüssel, danach wird alles gut verrührt.","corrections":{"18":"Schüssel,","6":"Mutter"}},
+  {"level":1,"topic":"Doppelkonsonant","shown":"Sophie spielt heute mit einem Bal.","corrections":{"5":"Ball."}},
+  {"level":2,"topic":"Nomen groß","shown":"Im Garten spielt Tom mit einem Ball. Später sitzt er im schatten unter einem Baum.","corrections":{"11":"Schatten"}},
+  {"level":1,"topic":"ie + Doppelkonsonant","shown":"Jonas spilt heute mit einem Bal.","corrections":{"1":"spielt","5":"Ball."}},
+  {"level":3,"topic":"Doppelkonsonant + Wort klein + Nomen groß","shown":"Am Morgen hilft Jonas beim Frühstück. Er Stellt Tassen und teller auf den Tisch, während die Muter frische Brötchen und Butter aus der Küche bringt.","corrections":{"16":"Mutter","7":"stellt","10":"Teller"}},
+  {"level":2,"topic":"Nomen groß","shown":"Der bäcker öffnet früh seinen Laden. Vor der Tür warten schon mehrere Kinder.","corrections":{"1":"Bäcker"}},
+  {"level":1,"topic":"Nomen groß","shown":"Der vogel fliegt hoch über die Bäume.","corrections":{"1":"Vogel"}},
+  {"level":1,"topic":"Buchstabendreher","shown":"Die Sonne scheint über dem grünen Graten.","corrections":{"6":"Garten."}},
+  {"level":2,"topic":"Wort klein + Doppelkonsonant","shown":"Finn räumt das Zimer auf. Unter dem Bett Findet er ein altes Bilderbuch.","corrections":{"8":"findet","3":"Zimmer"}},
+  {"level":2,"topic":"Wort klein + Satzanfang","shown":"Im Zoo beobachtet Paula die Tiere. besonders lange bleibt sie bei den großen Katzen Stehen.","corrections":{"14":"stehen.","6":"Besonders"}},
+  {"level":2,"topic":"Nomen groß","shown":"Die Katze schläft auf dem Kissen. Am mittag springt sie auf die Fensterbank.","corrections":{"7":"Mittag"}},
+  {"level":1,"topic":"Doppelkonsonant + Wort klein","shown":"Lina Spielt heute mit einem Bal.","corrections":{"5":"Ball.","1":"spielt"}},
+  {"level":2,"topic":"Doppelkonsonant","shown":"Greta räumt das Zimmer auf. Unter dem Bet findet sie ein altes Bilderbuch.","corrections":{"7":"Bett"}},
+  {"level":3,"topic":"Wort klein + Nomen groß","shown":"Während des Ausflugs macht die Klasse eine Pause an einem kleinen see. Klara beobachtet mehrere Enten, die Leise über das Wasser schwimmen und nach Futter suchen.","corrections":{"17":"leise","11":"See."}},
+  {"level":3,"topic":"Nomen groß + Falscher Buchstabe","shown":"Auf dem Marktplatz stehen fiele Stände mit obst, Gemüse und frischem Brot. Finn kauft einen Apfel und trägt den vollen Korb vorsichtig nach Hause.","corrections":{"7":"Obst,","4":"viele"}},
+  {"level":2,"topic":"Falscher Buchstabe","shown":"Auf der Wiese stehen viele Blummen. Zwischen ihnen fliegt ein kleiner Falter von Blüte zu Blüte.","corrections":{"5":"Blumen."}},
+  {"level":3,"topic":"Satzanfang + Buchstabe fehlt","shown":"im Wald entdeckt Moritz zwischen den Bäumen eine kleine Hütte. Vor der Tür liegen alte Holzscheite, und hinter dem Fenser steht eine helle Lampe.","corrections":{"0":"Im","19":"Fenster"}},
+  {"level":3,"topic":"Nomen groß + Satzanfang","shown":"auf dem Marktplatz stehen viele stände mit Obst, Gemüse und frischem Brot. Ida kauft einen Apfel und trägt den vollen Korb vorsichtig nach Hause.","corrections":{"5":"Stände","0":"Auf"}},
+  {"level":2,"topic":"tz","shown":"Die Kaze schläft auf dem Kissen. Am Mittag springt sie auf die Fensterbank.","corrections":{"1":"Katze"}},
+  {"level":2,"topic":"Satzanfang","shown":"Im Winter bauen die Kinder einen Schneemann. seine Nase besteht aus einer langen Karotte.","corrections":{"7":"Seine"}},
+  {"level":2,"topic":"Buchstabendreher","shown":"Leo packt am Morgen den Ranzen. Danach fährt er mit dem Fahrard zur Schule.","corrections":{"11":"Fahrrad"}},
+  {"level":3,"topic":"Nomen groß + Doppelkonsonant","shown":"Die Klase schreibt heute eine kurze Geschichte. Felix denkt lange über einen lustigen Satz nach und liest den fertigen Text später der lehrerin vor.","corrections":{"22":"Lehrerin","1":"Klasse"}},
+  {"level":1,"topic":"Satzanfang","shown":"vor der Tür steht ein rotes Fahrrad.","corrections":{"0":"Vor"}},
+  {"level":1,"topic":"Nomen groß","shown":"Emma fährt mit dem fahrrad zum Park.","corrections":{"4":"Fahrrad"}},
+  {"level":1,"topic":"Nomen groß","shown":"Emil spielt heute mit einem ball.","corrections":{"5":"Ball."}},
+  {"level":2,"topic":"Doppelkonsonant","shown":"Auf dem Spielplatz klettert Ida auf die Rutsche. Danach rent sie zum Klettergerüst.","corrections":{"9":"rennt"}},
+  {"level":1,"topic":"Doppelkonsonant","shown":"Im Zimmer steht eine große Pupe.","corrections":{"5":"Puppe."}},
+  {"level":2,"topic":"Nomen groß","shown":"Lena packt am Morgen den Ranzen. Danach fährt sie mit dem Fahrrad zur schule.","corrections":{"13":"Schule."}},
+  {"level":1,"topic":"Wort klein","shown":"Mara Malt mit einem Dicken Pinsel.","corrections":{"4":"dicken","1":"malt"}},
+  {"level":1,"topic":"Nomen groß","shown":"Der ball liegt unter dem großen Tisch.","corrections":{"1":"Ball"}},
+  {"level":3,"topic":"Doppelkonsonant + Nomen groß","shown":"Während des Ausflugs macht die Klase eine Pause an einem kleinen See. Robin beobachtet mehrere enten, die leise über das Waser schwimmen und nach Futter suchen.","corrections":{"20":"Wasser","15":"Enten,","5":"Klasse"}},
+  {"level":3,"topic":"Wort klein + Satzanfang","shown":"im Wald entdeckt Noah zwischen den Bäumen eine Kleine Hütte. vor der Tür liegen alte Holzscheite, und hinter dem Fenster steht eine helle Lampe.","corrections":{"8":"kleine","10":"Vor","0":"Im"}},
+  {"level":2,"topic":"Doppelkonsonant","shown":"Auf dem Spielplatz klettert Paul auf die Rutsche. Danach rent er zum Klettergerüst.","corrections":{"9":"rennt"}},
+  {"level":3,"topic":"Satzanfang + Nomen groß","shown":"Vor dem Schlafengehen räumt Finn noch das zimmer auf. die Puppe kommt ins Regal, das Buch auf den Tisch und die Decke ordentlich aufs Bett.","corrections":{"9":"Die","7":"Zimmer"}},
+  {"level":3,"topic":"Falscher Buchstabe + Buchstabendreher","shown":"Im Graten blühen viele Blummen zwischen den Bäumen. Luisa sammelt vorsichtig einige Blätter, während ein kleiner Vogel auf der Fahne neben dem Haus sitzt.","corrections":{"4":"Blumen","1":"Garten"}},
+  {"level":2,"topic":"Nomen groß + Satzanfang","shown":"Im Winter bauen die Kinder einen Schneemann. seine Nase besteht aus einer langen karotte.","corrections":{"13":"Karotte.","7":"Seine"}},
+  {"level":2,"topic":"Doppelkonsonant","shown":"Die Katze schläft auf dem Kissen. Am Mitag springt sie auf die Fensterbank.","corrections":{"7":"Mittag"}},
+  {"level":1,"topic":"Nomen groß","shown":"Der kleine vogel sitzt auf einem Ast.","corrections":{"2":"Vogel"}},
+  {"level":2,"topic":"Nomen groß + Wort klein","shown":"Paul Geht mit der Familie zum hafen. Dort sehen alle zwei große Schiffe.","corrections":{"6":"Hafen.","1":"geht"}},
+  {"level":3,"topic":"Satzanfang + Wort klein","shown":"im Wald entdeckt Mia zwischen den Bäumen eine Kleine Hütte. Vor der Tür liegen alte Holzscheite, und hinter dem Fenster steht eine helle Lampe.","corrections":{"0":"Im","8":"kleine"}},
+  {"level":3,"topic":"Nomen groß + Satzanfang","shown":"am sonntag besucht Mara mit der familie den Zoo. Nach den großen Katzen schauen alle noch bei den Vögeln vorbei und essen danach ein Brötchen.","corrections":{"1":"Sonntag","0":"Am","6":"Familie"}},
+  {"level":2,"topic":"Nomen groß + Satzanfang","shown":"Ben hilft beim frühstück. er stellt Teller, Tassen und einen Korb mit Brötchen auf den Tisch.","corrections":{"3":"Frühstück.","4":"Er"}},
+  {"level":2,"topic":"Nomen groß + Satzanfang","shown":"Der Hund rennt über die wiese. plötzlich bleibt er vor einer großen Pfütze stehen.","corrections":{"5":"Wiese.","6":"Plötzlich"}},
+  {"level":3,"topic":"ck + Nomen groß","shown":"Im Wald entdekt Moritz zwischen den Bäumen eine kleine hütte. Vor der Tür liegen alte Holzscheite, und hinter dem Fenster steht eine helle Lampe.","corrections":{"2":"entdeckt","9":"Hütte."}},
+  {"level":3,"topic":"Nomen groß + ck + Buchstabe fehlt","shown":"Im Wald entdekt Paula zwischen den Bäumen eine kleine hütte. Vor der Tür liegen alte Holzscheite, und hinter dem Fenser steht eine helle Lampe.","corrections":{"9":"Hütte.","2":"entdeckt","19":"Fenster"}},
+  {"level":1,"topic":"Wort klein","shown":"Lena Backt mit der Mutter einen Kuchen.","corrections":{"1":"backt"}},
+  {"level":1,"topic":"Satzanfang","shown":"die Katze sitzt leise auf der Decke.","corrections":{"0":"Die"}},
+  {"level":1,"topic":"Satzanfang","shown":"auf der Wiese läuft ein kleines Pferd.","corrections":{"0":"Auf"}},
+  {"level":3,"topic":"ck + Nomen groß","shown":"Im Wald entdekt Lena zwischen den Bäumen eine kleine Hütte. Vor der tür liegen alte Holzscheite, und hinter dem Fenster steht eine helle Lampe.","corrections":{"2":"entdeckt","12":"Tür"}},
+  {"level":1,"topic":"Doppelkonsonant","shown":"Hannes backt mit der Muter einen Kuchen.","corrections":{"4":"Mutter"}},
+  {"level":3,"topic":"Nomen groß + Satzanfang + Falscher Buchstabe","shown":"nach dem Unterricht räumt David den Ranzen ein. Auf dem schulhof wartet schon ein Freunt, und gemeinsam laufen beide langsam durch den Park nach Hause.","corrections":{"10":"Schulhof","0":"Nach","14":"Freund,"}},
+  {"level":2,"topic":"ie","shown":"Die Lehrerin verteilt neue Hefte. Nora schribt langsam den Namen auf die erste Seite.","corrections":{"6":"schreibt"}},
+  {"level":2,"topic":"Nomen groß","shown":"Emil geht mit der familie zum Hafen. Dort sehen alle zwei große Schiffe.","corrections":{"4":"Familie"}},
+  {"level":2,"topic":"Satzanfang","shown":"Ben findet im Garten einen kleinen Schatz. unter einem Stein liegt eine alte Karte.","corrections":{"7":"Unter"}},
+  {"level":1,"topic":"Nomen groß","shown":"Moritz packt den ranzen für die schule.","corrections":{"3":"Ranzen","6":"Schule."}},
+  {"level":3,"topic":"Nomen groß + Satzanfang","shown":"Kurz vor dem Abendessen klingelt es an der Tür. die nachbarin bringt einen Korb mit frischen äpfeln, und Oskar bedankt sich freundlich bei ihr.","corrections":{"10":"Nachbarin","9":"Die","16":"Äpfeln,"}},
+  {"level":2,"topic":"Nomen groß + Wort klein","shown":"Marie räumt das zimmer auf. Unter dem Bett Findet sie ein altes Bilderbuch.","corrections":{"3":"Zimmer","8":"findet"}},
+  {"level":3,"topic":"ck + Satzanfang","shown":"Auf dem Weg zum Bäker entdekt Emil eine kleine Katze. sie sitzt unter einer Bank und schaut neugierig auf den Korb mit den Brötchen.","corrections":{"4":"Bäcker","10":"Sie","5":"entdeckt"}},
+  {"level":1,"topic":"Buchstabendreher","shown":"Zum Frühstück isst Anna einen roten Aplfel.","corrections":{"6":"Apfel."}},
+  {"level":2,"topic":"Wort klein","shown":"Im Zoo Beobachtet Luisa die Tiere. Besonders lange bleibt sie bei den großen Katzen Stehen.","corrections":{"14":"stehen.","2":"beobachtet"}},
+  {"level":3,"topic":"ck + Nomen groß","shown":"Auf dem Weg zum Bäker entdeckt Felix eine kleine katze. Sie sitzt unter einer Bank und schaut neugierig auf den Korb mit den Brötchen.","corrections":{"4":"Bäcker","9":"Katze."}},
+  {"level":1,"topic":"Satzanfang + Falscher Buchstabe","shown":"der Hund wartet vor der offenen Türr.","corrections":{"0":"Der","6":"Tür."}},
+  {"level":2,"topic":"Nomen groß","shown":"Der hund rennt über die wiese. Plötzlich bleibt er vor einer großen Pfütze stehen.","corrections":{"1":"Hund","5":"Wiese."}},
+  {"level":2,"topic":"Doppelkonsonant","shown":"Der Bus komt am Morgen pünktlich. Sophie findet sofort einen freien Sitzplatz am Fenster.","corrections":{"2":"kommt"}},
+  {"level":1,"topic":"ie","shown":"Robin list heute ein spannendes Buch.","corrections":{"1":"liest"}},
+  {"level":1,"topic":"Nomen groß","shown":"Die Sonne scheint über dem grünen garten.","corrections":{"6":"Garten."}},
+  {"level":3,"topic":"Buchstabendreher + Dehnungs-h","shown":"Als Oskar am Morgen aufwacht, prasselt der Regen gegen die Fensterscheibe. Trotzdem zieht er schnell die Jacke an und färt mit dem Fahrard zur Schule.","corrections":{"22":"Fahrrad","19":"fährt"}},
+  {"level":1,"topic":"Satzanfang","shown":"auf dem Tisch steht eine blaue Tasse.","corrections":{"0":"Auf"}},
+  {"level":1,"topic":"Nomen groß","shown":"Die katze schläft auf dem weichen kissen.","corrections":{"1":"Katze","6":"Kissen."}},
+  {"level":1,"topic":"Buchstabendreher","shown":"Am Mrogn trinkt Anna warme Milch.","corrections":{"1":"Morgen"}},
+  {"level":3,"topic":"Wort klein + Satzanfang","shown":"am Nachmittag fährt Robin mit dem Fahrrad zum See. Dort Wartet schon die Familie, und gemeinsam essen alle Kuchen, Obst und frisches Brot.","corrections":{"10":"wartet","0":"Am"}},
+  {"level":2,"topic":"Satzanfang","shown":"am Nachmittag schreibt Felix eine Geschichte. danach liest er den Text noch einmal langsam.","corrections":{"6":"Danach","0":"Am"}},
+  {"level":3,"topic":"Nomen groß + Satzanfang + Wort klein","shown":"Am Abend sitzt Marie am Fenster und liest ein spannendes Buch. draußen scheint der mond, während eine Eule Leise auf einem Ast sitzt.","corrections":{"14":"Mond,","11":"Draußen","18":"leise"}},
+  {"level":1,"topic":"ie","shown":"Oskar schribt einen Brief an einen Freund.","corrections":{"1":"schreibt"}},
+  {"level":1,"topic":"Nomen groß","shown":"Anton fährt mit dem fahrrad zum Park.","corrections":{"4":"Fahrrad"}},
+  {"level":3,"topic":"Satzanfang + ie","shown":"die Klasse schribt heute eine kurze Geschichte. Oskar denkt lange über einen lustigen Satz nach und liest den fertigen Text später der Lehrerin vor.","corrections":{"0":"Die","2":"schreibt"}},
+  {"level":3,"topic":"Wort klein + Buchstabe fehlt","shown":"Im Wald Entdeckt Ben zwischen den Bäumen eine kleine Hütte. Vor der Tür liegen alte Holzscheite, und hinter dem Fenser steht eine helle Lampe.","corrections":{"2":"entdeckt","19":"Fenster"}},
+  {"level":2,"topic":"Nomen groß + Wort klein","shown":"Sophie Backt mit der Mutter einen kuchen. In der Schüssel liegen Mehl, Zucker und Butter.","corrections":{"6":"Kuchen.","1":"backt"}},
+  {"level":2,"topic":"Nomen groß + Doppelkonsonant","shown":"Die Katze schläft auf dem kissen. Am Mitag springt sie auf die Fensterbank.","corrections":{"5":"Kissen.","7":"Mittag"}},
+  {"level":1,"topic":"Wort klein","shown":"Am Morgen Trinkt Emil warme Milch.","corrections":{"2":"trinkt"}},
+  {"level":3,"topic":"Falscher Buchstabe + Nomen groß + Doppelkonsonant","shown":"Vor dem Schlafengehen räumt Emma noch das Zimmer auf. Die Pupe kommt ins Regal, das Buchh auf den Tisch und die decke ordentlich aufs Bett.","corrections":{"15":"Buch","21":"Decke","10":"Puppe"}},
+  {"level":2,"topic":"Satzanfang + Wort klein","shown":"der Bus Kommt am Morgen pünktlich. Tom findet sofort einen freien Sitzplatz am Fenster.","corrections":{"0":"Der","2":"kommt"}},
+  {"level":1,"topic":"Satzanfang + Nomen groß","shown":"im Sommer schwimmt Lina im kalten wasser.","corrections":{"0":"Im","6":"Wasser."}},
+  {"level":1,"topic":"Satzanfang","shown":"im Zimmer steht eine große Puppe.","corrections":{"0":"Im"}},
+  {"level":3,"topic":"Nomen groß + Wort klein","shown":"Nach dem Unterricht Räumt Anna den ranzen ein. Auf dem Schulhof wartet schon ein freund, und gemeinsam laufen beide langsam durch den Park nach Hause.","corrections":{"6":"Ranzen","3":"räumt","14":"Freund,"}},
+  {"level":3,"topic":"Nomen groß + Doppelkonsonant","shown":"Am Nachmittag fährt Finn mit dem Fahrad zum see. Dort wartet schon die familie, und gemeinsam essen alle Kuchen, Obst und frisches Brot.","corrections":{"8":"See.","6":"Fahrrad","13":"Familie,"}},
+  {"level":2,"topic":"Nomen groß + Falscher Buchstabe","shown":"Lina malt ein großes bild. Dafür benutzt sie einen dicken Pinsell und blaue Farbe.","corrections":{"4":"Bild.","10":"Pinsel"}},
+  {"level":1,"topic":"Wort klein","shown":"Am Morgen trinkt Mara Warme Milch.","corrections":{"4":"warme"}},
+  {"level":1,"topic":"Wort klein","shown":"Der Hund Wartet vor der offenen Tür.","corrections":{"2":"wartet"}},
+  {"level":3,"topic":"Buchstabendreher","shown":"Als Anton am Mrogn aufwacht, prasselt der Regen gegen die Fensterscheibe. Trotzdem zieht er schnell die Jacke an und fährt mit dem Fahrrad zur Shcule.","corrections":{"3":"Morgen","24":"Schule."}},
+  {"level":2,"topic":"Satzanfang","shown":"der Regen prasselt gegen das Fenster. im Zimmer liest Moritz ein spannendes Buch.","corrections":{"0":"Der","6":"Im"}},
+  {"level":2,"topic":"Buchstabendreher","shown":"Am Mrogn scheint die Sonne. Trotzdem nimmt Noah eine warme Jacke mit.","corrections":{"1":"Morgen"}},
+  {"level":3,"topic":"Nomen groß + Falscher Buchstabe","shown":"Auf dem Marktplatz stehen fiele stände mit Obst, Gemüse und frischem Brot. Hannes kauft einen Apfel und trägt den vollen Korb vorsichtig nach Hause.","corrections":{"5":"Stände","4":"viele"}},
+  {"level":3,"topic":"Nomen groß + Falscher Buchstabe","shown":"Auf dem Marktplatz stehen fiele Stände mit Obst, Gemüse und frischem brot. Moritz kauft einen Apfel und trägt den vollen Korb vorsichtig nach Hause.","corrections":{"11":"Brot.","4":"viele"}},
+  {"level":1,"topic":"Dehnungs-h","shown":"Zum Früstück isst Hannes einen roten Apfel.","corrections":{"1":"Frühstück"}},
+  {"level":1,"topic":"Doppelkonsonant","shown":"Der Bal liegt unter dem großen Tisch.","corrections":{"1":"Ball"}},
+  {"level":3,"topic":"Satzanfang + Buchstabendreher + Doppelkonsonant","shown":"als Ben am Morgen aufwacht, prasselt der Regen gegen die Fensterscheibe. Trotzdem zieht er schnell die Jacke an und fährt mit dem Fahrad zur Shcule.","corrections":{"0":"Als","24":"Schule.","22":"Fahrrad"}},
+  {"level":1,"topic":"Doppelkonsonant","shown":"Die Sone scheint über dem grünen Garten.","corrections":{"1":"Sonne"}},
+  {"level":3,"topic":"Nomen groß + Satzanfang","shown":"Die Lehrerin liest der Klasse eine spannende geschichte vor. danach schreiben die Kinder wichtige Wörter in ihr Heft und vergleichen gemeinsam die Ergebnisse.","corrections":{"7":"Geschichte","9":"Danach"}},
+  {"level":3,"topic":"Nomen groß + Falscher Buchstabe + ie","shown":"Die Lehrerin list der klasse eine spannende Geschichte vor. Danach schreiben die Kinder wichtige Wörter in ihr Hefd und vergleichen gemeinsam die Ergebnisse.","corrections":{"4":"Klasse","17":"Heft","2":"liest"}},
+  {"level":2,"topic":"Wort klein + Nomen groß","shown":"Paula geht mit der Familie zum Hafen. Dort sehen alle zwei Große schiffe.","corrections":{"11":"große","12":"Schiffe."}},
+  {"level":1,"topic":"Doppelkonsonant","shown":"Vor der Tür steht ein rotes Fahrad.","corrections":{"6":"Fahrrad."}},
+  {"level":1,"topic":"Doppelkonsonant","shown":"Im Somer schwimmt Ben im kalten Wasser.","corrections":{"1":"Sommer"}},
+  {"level":3,"topic":"Nomen groß + Wort klein","shown":"Am Sonntag Besucht Moritz mit der Familie den Zoo. Nach den großen Katzen schauen alle noch bei den Vögeln vorbei und essen danach ein brötchen.","corrections":{"24":"Brötchen.","2":"besucht"}},
+  {"level":2,"topic":"Satzanfang","shown":"im Zoo beobachtet Felix die Tiere. Besonders lange bleibt er bei den großen Katzen stehen.","corrections":{"0":"Im"}},
+  {"level":2,"topic":"Falscher Buchstabe + Nomen groß","shown":"Der bäcker öffnet früh seinen Laden. Vor der Türr warten schon mehrere Kinder.","corrections":{"8":"Tür","1":"Bäcker"}},
+  {"level":3,"topic":"Nomen groß","shown":"Im Museum betrachtet Tom eine alte Karte. Darauf sind Häuser, eine Straße und ein kleiner hafen zu sehen, in dem mehrere schiffe liegen.","corrections":{"15":"Hafen","21":"Schiffe"}},
+  {"level":3,"topic":"Satzanfang + Nomen groß","shown":"in der pause erzählt Emma den Freunden vom Wochenende. Die Familie hat eine lange Fahrradtour durch den Wald gemacht und an einer kleinen Brücke Rast gemacht.","corrections":{"0":"In","2":"Pause"}},
+  {"level":2,"topic":"Nomen groß + ck","shown":"Der Bäker öffnet früh seinen Laden. Vor der tür warten schon mehrere Kinder.","corrections":{"8":"Tür","1":"Bäcker"}},
+  {"level":2,"topic":"Nomen groß + Satzanfang","shown":"Noah packt am morgen den Ranzen. danach fährt er mit dem Fahrrad zur Schule.","corrections":{"3":"Morgen","6":"Danach"}},
+  {"level":2,"topic":"Wort klein + Nomen groß","shown":"Emma zieht die jacke an. Draußen ist es kalt und auf der Straße Liegt Schnee.","corrections":{"13":"liegt","3":"Jacke"}},
+  {"level":2,"topic":"Buchstabendreher","shown":"Heute Mrogn scheint die Sonne. Trotzdem nimmt Ben eine warme Jacke mit.","corrections":{"1":"Morgen"}},
+  {"level":3,"topic":"Nomen groß + Falscher Buchstabe","shown":"Im Winnter bauen die Kinder auf dem schulhof einen großen Schneemann. Seine Nase ist eine Karotte, und auf dem Kopf trägt er einen alten Hut.","corrections":{"7":"Schulhof","1":"Winter"}},
+  {"level":3,"topic":"Nomen groß + Satzanfang","shown":"Am Sonntag besucht Emil mit der familie den Zoo. nach den großen Katzen schauen alle noch bei den Vögeln vorbei und essen danach ein Brötchen.","corrections":{"6":"Familie","9":"Nach"}},
+  {"level":2,"topic":"Buchstabendreher","shown":"Sophie packt am Morgen den Ranzen. Danach fährt sie mit dem Fahrrad zur Shcule.","corrections":{"13":"Schule."}},
+  {"level":1,"topic":"Falscher Buchstabe","shown":"Anna packt den Rantzen für die Schule.","corrections":{"3":"Ranzen"}},
+  {"level":2,"topic":"Wort klein + Nomen groß","shown":"Auf der Wiese Stehen viele Blumen. Zwischen ihnen fliegt ein kleiner Falter von Blüte zu blüte.","corrections":{"3":"stehen","15":"Blüte."}},
+  {"level":3,"topic":"Nomen groß + Wort klein","shown":"Kurz vor dem Abendessen klingelt es an der Tür. Die Nachbarin Bringt einen korb mit frischen Äpfeln, und Paula bedankt sich freundlich bei ihr.","corrections":{"13":"Korb","11":"bringt"}},
+  {"level":1,"topic":"Wort klein","shown":"Die Katze sitzt Leise auf der Decke.","corrections":{"3":"leise"}},
+  {"level":3,"topic":"Doppelkonsonant + Buchstabendreher","shown":"Am Mrogn hilft Anton beim Frühstück. Er stellt Tassen und Teller auf den Tisch, während die Mutter frische Brötchen und Buter aus der Küche bringt.","corrections":{"20":"Butter","1":"Morgen"}},
+  {"level":2,"topic":"Satzanfang + Nomen groß","shown":"Der Hund rennt über die Wiese. plötzlich bleibt er vor einer großen pfütze stehen.","corrections":{"6":"Plötzlich","12":"Pfütze"}},
+  {"level":2,"topic":"Nomen groß + Satzanfang","shown":"Luisa liest ein spannendes buch. danach schreibt sie einen kurzen Brief an einen Freund.","corrections":{"4":"Buch.","5":"Danach"}},
+  {"level":2,"topic":"Falscher Buchstabe","shown":"Klara packt am Morgen den Rantzen. Danach fährt sie mit dem Fahrrad zur Schule.","corrections":{"5":"Ranzen."}},
+  {"level":2,"topic":"Buchstabendreher","shown":"Nach der Shcule fährt Hannes mit dem Fahrrad nach Hause. Der Rucksack liegt hinten auf dem Gepäckträger.","corrections":{"2":"Schule"}},
+  {"level":3,"topic":"Nomen groß + Wort klein","shown":"Während des Ausflugs macht die klasse eine Pause an einem kleinen See. Moritz beobachtet mehrere Enten, die Leise über das Wasser schwimmen und nach Futter suchen.","corrections":{"5":"Klasse","17":"leise"}},
+  {"level":3,"topic":"Nomen groß + Falscher Buchstabe","shown":"Die Lehrerin liest der Klasse eine spannende geschichte vor. Danach schreiben die Kinder wichtige Wörter in ihr Hefd und vergleichen gemeinsam die Ergebnisse.","corrections":{"7":"Geschichte","17":"Heft"}},
+  {"level":1,"topic":"Wort klein","shown":"Anton Spielt heute mit einem Ball.","corrections":{"1":"spielt"}},
+  {"level":1,"topic":"Nomen groß","shown":"Finn malt mit einem dicken pinsel.","corrections":{"5":"Pinsel."}},
+  {"level":3,"topic":"Nomen groß + Wort klein","shown":"Die Klasse schreibt heute eine kurze geschichte. Ida denkt lange über einen lustigen Satz nach und Liest den fertigen Text später der Lehrerin vor.","corrections":{"6":"Geschichte.","16":"liest"}},
+  {"level":3,"topic":"Satzanfang","shown":"kurz vor dem Abendessen klingelt es an der Tür. die Nachbarin bringt einen Korb mit frischen Äpfeln, und Finn bedankt sich freundlich bei ihr.","corrections":{"0":"Kurz","9":"Die"}},
+  {"level":3,"topic":"Nomen groß + Doppelkonsonant","shown":"Als der Bus endlich komt, steigen die Fahrgäste nacheinander ein. Eine ältere dame sucht nach einem freien Sitzplatz, und Anna steht sofort freundlich auf.","corrections":{"12":"Dame","4":"kommt,"}},
+  {"level":1,"topic":"Falscher Buchstabe","shown":"Oskar backt mit der Mutter einen Kucheen.","corrections":{"6":"Kuchen."}},
+  {"level":1,"topic":"Nomen groß + Wort klein","shown":"Die mutter kocht eine Warme Suppe.","corrections":{"1":"Mutter","4":"warme"}},
+  {"level":2,"topic":"Wort klein + Satzanfang","shown":"auf dem Spielplatz Klettert Anna auf die Rutsche. Danach rennt sie zum Klettergerüst.","corrections":{"3":"klettert","0":"Auf"}},
+  {"level":1,"topic":"Doppelkonsonant","shown":"Der Hund rennt schnel über die Wiese.","corrections":{"3":"schnell"}},
+  {"level":3,"topic":"Wort klein + ck + Doppelkonsonant","shown":"Am Samstag bakt Mara mit der Mutter einen Schokoladenkuchen. Zuerst kommen Mehl, Zucker und Buter in eine Große Schüssel, danach wird alles gut verrührt.","corrections":{"17":"große","2":"backt","14":"Butter"}},
+  {"level":3,"topic":"Nomen groß + Doppelkonsonant + Satzanfang","shown":"Am Sontag besucht Anton mit der familie den Zoo. nach den großen Katzen schauen alle noch bei den Vögeln vorbei und essen danach ein Brötchen.","corrections":{"6":"Familie","1":"Sonntag","9":"Nach"}},
+  {"level":1,"topic":"Doppelkonsonant","shown":"Im Somer schwimmt Hannes im kalten Wasser.","corrections":{"1":"Sommer"}},
+  {"level":2,"topic":"Nomen groß","shown":"Auf dem Spielplatz klettert Clara auf die rutsche. Danach rennt sie zum Klettergerüst.","corrections":{"7":"Rutsche."}},
+  {"level":1,"topic":"Nomen groß","shown":"Der Regen fällt leise auf die straße.","corrections":{"6":"Straße."}},
+  {"level":2,"topic":"ie","shown":"Clara liest ein spannendes Buch. Danach schreibt sie einen kurzen Brif an einen Freund.","corrections":{"10":"Brief"}},
+  {"level":3,"topic":"Nomen groß + Wort klein","shown":"Kurz vor dem Abendessen klingelt es an der Tür. Die nachbarin Bringt einen Korb mit frischen äpfeln, und Jonas bedankt sich freundlich bei ihr.","corrections":{"10":"Nachbarin","11":"bringt","16":"Äpfeln,"}},
+  {"level":1,"topic":"Nomen groß","shown":"Auf dem bett liegt ein weiches kissen.","corrections":{"6":"Kissen.","2":"Bett"}},
+  {"level":3,"topic":"Nomen groß + Buchstabendreher","shown":"Im Museum betrachtet Noah eine alte Krate. Darauf sind häuser, eine Straße und ein kleiner hafen zu sehen, in dem mehrere Schiffe liegen.","corrections":{"15":"Hafen","6":"Karte.","9":"Häuser,"}},
+  {"level":3,"topic":"Nomen groß + Buchstabendreher + Falscher Buchstabe","shown":"Auf dem Marktplatz stehen fiele Stände mit Obst, Gemüse und frischem brot. Finn kauft einen Aplfel und trägt den vollen Korb vorsichtig nach Hause.","corrections":{"11":"Brot.","15":"Apfel","4":"viele"}},
+  {"level":3,"topic":"Satzanfang + Wort klein","shown":"Auf dem Weg zum Bäcker entdeckt Paula eine kleine Katze. sie Sitzt unter einer Bank und schaut neugierig auf den Korb mit den Brötchen.","corrections":{"10":"Sie","11":"sitzt"}},
+  {"level":2,"topic":"Nomen groß","shown":"Anna zieht die jacke an. Draußen ist es kalt und auf der Straße liegt Schnee.","corrections":{"3":"Jacke"}},
+  {"level":3,"topic":"Doppelkonsonant + Satzanfang","shown":"im Winter bauen die Kinder auf dem Schulhof einen großen Schneemann. Seine Nase ist eine Karote, und auf dem Kopf trägt er einen alten Hut.","corrections":{"15":"Karotte,","0":"Im"}},
+  {"level":3,"topic":"Doppelkonsonant + Nomen groß","shown":"Am Sontag besucht Noah mit der familie den Zoo. Nach den großen Katzen schauen alle noch bei den Vögeln vorbei und essen danach ein Brötchen.","corrections":{"1":"Sonntag","6":"Familie"}},
+  {"level":2,"topic":"Doppelkonsonant","shown":"Sophie geht mit der Familie zum Hafen. Dort sehen alle zwei große Schife.","corrections":{"12":"Schiffe."}},
+  {"level":2,"topic":"Wort klein","shown":"Am Nachmittag schreibt Nora eine Geschichte. Danach liest sie den Text noch einmal Langsam.","corrections":{"13":"langsam."}},
+  {"level":3,"topic":"Nomen groß + Doppelkonsonant + Satzanfang","shown":"Am Sontag besucht Oskar mit der Familie den Zoo. nach den großen Katzen schauen alle noch bei den Vögeln vorbei und essen danach ein brötchen.","corrections":{"24":"Brötchen.","1":"Sonntag","9":"Nach"}},
+  {"level":1,"topic":"Nomen groß + Falscher Buchstabe","shown":"Im garten blühen viele bunte Blummen.","corrections":{"1":"Garten","5":"Blumen."}},
+  {"level":2,"topic":"Nomen groß + Buchstabe fehlt","shown":"Der Bus kommt am Morgen pünktlich. Finn findet sofort einen freien sitzplatz am Fenser.","corrections":{"11":"Sitzplatz","13":"Fenster."}},
+  {"level":1,"topic":"Satzanfang","shown":"der Regen fällt leise auf die Straße.","corrections":{"0":"Der"}},
+  {"level":2,"topic":"Satzanfang + ie","shown":"Am Nachmittag schreibt Nora eine Geschichte. danach list sie den Text noch einmal langsam.","corrections":{"6":"Danach","7":"liest"}},
+  {"level":3,"topic":"Nomen groß + Doppelkonsonant","shown":"Während des Ausflugs macht die klasse eine Pause an einem kleinen See. Emil beobachtet mehrere Enten, die leise über das Waser schwimmen und nach Futter suchen.","corrections":{"5":"Klasse","20":"Wasser"}},
+  {"level":2,"topic":"Doppelkonsonant + Nomen groß","shown":"Auf dem spielplatz kletert Lina auf die Rutsche. Danach rennt sie zum Klettergerüst.","corrections":{"3":"klettert","2":"Spielplatz"}},
+  {"level":2,"topic":"ie + Satzanfang","shown":"die Lehrerin verteilt neue Hefte. Oskar schribt langsam den Namen auf die erste Seite.","corrections":{"6":"schreibt","0":"Die"}},
+  {"level":3,"topic":"Wort klein + Doppelkonsonant","shown":"Am Samstag Backt Leo mit der Muter einen Schokoladenkuchen. Zuerst kommen Mehl, Zucker und Butter in eine große Schüssel, danach wird alles gut verrührt.","corrections":{"2":"backt","6":"Mutter"}},
+  {"level":1,"topic":"Nomen groß","shown":"Zum Frühstück isst Anton einen roten apfel.","corrections":{"6":"Apfel."}},
+  {"level":1,"topic":"Nomen groß","shown":"Auf dem Tisch steht eine blaue tasse.","corrections":{"6":"Tasse."}},
+  {"level":3,"topic":"Buchstabendreher + Satzanfang","shown":"Als Greta am Morgen aufwacht, prasselt der Regen gegen die Fensterscheibe. trotzdem zieht sie schnell die Jacke an und fährt mit dem Fahrrad zur Shcule.","corrections":{"24":"Schule.","11":"Trotzdem"}},
+  {"level":3,"topic":"Satzanfang + Wort klein","shown":"Am Morgen hilft Klara beim Frühstück. sie Stellt Tassen und Teller auf den Tisch, während die Mutter frische Brötchen und Butter aus der Küche bringt.","corrections":{"6":"Sie","7":"stellt"}},
+  {"level":2,"topic":"Nomen groß + Satzanfang","shown":"Im Winter bauen die Kinder einen Schneemann. seine nase besteht aus einer langen Karotte.","corrections":{"8":"Nase","7":"Seine"}},
+  {"level":3,"topic":"Nomen groß + Satzanfang + Wort klein","shown":"Auf dem Weg zum bäcker entdeckt Greta eine kleine Katze. sie Sitzt unter einer Bank und schaut neugierig auf den Korb mit den Brötchen.","corrections":{"4":"Bäcker","10":"Sie","11":"sitzt"}},
+  {"level":1,"topic":"Nomen groß","shown":"Leo spielt heute mit einem ball.","corrections":{"5":"Ball."}},
+  {"level":3,"topic":"Nomen groß + Wort klein + Falscher Buchstabe","shown":"Im Winnter bauen die Kinder auf dem Schulhof einen großen schneemann. Seine Nase ist eine Karotte, und auf dem Kopf Trägt er einen alten Hut.","corrections":{"10":"Schneemann.","20":"trägt","1":"Winter"}},
+  {"level":3,"topic":"Doppelkonsonant + Nomen groß + Wort klein","shown":"Am Sontag Besucht Ben mit der familie den Zoo. Nach den großen Katzen schauen alle noch bei den Vögeln vorbei und essen danach ein Brötchen.","corrections":{"1":"Sonntag","6":"Familie","2":"besucht"}},
+  {"level":3,"topic":"Nomen groß + Satzanfang + Buchstabendreher","shown":"im Museum betrachtet Marie eine alte Krate. Darauf sind Häuser, eine Straße und ein kleiner Hafen zu sehen, in dem mehrere schiffe liegen.","corrections":{"21":"Schiffe","0":"Im","6":"Karte."}},
+  {"level":2,"topic":"Satzanfang","shown":"am Nachmittag schreibt Anna eine Geschichte. danach liest sie den Text noch einmal langsam.","corrections":{"0":"Am","6":"Danach"}},
+  {"level":3,"topic":"Satzanfang + Wort klein","shown":"die Klasse Schreibt heute eine kurze Geschichte. Greta denkt lange über einen lustigen Satz nach und liest den fertigen Text später der Lehrerin vor.","corrections":{"0":"Die","2":"schreibt"}},
+  {"level":1,"topic":"Nomen groß","shown":"Auf dem tisch steht eine blaue Tasse.","corrections":{"2":"Tisch"}},
+  {"level":2,"topic":"Nomen groß","shown":"Paul hilft beim Frühstück. Er stellt Teller, Tassen und einen korb mit Brötchen auf den Tisch.","corrections":{"10":"Korb"}},
+  {"level":2,"topic":"Nomen groß","shown":"Im Garten spielt Luisa mit einem Ball. Später sitzt sie im schatten unter einem Baum.","corrections":{"11":"Schatten"}},
+  {"level":3,"topic":"Nomen groß + Doppelkonsonant + tz","shown":"Nach der schule trifft Emma einen Freund im Park. Gemeinsam spielen beide Fußball, bis plözlich starker Regen fällt und sie schnel unter eine Brücke laufen.","corrections":{"2":"Schule","20":"schnell","14":"plötzlich"}},
+  {"level":2,"topic":"Satzanfang + ie","shown":"Im Garten spilt Lina mit einem Ball. später sitzt sie im Schatten unter einem Baum.","corrections":{"7":"Später","2":"spielt"}},
+  {"level":3,"topic":"Nomen groß","shown":"In der Pause erzählt Anton den Freunden vom wochenende. Die Familie hat eine lange Fahrradtour durch den Wald gemacht und an einer kleinen brücke Rast gemacht.","corrections":{"8":"Wochenende.","23":"Brücke"}},
+  {"level":3,"topic":"Falscher Buchstabe + Satzanfang + Doppelkonsonant","shown":"Die Lehrerin liest der Klase eine spannende Geschichte vor. danach schreiben die Kinder wichtige Wörter in ihr Hefd und vergleichen gemeinsam die Ergebnisse.","corrections":{"17":"Heft","9":"Danach","4":"Klasse"}},
+  {"level":1,"topic":"Buchstabendreher","shown":"Greta packt den Ranzen für die Shcule.","corrections":{"6":"Schule."}},
+  {"level":2,"topic":"Nomen groß","shown":"Mara findet im garten einen kleinen Schatz. Unter einem Stein liegt eine alte Karte.","corrections":{"3":"Garten"}},
+  {"level":2,"topic":"Falscher Buchstabe","shown":"Auf der Wiese stehen fiele Blummen. Zwischen ihnen fliegt ein kleiner Falter von Blüte zu Blüte.","corrections":{"4":"viele","5":"Blumen."}},
+  {"level":2,"topic":"Wort klein","shown":"Im Garten Spielt Leo mit einem Ball. Später sitzt er im Schatten unter einem Baum.","corrections":{"2":"spielt"}},
+  {"level":1,"topic":"Nomen groß","shown":"Jonas backt mit der Mutter einen kuchen.","corrections":{"6":"Kuchen."}},
+  {"level":3,"topic":"Nomen groß","shown":"Auf dem Marktplatz stehen viele Stände mit Obst, gemüse und frischem Brot. Mia kauft einen Apfel und trägt den vollen korb vorsichtig nach Hause.","corrections":{"8":"Gemüse","20":"Korb"}},
+  {"level":1,"topic":"Falscher Buchstabe","shown":"Der Fogel fliegt hoch über die Bäume.","corrections":{"1":"Vogel"}},
+  {"level":3,"topic":"Doppelkonsonant + Satzanfang","shown":"Vor dem Schlafengehen räumt Marie noch das Zimmer auf. die Pupe kommt ins Regal, das Buch auf den Tisch und die Decke ordentlich aufs Bett.","corrections":{"10":"Puppe","9":"Die"}},
+  {"level":3,"topic":"ie + Satzanfang","shown":"die Klasse schribt heute eine kurze Geschichte. Sophie denkt lange über einen lustigen Satz nach und liest den fertigen Text später der Lehrerin vor.","corrections":{"2":"schreibt","0":"Die"}},
+  {"level":3,"topic":"Buchstabendreher + Doppelkonsonant + Falscher Buchstabe","shown":"Nach der Shcule trifft Nora einen Freunt im Park. Gemeinsam spielen beide Fußball, bis plötzlich starker Regen fällt und sie schnel unter eine Brücke laufen.","corrections":{"2":"Schule","20":"schnell","6":"Freund"}},
+  {"level":3,"topic":"Doppelkonsonant + Satzanfang + Nomen groß","shown":"Im museum betrachtet Noah eine alte Karte. darauf sind Häuser, eine Straße und ein kleiner Hafen zu sehen, in dem mehrere Schife liegen.","corrections":{"21":"Schiffe","7":"Darauf","1":"Museum"}},
+  {"level":2,"topic":"Wort klein","shown":"Der Bäcker Öffnet früh seinen Laden. Vor der Tür warten schon mehrere Kinder.","corrections":{"2":"öffnet"}},
+  {"level":1,"topic":"Buchstabendreher","shown":"Zum Frühstück isst Moritz einen roten Aplfel.","corrections":{"6":"Apfel."}},
+  {"level":3,"topic":"Satzanfang + Nomen groß","shown":"Nach der schule trifft Marie einen Freund im Park. gemeinsam spielen beide Fußball, bis plötzlich starker Regen fällt und sie schnell unter eine brücke laufen.","corrections":{"9":"Gemeinsam","2":"Schule","23":"Brücke"}},
+  {"level":1,"topic":"Buchstabendreher","shown":"Paul packt den Ranzen für die Shcule.","corrections":{"6":"Schule."}},
+  {"level":2,"topic":"Satzanfang","shown":"Lina räumt das Zimmer auf. unter dem Bett findet sie ein altes Bilderbuch.","corrections":{"5":"Unter"}},
+  {"level":2,"topic":"Doppelkonsonant","shown":"Moritz besucht am Sontag die Großeltern. Zum Mittag gibt es Supe und frisches Brot.","corrections":{"3":"Sonntag","10":"Suppe"}},
+  {"level":2,"topic":"Nomen groß","shown":"Ben findet im Garten einen kleinen schatz. Unter einem Stein liegt eine alte karte.","corrections":{"13":"Karte.","6":"Schatz."}},
+  {"level":1,"topic":"ie + Nomen groß","shown":"Marie list am Nachmittag ein spannendes buch.","corrections":{"1":"liest","6":"Buch."}},
+  {"level":1,"topic":"Nomen groß","shown":"Die Katze sitzt leise auf der decke.","corrections":{"6":"Decke."}},
+  {"level":2,"topic":"Wort klein","shown":"Lena Findet im Garten einen kleinen Schatz. Unter einem Stein liegt eine alte Karte.","corrections":{"1":"findet"}},
+  {"level":1,"topic":"Wort klein + Nomen groß","shown":"Paul malt mit einem Dicken pinsel.","corrections":{"4":"dicken","5":"Pinsel."}},
+  {"level":1,"topic":"Nomen groß","shown":"Die Mutter kocht eine warme suppe.","corrections":{"5":"Suppe."}},
+  {"level":2,"topic":"Wort klein","shown":"Die Lehrerin verteilt neue Hefte. Tom schreibt Langsam den Namen auf die erste Seite.","corrections":{"7":"langsam"}},
+  {"level":2,"topic":"Satzanfang","shown":"Im Zoo beobachtet Leo die Tiere. besonders lange bleibt er bei den großen Katzen stehen.","corrections":{"6":"Besonders"}},
+  {"level":2,"topic":"ie","shown":"Moritz liest ein spannendes Buch. Danach schreibt er einen kurzen Brif an einen Freund.","corrections":{"10":"Brief"}},
+  {"level":2,"topic":"Nomen groß","shown":"Auf der Wiese stehen viele Blumen. Zwischen ihnen fliegt ein kleiner falter von Blüte zu Blüte.","corrections":{"11":"Falter"}},
+  {"level":1,"topic":"Buchstabendreher","shown":"Oskar packt den Ranzen für die Shcule.","corrections":{"6":"Schule."}},
+  {"level":2,"topic":"Nomen groß","shown":"Der Regen prasselt gegen das Fenster. Im zimmer liest David ein spannendes buch.","corrections":{"12":"Buch.","7":"Zimmer"}},
+  {"level":1,"topic":"Wort klein","shown":"Am Morgen Trinkt Nora warme Milch.","corrections":{"2":"trinkt"}},
+  {"level":1,"topic":"Falscher Buchstabe","shown":"Oskar liest heute ein spannendes Buchh.","corrections":{"5":"Buch."}},
+  {"level":1,"topic":"Nomen groß","shown":"Der hund rennt schnell über die wiese.","corrections":{"1":"Hund","6":"Wiese."}},
+  {"level":1,"topic":"Nomen groß + ie","shown":"Sophie spilt nach der schule im Garten.","corrections":{"4":"Schule","1":"spielt"}},
+  {"level":1,"topic":"Nomen groß","shown":"Der regen fällt leise auf die Straße.","corrections":{"1":"Regen"}},
+  {"level":1,"topic":"Nomen groß + Doppelkonsonant","shown":"Auf dem bett liegt ein weiches Kisen.","corrections":{"2":"Bett","6":"Kissen."}},
+  {"level":2,"topic":"Nomen groß + Wort klein","shown":"Am Morgen scheint die sonne. Trotzdem Nimmt Marie eine warme Jacke mit.","corrections":{"4":"Sonne.","6":"nimmt"}},
+  {"level":2,"topic":"Wort klein + Buchstabendreher","shown":"Luisa findet im Graten einen kleinen Schatz. Unter einem Stein Liegt eine alte Karte.","corrections":{"10":"liegt","3":"Garten"}},
+  {"level":1,"topic":"Doppelkonsonant","shown":"Auf dem Tisch steht eine blaue Tase.","corrections":{"6":"Tasse."}},
+  {"level":3,"topic":"Satzanfang + Nomen groß","shown":"Am Morgen hilft Leo beim Frühstück. er stellt Tassen und teller auf den Tisch, während die mutter frische Brötchen und Butter aus der Küche bringt.","corrections":{"6":"Er","16":"Mutter","10":"Teller"}},
+  {"level":1,"topic":"Dehnungs-h","shown":"Mara färt mit dem Fahrrad zum Park.","corrections":{"1":"fährt"}},
+  {"level":3,"topic":"Nomen groß","shown":"Die Lehrerin liest der klasse eine spannende Geschichte vor. Danach schreiben die Kinder wichtige Wörter in ihr heft und vergleichen gemeinsam die Ergebnisse.","corrections":{"4":"Klasse","17":"Heft"}},
+  {"level":1,"topic":"Doppelkonsonant","shown":"Anton backt mit der Muter einen Kuchen.","corrections":{"4":"Mutter"}},
+  {"level":1,"topic":"Doppelkonsonant","shown":"Die Muter kocht eine warme Suppe.","corrections":{"1":"Mutter"}},
+  {"level":2,"topic":"Satzanfang","shown":"am Nachmittag schreibt Oskar eine Geschichte. Danach liest er den Text noch einmal langsam.","corrections":{"0":"Am"}},
+  {"level":1,"topic":"Doppelkonsonant","shown":"Luisa spielt heute mit einem Bal.","corrections":{"5":"Ball."}},
+  {"level":3,"topic":"Doppelkonsonant + Nomen groß","shown":"Während des Ausflugs macht die Klase eine pause an einem kleinen See. Finn beobachtet mehrere Enten, die leise über das Wasser schwimmen und nach Futter suchen.","corrections":{"5":"Klasse","7":"Pause"}},
+  {"level":3,"topic":"Satzanfang + Doppelkonsonant","shown":"Am Samstag backt Klara mit der Muter einen Schokoladenkuchen. zuerst kommen Mehl, Zucker und Butter in eine große Schüssel, danach wird alles gut verrührt.","corrections":{"9":"Zuerst","6":"Mutter"}},
+  {"level":1,"topic":"Nomen groß","shown":"Clara schreibt einen Brief an einen freund.","corrections":{"6":"Freund."}},
+  {"level":2,"topic":"ie","shown":"Im Garten spilt Emil mit einem Ball. Später sitzt er im Schatten unter einem Baum.","corrections":{"2":"spielt"}},
+  {"level":1,"topic":"ie + Nomen groß","shown":"Hannes spilt heute mit einem ball.","corrections":{"1":"spielt","5":"Ball."}},
+  {"level":1,"topic":"Wort klein","shown":"Sophie Spielt heute mit einem Ball.","corrections":{"1":"spielt"}},
+  {"level":3,"topic":"Wort klein + ss und ß","shown":"Am Abend sitzt Leo am Fenster und liest ein spannendes Buch. drausen scheint der Mond, während eine Eule Leise auf einem Ast sitzt.","corrections":{"18":"leise","11":"Draußen"}},
+  {"level":3,"topic":"Satzanfang + Nomen groß","shown":"Nach der Schule trifft Sophie einen freund im park. gemeinsam spielen beide Fußball, bis plötzlich starker Regen fällt und sie schnell unter eine Brücke laufen.","corrections":{"9":"Gemeinsam","6":"Freund","8":"Park."}},
+  {"level":1,"topic":"ck","shown":"Greta findet im Ruksack ein altes Heft.","corrections":{"3":"Rucksack"}},
+  {"level":3,"topic":"Nomen groß + Doppelkonsonant + Falscher Buchstabe","shown":"Im garten blühen viele Blumen zwischen den Bäumen. Klara samelt vorsichtig einige Blätter, während ein kleiner Fogel auf der Fahne neben dem Haus sitzt.","corrections":{"1":"Garten","9":"sammelt","16":"Vogel"}},
+  {"level":3,"topic":"ck + Nomen groß","shown":"Im wald entdekt Oskar zwischen den Bäumen eine kleine Hütte. Vor der tür liegen alte Holzscheite, und hinter dem Fenster steht eine helle Lampe.","corrections":{"2":"entdeckt","12":"Tür","1":"Wald"}},
+  {"level":1,"topic":"Satzanfang","shown":"die Katze schläft auf dem weichen Kissen.","corrections":{"0":"Die"}},
+  {"level":1,"topic":"ie + Nomen groß","shown":"Clara schribt einen Brief an einen freund.","corrections":{"1":"schreibt","6":"Freund."}},
+  {"level":1,"topic":"Satzanfang + tz","shown":"die Kaze schläft auf dem weichen Kissen.","corrections":{"0":"Die","1":"Katze"}},
+  {"level":2,"topic":"Nomen groß","shown":"Die katze schläft auf dem Kissen. Am Mittag springt sie auf die Fensterbank.","corrections":{"1":"Katze"}},
+  {"level":2,"topic":"ck","shown":"Nach der Schule fährt David mit dem Fahrrad nach Hause. Der Ruksack liegt hinten auf dem Gepäckträger.","corrections":{"11":"Rucksack"}},
+  {"level":1,"topic":"Doppelkonsonant","shown":"Im Somer schwimmt Oskar im kalten Wasser.","corrections":{"1":"Sommer"}},
+  {"level":3,"topic":"Nomen groß","shown":"Auf dem Weg zum bäcker entdeckt Luisa eine kleine Katze. Sie sitzt unter einer bank und schaut neugierig auf den Korb mit den Brötchen.","corrections":{"4":"Bäcker","14":"Bank"}},
+  {"level":1,"topic":"Nomen groß","shown":"Greta findet im Rucksack ein altes heft.","corrections":{"6":"Heft."}},
+  {"level":1,"topic":"Wort klein","shown":"Greta malt mit einem Dicken Pinsel.","corrections":{"4":"dicken"}},
+  {"level":1,"topic":"Buchstabendreher","shown":"Felix spielt nach der Shcule im Garten.","corrections":{"4":"Schule"}},
+  {"level":2,"topic":"ck","shown":"Früh am Morgen scheint die Sonne. Trotzdem nimmt Mia eine warme Jake mit.","corrections":{"11":"Jacke"}},
+  {"level":2,"topic":"Satzanfang + Nomen groß","shown":"Marie liest ein spannendes Buch. danach schreibt sie einen kurzen brief an einen Freund.","corrections":{"5":"Danach","10":"Brief"}},
+  {"level":1,"topic":"Nomen groß","shown":"Die mutter kocht eine warme Suppe.","corrections":{"1":"Mutter"}},
+  {"level":3,"topic":"Wort klein + Buchstabendreher + Satzanfang","shown":"als Clara am Mrogn aufwacht, prasselt der Regen gegen die Fensterscheibe. Trotzdem zieht sie Schnell die Jacke an und fährt mit dem Fahrrad zur Schule.","corrections":{"14":"schnell","3":"Morgen","0":"Als"}},
+  {"level":2,"topic":"Wort klein","shown":"Ida liest ein spannendes Buch. Danach Schreibt sie einen kurzen Brief an einen Freund.","corrections":{"6":"schreibt"}},
+  {"level":1,"topic":"Falscher Buchstabe","shown":"Im Garten blühen viele bunte Blummen.","corrections":{"5":"Blumen."}},
+  {"level":2,"topic":"Nomen groß","shown":"Ida liest ein spannendes buch. Danach schreibt sie einen kurzen Brief an einen Freund.","corrections":{"4":"Buch."}},
+  {"level":3,"topic":"Nomen groß + Wort klein","shown":"In der Pause Erzählt Mia den Freunden vom Wochenende. Die Familie hat eine lange Fahrradtour durch den Wald gemacht und an einer kleinen brücke Rast gemacht.","corrections":{"23":"Brücke","3":"erzählt"}},
+  {"level":2,"topic":"Satzanfang + Doppelkonsonant","shown":"Nora geht mit der Familie zum Hafen. dort sehen alle zwei große Schife.","corrections":{"7":"Dort","12":"Schiffe."}},
+  {"level":3,"topic":"Wort klein + Buchstabendreher","shown":"Am Wochenende Besucht Jonas mit der Familie den Zoo. Nach den großen Katzen schauen alle noch bei den Vögeln vorbei und essen danach ein Brötcehn.","corrections":{"2":"besucht","24":"Brötchen."}},
+  {"level":2,"topic":"Wort klein + Satzanfang","shown":"Anton Backt mit der Mutter einen Kuchen. in der Schüssel liegen Mehl, Zucker und Butter.","corrections":{"1":"backt","7":"In"}},
+  {"level":3,"topic":"Doppelkonsonant + Nomen groß","shown":"Als der Bus endlich komt, steigen die Fahrgäste nacheinander ein. Eine ältere Dame sucht nach einem freien sitzplatz, und Marie steht sofort freundlich auf.","corrections":{"4":"kommt,","17":"Sitzplatz,"}},
+  {"level":3,"topic":"Satzanfang + Nomen groß","shown":"kurz vor dem Abendessen klingelt es an der Tür. Die Nachbarin bringt einen Korb mit frischen äpfeln, und Ida bedankt sich freundlich bei ihr.","corrections":{"0":"Kurz","16":"Äpfeln,"}},
+  {"level":2,"topic":"Buchstabendreher + Wort klein","shown":"Greta Packt am Morgen den Ranzen. Danach fährt sie mit dem Fahrard zur Schule.","corrections":{"11":"Fahrrad","1":"packt"}},
+  {"level":1,"topic":"Falscher Buchstabe","shown":"Auf der Wisse läuft ein kleines Pferd.","corrections":{"2":"Wiese"}},
+  {"level":2,"topic":"Falscher Buchstabe + Nomen groß","shown":"Auf der Wisse stehen viele Blumen. Zwischen ihnen fliegt ein kleiner Falter von Blüte zu blüte.","corrections":{"2":"Wiese","15":"Blüte."}},
+  {"level":2,"topic":"Falscher Buchstabe + Nomen groß","shown":"Lena malt ein großes Bilt. Dafür benutzt sie einen dicken pinsel und blaue Farbe.","corrections":{"4":"Bild.","10":"Pinsel"}},
+  {"level":2,"topic":"Satzanfang","shown":"der Regen prasselt gegen das Fenster. Im Zimmer liest Klara ein spannendes Buch.","corrections":{"0":"Der"}},
+  {"level":3,"topic":"Nomen groß + Satzanfang + Wort klein","shown":"am Abend Sitzt Sophie am Fenster und liest ein spannendes buch. Draußen scheint der Mond, während eine Eule leise auf einem Ast sitzt.","corrections":{"10":"Buch.","0":"Am","2":"sitzt"}},
+  {"level":1,"topic":"Nomen groß","shown":"Vor der Tür steht ein rotes fahrrad.","corrections":{"6":"Fahrrad."}},
+  {"level":1,"topic":"Nomen groß","shown":"Lena fährt mit dem Fahrrad zum park.","corrections":{"6":"Park."}},
+  {"level":1,"topic":"Satzanfang","shown":"der Ball liegt unter dem großen Tisch.","corrections":{"0":"Der"}},
+  {"level":3,"topic":"Wort klein + ie","shown":"Die Klasse schribt heute eine kurze Geschichte. Oskar Denkt lange über einen lustigen Satz nach und liest den fertigen Text später der Lehrerin vor.","corrections":{"8":"denkt","2":"schreibt"}},
+  {"level":3,"topic":"Satzanfang + Nomen groß","shown":"die lehrerin liest der Klasse eine spannende Geschichte vor. Danach schreiben die Kinder wichtige Wörter in ihr heft und vergleichen gemeinsam die Ergebnisse.","corrections":{"0":"Die","1":"Lehrerin","17":"Heft"}},
+  {"level":2,"topic":"Doppelkonsonant + Nomen groß","shown":"Heute Morgen scheint die sonne. Trotzdem nimt Robin eine warme Jacke mit.","corrections":{"6":"nimmt","4":"Sonne."}},
+  {"level":2,"topic":"ie","shown":"Auf der Wiese stehen viele Blumen. Zwischen ihnen fligt ein kleiner Falter von Blüte zu Blüte.","corrections":{"8":"fliegt"}},
+  {"level":3,"topic":"Nomen groß + ie + Doppelkonsonant","shown":"Die Klase schreibt heute eine kurze geschichte. Greta denkt lange über einen lustigen Satz nach und list den fertigen Text später der Lehrerin vor.","corrections":{"6":"Geschichte.","16":"liest","1":"Klasse"}},
+  {"level":3,"topic":"Wort klein + Nomen groß","shown":"Nach dem Unterricht Räumt Leo den Ranzen ein. Auf dem Schulhof wartet schon ein freund, und gemeinsam laufen beide langsam durch den Park nach Hause.","corrections":{"3":"räumt","14":"Freund,"}},
+  {"level":2,"topic":"Nomen groß","shown":"Der Bäcker öffnet früh seinen Laden. Vor der tür warten schon mehrere Kinder.","corrections":{"8":"Tür"}},
+  {"level":3,"topic":"Nomen groß + Doppelkonsonant","shown":"Am Nachmittag fährt David mit dem Fahrad zum see. Dort wartet schon die Familie, und gemeinsam essen alle Kuchen, Obst und frisches Brot.","corrections":{"8":"See.","6":"Fahrrad"}},
+  {"level":3,"topic":"Satzanfang + tz + Nomen groß","shown":"Als der bus endlich kommt, steigen die Fahrgäste nacheinander ein. eine ältere Dame sucht nach einem freien Sizplatz, und Klara steht sofort freundlich auf.","corrections":{"10":"Eine","17":"Sitzplatz,","2":"Bus"}},
+  {"level":3,"topic":"Dehnungs-h + Buchstabendreher","shown":"Am Mrogn hilft Anna beim Früstück. Sie stellt Tassen und Teller auf den Tisch, während die Mutter frische Brötchen und Butter aus der Küche bringt.","corrections":{"5":"Frühstück.","1":"Morgen"}},
+  {"level":1,"topic":"Nomen groß","shown":"Paul findet im rucksack ein altes Heft.","corrections":{"3":"Rucksack"}},
+  {"level":3,"topic":"Nomen groß + Buchstabe fehlt + Wort klein","shown":"Im Wald entdeckt Emma zwischen den Bäumen eine Kleine Hütte. Vor der Tür liegen alte holzscheite, und hinter dem Fenser steht eine helle Lampe.","corrections":{"15":"Holzscheite,","19":"Fenster","8":"kleine"}},
+  {"level":1,"topic":"Wort klein","shown":"Lena Liest heute ein spannendes Buch.","corrections":{"1":"liest"}},
+  {"level":2,"topic":"Falscher Buchstabe + Nomen groß","shown":"Im Winnter bauen die Kinder einen schneemann. Seine Nase besteht aus einer langen Karotte.","corrections":{"1":"Winter","6":"Schneemann."}},
+  {"level":1,"topic":"Falscher Buchstabe","shown":"Jonas liest heute ein spannendes Buchh.","corrections":{"5":"Buch."}},
+  {"level":3,"topic":"Nomen groß + Wort klein + Satzanfang","shown":"nach dem unterricht räumt Marie den Ranzen ein. Auf dem Schulhof Wartet schon ein Freund, und gemeinsam laufen beide langsam durch den Park nach Hause.","corrections":{"2":"Unterricht","11":"wartet","0":"Nach"}},
+  {"level":1,"topic":"Nomen groß","shown":"Der Vogel fliegt hoch über die bäume.","corrections":{"6":"Bäume."}},
+  {"level":2,"topic":"Nomen groß","shown":"Tom malt ein großes Bild. Dafür benutzt er einen dicken pinsel und blaue farbe.","corrections":{"10":"Pinsel","13":"Farbe."}},
+  {"level":2,"topic":"Satzanfang + Nomen groß","shown":"David hilft beim Frühstück. er stellt Teller, Tassen und einen Korb mit brötchen auf den Tisch.","corrections":{"4":"Er","12":"Brötchen"}},
+  {"level":2,"topic":"Wort klein","shown":"Am Nachmittag schreibt Hannes eine Geschichte. Danach Liest er den Text noch einmal langsam.","corrections":{"7":"liest"}},
+  {"level":3,"topic":"Nomen groß","shown":"Am Nachmittag fährt Sophie mit dem fahrrad zum See. Dort wartet schon die familie, und gemeinsam essen alle Kuchen, Obst und frisches Brot.","corrections":{"13":"Familie,","6":"Fahrrad"}},
+  {"level":2,"topic":"Satzanfang","shown":"Auf der Wiese stehen viele Blumen. zwischen ihnen fliegt ein kleiner Falter von Blüte zu Blüte.","corrections":{"6":"Zwischen"}},
+  {"level":2,"topic":"Satzanfang + Nomen groß","shown":"Felix geht mit der Familie zum Hafen. dort sehen alle zwei große schiffe.","corrections":{"7":"Dort","12":"Schiffe."}},
+  {"level":3,"topic":"Falscher Buchstabe + Satzanfang","shown":"im Winnter bauen die Kinder auf dem Schulhof einen großen Schneemann. Seine Nase ist eine Karotte, und auf dem Kopf trägt er einen alten Hut.","corrections":{"1":"Winter","0":"Im"}},
+  {"level":2,"topic":"Satzanfang","shown":"der Bäcker öffnet früh seinen Laden. Vor der Tür warten schon mehrere Kinder.","corrections":{"0":"Der"}},
+  {"level":3,"topic":"Nomen groß + Satzanfang + Falscher Buchstabe","shown":"Vor dem Schlafengehen räumt Oskar noch das Zimmer auf. die puppe kommt ins Regal, das Buchh auf den Tisch und die Decke ordentlich aufs Bett.","corrections":{"10":"Puppe","9":"Die","15":"Buch"}},
+  {"level":3,"topic":"Satzanfang + Doppelkonsonant","shown":"Als der Bus endlich komt, steigen die Fahrgäste nacheinander ein. eine ältere Dame sucht nach einem freien Sitzplatz, und Paul steht sofort freundlich auf.","corrections":{"10":"Eine","4":"kommt,"}},
+  {"level":1,"topic":"Nomen groß + Doppelkonsonant","shown":"Die Sone scheint über dem grünen garten.","corrections":{"6":"Garten.","1":"Sonne"}},
+  {"level":1,"topic":"Nomen groß","shown":"Die katze schläft auf dem weichen Kissen.","corrections":{"1":"Katze"}},
+  {"level":2,"topic":"Falscher Buchstabe","shown":"Auf der Wiese stehen fiele Blumen. Zwischen ihnen fliegt ein kleiner Falter von Blüte zu Blüte.","corrections":{"4":"viele"}},
+  {"level":3,"topic":"Nomen groß + tz + Satzanfang","shown":"Auf dem Weg zum Bäcker entdeckt Lena eine kleine Kaze. sie sitzt unter einer Bank und schaut neugierig auf den korb mit den Brötchen.","corrections":{"20":"Korb","9":"Katze.","10":"Sie"}},
+  {"level":3,"topic":"Wort klein + Doppelkonsonant","shown":"Während des Ausflugs macht die Klase eine Pause an einem kleinen See. Mara beobachtet mehrere Enten, die Leise über das Wasser schwimmen und nach Futter suchen.","corrections":{"17":"leise","5":"Klasse"}},
+  {"level":1,"topic":"Falscher Buchstabe","shown":"Noah malt mit einem dicken Pinsell.","corrections":{"5":"Pinsel."}},
+  {"level":3,"topic":"Doppelkonsonant + Nomen groß","shown":"Als der Bus endlich komt, steigen die fahrgäste nacheinander ein. Eine ältere dame sucht nach einem freien Sitzplatz, und Jonas steht sofort freundlich auf.","corrections":{"4":"kommt,","7":"Fahrgäste","12":"Dame"}},
+  {"level":1,"topic":"Wort klein","shown":"Lina malt mit einem Dicken Pinsel.","corrections":{"4":"dicken"}},
+  {"level":2,"topic":"Wort klein","shown":"Im Park Beobachtet Felix viele Vögel. Ein kleiner Vogel Fliegt plötzlich auf einen Ast.","corrections":{"2":"beobachtet","9":"fliegt"}},
+  {"level":3,"topic":"Wort klein + Nomen groß","shown":"Kurz vor dem Abendessen klingelt es an der Tür. Die Nachbarin Bringt einen korb mit frischen Äpfeln, und Noah bedankt sich freundlich bei ihr.","corrections":{"11":"bringt","13":"Korb"}},
+  {"level":2,"topic":"Nomen groß + Buchstabe fehlt","shown":"Der Hund rennt über die wiese. Plötzlich bleibt er vor einer großen Fütze stehen.","corrections":{"5":"Wiese.","12":"Pfütze"}},
+  {"level":1,"topic":"Nomen groß + Buchstabendreher","shown":"Die sonne scheint über dem grünen Graten.","corrections":{"1":"Sonne","6":"Garten."}},
+  {"level":1,"topic":"Doppelkonsonant","shown":"Finn fährt mit dem Fahrad zum Park.","corrections":{"4":"Fahrrad"}},
+  {"level":1,"topic":"Nomen groß","shown":"Anton liest heute ein spannendes buch.","corrections":{"5":"Buch."}},
+  {"level":3,"topic":"Falscher Buchstabe + Wort klein + Doppelkonsonant","shown":"Vor dem Schlafengehen räumt Emil noch das Zimmer auf. Die Puppe Kommt ins Regal, das Buchh auf den Tisch und die Decke ordentlich aufs Bet.","corrections":{"15":"Buch","11":"kommt","24":"Bett."}},
+  {"level":1,"topic":"ie + Buchstabendreher","shown":"Ben spilt nach der Shcule im Garten.","corrections":{"1":"spielt","4":"Schule"}},
+  {"level":2,"topic":"Wort klein + Satzanfang","shown":"der Bus kommt am Morgen pünktlich. Felix Findet sofort einen freien Sitzplatz am Fenster.","corrections":{"7":"findet","0":"Der"}},
+  {"level":1,"topic":"Wort klein","shown":"Der Regen fällt Leise auf die Straße.","corrections":{"3":"leise"}},
+  {"level":3,"topic":"Falscher Buchstabe + ck","shown":"Im Wald entdekt Emil zwischen den Bäumen eine kleine Hütte. Vor der Türr liegen alte Holzscheite, und hinter dem Fenster steht eine helle Lampe.","corrections":{"12":"Tür","2":"entdeckt"}},
+  {"level":1,"topic":"Wort klein","shown":"Der Vogel Fliegt hoch über die Bäume.","corrections":{"2":"fliegt"}},
+  {"level":2,"topic":"Nomen groß","shown":"Im Winter bauen die Kinder einen Schneemann. Seine Nase besteht aus einer langen karotte.","corrections":{"13":"Karotte."}},
+  {"level":2,"topic":"ck + Nomen groß","shown":"Nach der Schule fährt Luisa mit dem fahrrad nach Hause. Der Ruksack liegt hinten auf dem Gepäckträger.","corrections":{"11":"Rucksack","7":"Fahrrad"}},
+  {"level":1,"topic":"ie","shown":"Ida spilt nach der Schule im Garten.","corrections":{"1":"spielt"}},
+  {"level":3,"topic":"Nomen groß + Wort klein","shown":"Auf dem Spielplatz Klettert Jonas mutig die Treppe hinauf. Oben wartet eine lange Rutsche, und unten steht schon ein freund mit einem Ball.","corrections":{"19":"Freund","3":"klettert"}},
+  {"level":3,"topic":"ie + Doppelkonsonant + Satzanfang","shown":"die Lehrerin liest der Klase eine spannende Geschichte vor. Danach schriben die Kinder wichtige Wörter in ihr Heft und vergleichen gemeinsam die Ergebnisse.","corrections":{"10":"schreiben","4":"Klasse","0":"Die"}},
+  {"level":1,"topic":"Buchstabendreher","shown":"Nora spielt nach der Shcule im Garten.","corrections":{"4":"Schule"}},
+  {"level":3,"topic":"Falscher Buchstabe + Nomen groß","shown":"Auf dem spielplatz klettert Noah mutig die Treppe hinauf. Oben wartet eine lange Rutsche, und unten steht schon ein Freunt mit einem Ball.","corrections":{"19":"Freund","2":"Spielplatz"}},
+  {"level":3,"topic":"Satzanfang + Nomen groß","shown":"vor dem Schlafengehen räumt David noch das Zimmer auf. Die Puppe kommt ins Regal, das buch auf den Tisch und die Decke ordentlich aufs Bett.","corrections":{"0":"Vor","15":"Buch"}},
+  {"level":1,"topic":"Nomen groß","shown":"Emma malt mit einem dicken pinsel.","corrections":{"5":"Pinsel."}},
+  {"level":1,"topic":"Nomen groß","shown":"David schreibt einen brief an einen Freund.","corrections":{"3":"Brief"}},
+  {"level":1,"topic":"Satzanfang","shown":"zum Frühstück isst Luisa einen roten Apfel.","corrections":{"0":"Zum"}},
+  {"level":3,"topic":"Wort klein + tz","shown":"Als der Bus endlich kommt, steigen die Fahrgäste nacheinander ein. Eine ältere Dame Sucht nach einem freien Sizplatz, und Emma steht sofort freundlich auf.","corrections":{"13":"sucht","17":"Sitzplatz,"}},
+  {"level":3,"topic":"Wort klein + Satzanfang","shown":"im Wald Entdeckt Paula zwischen den Bäumen eine kleine Hütte. Vor der Tür liegen alte Holzscheite, und hinter dem Fenster steht eine helle Lampe.","corrections":{"2":"entdeckt","0":"Im"}},
+  {"level":1,"topic":"Doppelkonsonant","shown":"Jonas spielt heute mit einem Bal.","corrections":{"5":"Ball."}},
+  {"level":1,"topic":"tz","shown":"Die Kaze schläft auf dem weichen Kissen.","corrections":{"1":"Katze"}},
+  {"level":3,"topic":"Nomen groß + Satzanfang","shown":"in der Pause erzählt Emil den Freunden vom Wochenende. die Familie hat eine lange Fahrradtour durch den Wald gemacht und an einer kleinen brücke Rast gemacht.","corrections":{"23":"Brücke","0":"In","9":"Die"}},
+  {"level":3,"topic":"Nomen groß + Satzanfang","shown":"Im Wald entdeckt Hannes zwischen den Bäumen eine kleine Hütte. vor der tür liegen alte Holzscheite, und hinter dem Fenster steht eine helle Lampe.","corrections":{"12":"Tür","10":"Vor"}},
+  {"level":2,"topic":"Nomen groß","shown":"Die katze schläft auf dem kissen. Am Mittag springt sie auf die Fensterbank.","corrections":{"5":"Kissen.","1":"Katze"}},
+  {"level":2,"topic":"Wort klein","shown":"Am Nachmittag schreibt Luisa eine Geschichte. Danach liest sie den Text noch einmal Langsam.","corrections":{"13":"langsam."}},
+  {"level":3,"topic":"Nomen groß + Wort klein","shown":"Nach dem Unterricht räumt Ben den Ranzen ein. Auf dem schulhof wartet schon ein Freund, und gemeinsam laufen beide Langsam durch den Park nach Hause.","corrections":{"10":"Schulhof","19":"langsam"}},
+  {"level":1,"topic":"Nomen groß + Doppelkonsonant","shown":"Auf dem tisch steht eine blaue Tase.","corrections":{"2":"Tisch","6":"Tasse."}},
+  {"level":2,"topic":"Nomen groß + Satzanfang","shown":"der bäcker öffnet früh seinen Laden. Vor der Tür warten schon mehrere Kinder.","corrections":{"1":"Bäcker","0":"Der"}},
+  {"level":2,"topic":"Doppelkonsonant + Nomen groß","shown":"Leo geht mit der Familie zum hafen. Dort sehen alle zwei große Schife.","corrections":{"12":"Schiffe.","6":"Hafen."}},
+  {"level":1,"topic":"Satzanfang","shown":"der Hund rennt schnell über die Wiese.","corrections":{"0":"Der"}},
+  {"level":2,"topic":"Nomen groß","shown":"Der bus kommt am Morgen pünktlich. Paula findet sofort einen freien Sitzplatz am Fenster.","corrections":{"1":"Bus"}},
+  {"level":2,"topic":"Wort klein","shown":"Lena Backt mit der Mutter einen Kuchen. In der Schüssel liegen Mehl, Zucker und Butter.","corrections":{"1":"backt"}},
+  {"level":3,"topic":"Doppelkonsonant + Wort klein","shown":"Auf dem Spielplatz Klettert Hannes mutig die Trepe hinauf. Oben wartet eine lange Rutsche, und unten steht schon ein Freund mit einem Ball.","corrections":{"7":"Treppe","3":"klettert"}}
+]
