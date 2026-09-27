@@ -620,7 +620,7 @@
     function startGame() {
       minNumber = Number(document.getElementById("minInput").value);
       maxNumber = Number(document.getElementById("maxInput").value);
-      totalRounds = 10;
+      totalRounds = Number(document.getElementById("roundsInput").value);
 
       if (Number.isNaN(minNumber)) minNumber = 1;
       if (Number.isNaN(maxNumber)) maxNumber = 10;
